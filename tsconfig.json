@@ -115,3 +115,19 @@
   "include": ["src/**/*.ts"],                            // Include all TypeScript files in the "src" directory.
   "exclude": ["dist"]    
 }
+
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "es6",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "rootDir": "./src"
+  }
+}
