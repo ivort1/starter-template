@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
     <title>Lit Starter</title>
+
+    <!-- Use the minified version of Lit from a CDN (production-ready) -->
     <script type="importmap">
-        {
-          "imports": {
-            "lit": "./node_modules/lit/index.js",
-            "@lit/reactive-element": "./node_modules/@lit/reactive-element/index.js",
-            "lit-html": "./node_modules/lit-html/lit-html.js",
-            "lit-element/lit-element.js": "./node_modules/lit/index.js"
-          }
+      {
+        "imports": {
+          "lit": "https://cdn.jsdelivr.net/gh/lit/dist@3/core/lit-core.min.js"
         }
-    </script>
-        
-</head>
-<body>
+      }
+    </script>    
+  </head>
+  <body>
     <my-button></my-button>
-    <script type="module" src="./dist/components/button.js"></script>
-</body>
+    <script type="module" src="./dist/main.js"></script>
+  </body>
 </html>

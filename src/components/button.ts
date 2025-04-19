@@ -3,12 +3,12 @@ import { LitElement, html, css } from 'lit';
 export class MyButton extends LitElement {
     static styles = css`
         button {
-            background-color: #6200ee;
+            background-color: #303030;
             color: white;
             border: none;
             padding: 10px 20px;
             cursor: pointer;
-            border-radius: 4px;
+            border-radius: 5px;
         }
     `;
 
