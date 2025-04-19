@@ -1,0 +1,35 @@
+:host {
+  --menu-button-bar-bg: #111111;
+}
+
+.menu-button {
+  cursor: pointer;
+  padding: 5px;
+  width: 25px;
+
+  /* Flexbox */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.menu-button div {
+  background-color: var(--menu-button-bar-bg);
+  height: 3px;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.toggle #bar-1 {
+  transform: rotate(-45deg) translate(-6px, 4px);
+}
+
+.toggle #bar-2 {
+  opacity: 0;
+}
+
+.toggle #bar-3 {
+  transform: rotate(45deg) translate(-6px, -6px);
+}

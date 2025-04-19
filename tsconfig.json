@@ -1,12 +1,16 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "module": "ES2022",
-    "moduleResolution": "bundler",
-    "outDir": "dist",
-    "rootDir": "src",
-    "strict": true,
-    "esModuleInterop": true
+    "target": "ES2022",                        // Good choice for modern JavaScript features
+    "module": "ES2022",                        // Keep the module format as ES2022 for compatibility with ES modules
+    "moduleResolution": "node",                // 'node' resolution is typically preferred for module resolution in TypeScript
+    "outDir": "dist",                          // Output compiled JavaScript to the dist folder
+    "rootDir": "src",                          // Input source files are located in the 'src' folder
+    "strict": true,                            // Enable strict mode for better type checking
+    "esModuleInterop": true,                   // Allow default imports from CommonJS modules
+    "skipLibCheck": true,                      // Skip type checking of declaration files, speeds up compilation
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false   // Ensures that file name casing is consistent across the project
   },
-  "include": ["src"]
+  "include": ["src"]                             // Include all files inside the 'src' directory
 }
