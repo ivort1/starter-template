@@ -1,0 +1,25 @@
+.mobile-nav-bar {
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    padding: 2rem 5rem;
+    background-color: #303030;
+    
+    /* Flexbox */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 7rem;
+}
+
+  
+  /* Ensuring the button-3 custom element grows in the flex container */
+  .mobile-nav-bar > button-3 {
+    display: block;
+    flex: 1;
+  }
+  

@@ -1,0 +1,65 @@
+body {
+  background-color: #111;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  /* background-color: #e9e6da; */
+}
+
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  margin: 0.5rem;
+  text-decoration: none;
+  color: #000;
+  transition: background 0.2s;
+}
+
+.button:hover {
+  background-color: #ccc;
+}
+
+.icon {
+  color: white; /* Or any color you want */
+  width: 4rem;
+  height: 4rem;
+}
+
+/* Base font class */
+.jost {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Weight utilities */
+.jost-thin    { font-weight: 100; }
+.jost-extralight { font-weight: 200; }
+.jost-light   { font-weight: 300; }
+.jost-regular { font-weight: 400; }
+.jost-medium  { font-weight: 500; }
+.jost-semibold { font-weight: 600; }
+.jost-bold    { font-weight: 700; }
+.jost-extrabold { font-weight: 800; }
+.jost-black   { font-weight: 900; }
+
+
+.header {
+  color: #FFF;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5rem;
+  margin: 2rem 0 3rem 2rem;
+
+}
+
+.divider {
+  height: 3px;
+  background-color: #e0e0e0;
+}

@@ -3,9 +3,13 @@
 }
 
 .menu-button {
+  background-color: steelblue;
+  box-sizing: border-box;
+  border: solid 5px #FFFFFF;
+  border-radius: 5px;
   cursor: pointer;
   padding: 5px;
-  width: 25px;
+  width: 100%;
 
   /* Flexbox */
   display: flex;
@@ -17,13 +21,13 @@
 
 .menu-button div {
   background-color: var(--menu-button-bar-bg);
-  height: 3px;
+  height: 2px;
   transition: all 0.3s ease;
   width: 100%;
 }
 
 .toggle #bar-1 {
-  transform: rotate(-45deg) translate(-6px, 4px);
+  transform: rotate(-45deg) translate(-5px, 4px);
 }
 
 .toggle #bar-2 {
@@ -31,5 +35,5 @@
 }
 
 .toggle #bar-3 {
-  transform: rotate(45deg) translate(-6px, -6px);
+  transform: rotate(45deg) translate(-5px, -5px);
 }
