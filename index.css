@@ -1,0 +1,38 @@
+body {
+    font-family: ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+/* What's Included With Your Subscription */
+#whatisincluded h1 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    letter-spacing: -1.2px;
+    line-height: 1;
+    margin-bottom: 1rem;
+    text-wrap: balance;
+    width: 100%;
+}
+
+#whatisincluded p {
+    font-size: 1.125rem;
+    color: #495565;
+    line-height: 2rem;
+    margin-bottom: 3rem;
+    text-wrap: balance;
+}
+
+/* md 48rem (768px) */
+@media (min-width: 48rem) {
+    #whatisincluded h1 {
+        font-size: 3rem;
+        margin-inline: auto;
+        max-width: 42rem;
+        text-align: center;
+    }
+
+    #whatisincluded p {
+        margin-inline: auto;
+        max-width: 56rem;
+        text-align: center;
+    }
+}
