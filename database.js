@@ -5,7 +5,7 @@ import server from "./assets/icons/server.js";
 import worldWideWeb from "./assets/icons/worldWideWeb.js";
 import googleBusiness from "./assets/icons/googleBusiness.js";
 import googleAnalytics from "./assets/icons/googleAnalytics.js";
-import stripe from "./assets/icons/stripe.js";
+import digitalPayments from "./assets/icons/digitalPayments.js";
 
 // FEATURES
 export const features = [
@@ -45,8 +45,8 @@ export const features = [
       "description": "Gain actionable insights with integrated Google Analytics, helping you track user behavior, optimize performance, and drive conversions."
     },
     {
-      "icon": `${stripe}`,
-      "feature": "Stripe Integration",
-      "description": "Streamline your online transactions and provide a frictionless and efficient e-commerce payment experience for your customers."
+      "icon": `${digitalPayments}`,
+      "feature": "Accept Digital Payments",
+      "description": "Streamline your online transactions with Stripe or Square Up and provide a frictionless and efficient e-commerce payment experience for your customers."
     }
 ];
