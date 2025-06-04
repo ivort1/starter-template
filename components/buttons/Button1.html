@@ -1,0 +1,57 @@
+<a href="" class="button-1">
+    <span class="content">
+        Click Me
+    </span>
+</a>
+
+<style>
+/* Button1 */
+.button-1 {
+    background: var(--color-accent-hover);
+    border-radius: 8px;
+    color: ghostwhite;
+    cursor: pointer;
+    display: inline-block;
+    font-size: var(--text-xl);
+    font-weight: var(--text-semibold);
+    line-height: var(--text-xl-line-height);
+    margin: 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0.9rem 3rem;
+    position: relative;
+}
+
+.button-1 span {
+    position: relative;
+    transition: color 0.4s;
+    z-index: 10;
+}
+
+.button-1:hover span {
+    color: black;
+}
+
+.button-1::before,
+.button-1::after {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+.button-1::before {
+    background: var(--color-accent);
+    content: "";
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+    width: 120%;
+}
+
+.button-1:hover::before {
+    transform: translate3d(100%, 0, 0);
+}
+</style>

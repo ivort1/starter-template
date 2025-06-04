@@ -1,0 +1,296 @@
+/* ----- CTA ----- */
+.cta {
+    background: url(/assets/backgrounds/maze-green.svg);
+    border-radius: 8px;
+    padding: 5rem 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.cta .section-header {
+    color: #FFFFFF;
+}
+
+.cta .section-description {
+    color: #e6e6e6;
+    margin-bottom: 2rem;
+}
+
+.cta .button-1-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.cta .button-1-content svg {
+    height: 1.5rem;
+    margin-top: 0.25rem;
+    rotate: calc(90deg);
+    width: 1.5rem;
+}
+
+/* sm 40rem (640px) */
+@media (min-width: 40rem) {
+    .cta {
+        align-items: center;
+    }
+
+    .cta .section-header {
+        font-size: var(--text-5xl, 3rem);
+        line-height: var(--text-5xl-line-height, 1);
+        margin-inline: auto;
+        max-width: var(--max-w-2xl, 42rem);
+        text-align: center;
+    }
+}
+/* ----- END: CTA ----- */
+
+/* ----- PRICING ----- */
+.pricing .card {
+    border-radius: 1.5rem;
+    padding: 5rem 3rem;
+    width: var(--max-w-full, 100%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+#card--annually {
+    border: solid 1.5px #dedede;
+}
+
+#card--annually .pricing--description,
+#card--annually .pricing--per,
+#card--annually li {
+  color: var(--color-gray-light);
+}
+
+#card--annually .pricing--subscription-type {    
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+#card--annually .pill {
+  background-color: #cffff2;
+}
+
+#card--annually .button-1 {
+    color: var(--color-accent);
+    outline: var(--color-accent) solid 1px !important;
+}
+
+#card--annually .button-1::before {
+    background-color: #FFFFFF;
+}
+
+#card--monthly {
+    background-color: #121212;
+    color: #FFFFFF;
+    padding: 7rem 3rem;
+    position: relative;
+}
+
+#card--monthly .pill {
+    background-color: var(--color-accent);
+    border-radius: 8px;
+    font-size: var(--text-base);
+    font-weight: var(--text-semibold);
+    line-height: var(--text-base-line-height);
+    position: absolute;
+    top: -1rem;
+    left: 3rem;
+}
+
+#card--monthly .pricing--description,
+#card--monthly .pricing--per,
+#card--monthly li {
+  color: var(--color-gray-dark);
+}
+
+.pricing--subscription-type {
+  color: var(--color-accent);
+  font-size: var(--text-base);
+  font-weight: var(--text-semibold);
+  line-height: var(--text-base-line-height);
+  width: var(--max-w-full, 100%);
+}
+
+.pricing--price-amount {
+    font-size: var(--text-5xl);
+    font-weight: var(--text-semibold);
+    line-height: var(--text-5xl-line-height);
+}
+
+.pricing--per {
+    font-size: var(--text-base);
+    line-height: var(--text-base-line-height);
+}
+
+.pricing ul li:not(:last-child) {
+    margin-bottom: 0.75rem;
+}
+
+.pricing li {
+    font-size: var(--text-sm);
+    line-height: var(--text-sm-line-height);
+
+    /* Flexbox */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+.pricing .icon {
+    color: var(--color-accent);
+    display: inline-block;
+    min-width: 1.5rem;
+    width: 1.5rem;
+}
+
+.pricing .button-1 {
+    padding: 0.75rem 1rem;
+    width: var(--max-w-full, 100%);
+}
+
+.pricing .button-1-content {
+    font-size: var(--text-sm);
+    line-height: var(--text-sm-line-height);
+
+    /* Flexbox */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.pricing--everything-you-get {
+    color: var(--color-gray-light);
+    font-weight: var(--text-semibold);
+    font-size: var(--text-base);
+    line-height: var(--text-base-line-height);
+    margin-top: 4rem;
+
+    /* Flexbox */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#dashed-arrow-icon {
+    rotate: calc(90deg);
+    max-width: var(--max-w-xs);
+    width: 100%;
+}
+
+/* md 48rem (768px) */
+@media (min-width: 48rem) {
+    .pricing .grid {
+        align-items: center;
+        gap: 0;
+    }
+
+    #card--annually {
+      border-radius: 1.5rem 0 0 1.5rem;
+    }
+
+    #card--annually .pricing--subscription-type {    
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+}
+/* ----- END: PRICING ----- */
+
+/* ----- FEATURES ----- */
+.features .icon {
+    background-color: #303030;
+    border-radius: 8px;
+    color: #FFFFFF;
+    min-width: 3rem;
+    padding: 0.5rem;
+    width: 3rem;
+}
+
+.features p {
+    font-size: var(--text-base, 1rem);
+    color: var(--color-gray, #495565);
+    line-height: var(--text-base-line-height, 1.5rem);
+}
+/* ----- END: FEATURES ----- */
+
+/* 
+***
+***
+ 
+----- COMPONENTS -----
+
+***
+*** */
+
+/* Button1 */
+.button-1 {
+    background: var(--color-accent-hover);
+    border: none;
+    border-radius: 8px;
+    color: ghostwhite;
+    cursor: pointer;
+    display: inline-block;
+    font-size: var(--text-xl);
+    font-weight: var(--text-semibold);
+    line-height: var(--text-xl-line-height);
+    margin: 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0.9rem 3rem;
+    position: relative;
+}
+
+.button-1 span {
+    position: relative;
+    transition: color 0.4s;
+    z-index: 10;
+}
+
+.button-1:hover span {
+    color: black;
+}
+
+.button-1::before,
+.button-1::after {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+.button-1::before {
+    background: var(--color-accent);
+    content: "";
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+    width: 120%;
+}
+
+.button-1:hover::before {
+    transform: translate3d(100%, 0, 0);
+}
