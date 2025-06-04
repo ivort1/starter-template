@@ -1,6 +1,189 @@
+/* ----- WHY US -----*/
+#why-us-features {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+#why-us-features li {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+#why-us-features svg {
+    height: auto;
+    min-width: 2rem;
+    width: 2rem;
+}
+
+#why-us-features p {
+    text-wrap: balance;
+}
+
+.why-us--feature {
+    color: var(--color-black);
+    line-height: var(--text-base-line-height);
+    font-size: var(--text-base);
+    font-weight: var(--text-semibold);
+}
+
+.why-us--description {
+    color: var(--color-gray-light);
+    line-height: var(--text-base-line-height);
+    font-size: var(--text-base);
+}
+
+.why-us img {
+    border-radius: 25px;
+    margin: auto 0;
+}
+
+/* md 48rem (768px) */
+@media (min-width: 48rem) {
+    #why-us-section {
+        max-width: var(--max-w-6xl);
+    }
+
+    .why-us .section-subheader {
+      text-align: left;
+    }
+
+    .why-us .section-header {
+        text-align: left;
+    }
+
+    .why-us .section-description {
+        margin: 0;
+        text-align: left;
+    }
+
+    .why-us .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .why-us .grid-col {
+        flex-direction: column;
+        gap: 3rem;
+    }
+}
+/* ----- END: WHY US -----*/
+
+/* ----- SERVICES ----- */
+.services .wallet {
+  --bg-color: var(--color-accent);
+  --bg-color-light: var(--color-accent-hover);
+  --text-color-hover: #fff;
+  --box-shadow-color: rgba(206, 178, 252, 0.48);
+}
+
+.services .card {
+    background: url(/assets/backgrounds/maze-green_dark.svg);
+  width: 220px;
+  height: 321px;
+  border-radius: 25px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 14px 26px rgba(0,0,0,0.04);
+  transition: all 0.3s ease-out;
+  text-decoration: none;
+}
+
+.services .card:hover {
+  transform: translateY(-5px) scale(1.005) translateZ(0);
+  box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+    0 24px 46px var(--box-shadow-color);
+}
+
+.services .card:hover .overlay {
+  transform: scale(4) translateZ(0);
+}
+
+.services .card:hover .circle {
+  border-color: var(--bg-color-light);
+  background: var(--bg-color);
+}
+
+.services .card:hover .circle:after {
+  background: var(--bg-color-light);
+}
+
+.services .card:hover p {
+  color: var(--text-color-hover);
+}
+
+.services .card:active {
+  transform: scale(1) translateZ(0);
+  box-shadow: 0 15px 24px rgba(0,0,0,0.11),
+    0 15px 24px var(--box-shadow-color);
+}
+
+.services .card p {
+  font-size: 17px;
+  color: var(--color-gray-dark);
+  margin-top: 30px;
+  z-index: 1000;
+  transition: color 0.3s ease-out;
+}
+
+.services .circle {
+  width: 131px;
+  height: 131px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease-out;
+}
+
+.services .circle:after {
+  content: "";
+  width: 118px;
+  height: 118px;
+  display: block;
+  position: absolute;
+  background: var(--bg-color);
+  border-radius: 50%;
+  transition: opacity 0.3s ease-out;
+}
+
+.services .circle svg {
+    color: #FFFFFF;
+  z-index: 10000;
+  transform: translateZ(0);
+  min-width: 3rem;
+  width: 3rem;
+}
+
+.services .overlay {
+  width: 118px;
+  position: absolute;
+  height: 118px;
+  border-radius: 50%;
+  background: var(--bg-color);
+  top: 70px;
+  left: 50px;
+  z-index: 0;
+  transition: transform 0.3s ease-out;
+}
+
+/* ----- END: SERVICES ----- */
+
 /* ----- CTA ----- */
 .cta {
-    background: url(/assets/backgrounds/maze-green.svg);
+    background: url(/assets/backgrounds/maze-green_dark.svg);
     border-radius: 8px;
     padding: 5rem 1rem;
 
@@ -30,7 +213,6 @@
 .cta .button-1-content svg {
     height: 1.5rem;
     margin-top: 0.25rem;
-    rotate: calc(90deg);
     width: 1.5rem;
 }
 
@@ -51,6 +233,29 @@
 /* ----- END: CTA ----- */
 
 /* ----- PRICING ----- */
+.pricing {
+    position: relative;
+}
+
+.gradient-wrapper {
+    position: absolute;
+    left: 15rem;
+    top: 13rem;
+    z-index: -10;
+    transform: translateZ(0);
+    overflow: hidden;
+    filter: blur(8rem);
+}
+
+.gradient-inner {
+    aspect-ratio: 1155 / 678;
+    background: linear-gradient(var(--color-accent), rgb(115, 222, 255));
+    opacity: 0.4;
+    height: 150px;
+    width: 900px;
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+}
+
 .pricing .card {
     border-radius: 1.5rem;
     padding: 5rem 3rem;
@@ -83,6 +288,7 @@
 
 #card--annually .pill {
   background-color: #cffff2;
+  font-weight: var(--text-bold);
 }
 
 #card--annually .button-1 {

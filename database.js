@@ -7,6 +7,22 @@ import googleBusiness from "./assets/icons/googleBusiness.js";
 import googleAnalytics from "./assets/icons/googleAnalytics.js";
 import digitalPayments from "./assets/icons/digitalPayments.js";
 
+// WHY US?
+export const whyUs = [
+   {
+    "feature": "Based in the United States.",
+    "description": "Working out of Southern California, our experts deliver personalized, industry-leading web solutions that keep your business ahead—without you lifting a finger."
+  },
+  {
+    "feature": "Unrivaled Customer Support.",
+    "description": "Our dedicated 24/7 support team ensures your site runs flawlessly—even in emergencies—so you never have to worry about technical issues."
+  },
+  {
+    "feature": "Opt-Out Assurance.",
+    "description": "Once your website goes live, we offer a 30-day trial and your total spend is capped at the cost of your first month. Experience our hands-free service with minimal commitment."
+  },
+];
+
 // FEATURES
 export const features = [
     {
