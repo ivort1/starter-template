@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/preset.css">
+    <link rel="stylesheet" href="/global.css">
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+    <main>
+        <section>
+            <h1 class="section-header">What’s Included With Your Subscription</h1>
+            <p class="section-description">
+                Both our monthly and annual subscriptions offer small businesses a complete,
+                hands-off web solution featuring custom design, unlimited revisions, proactive
+                maintenance, secure hosting, and SEO optimization.
+            </p>
+            <div class="grid included-in-your-subscription"></div>
+        </section>
+    </main>
+</body>
+
+<script type="module">
+    import { features } from './database.js';
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const gridComponent = document.querySelector('.grid');
+
+        features.forEach(({ icon, feature, description}) => {
+            const gridCol = document.createElement('div');
+            gridCol.className = 'grid-col';
+            gridCol.innerHTML = `
+                <div class="icon">${icon}</div>
+
+                <div>
+                    <h3>${feature}</h3>
+                    <p>${description}</p>
+                </div>
+            `;
+            gridComponent.appendChild(gridCol);
+        });
+    });
+</script>
+</html>

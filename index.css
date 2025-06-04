@@ -4,19 +4,19 @@ body {
 
 /* What's Included With Your Subscription */
 #whatisincluded h1 {
-    font-size: 2.25rem;
-    font-weight: 600;
+    font-size: var(--text-3xl, 1.875rem);
+    font-weight: var(--text-semibold, 600);
     letter-spacing: -1.2px;
-    line-height: 1;
+    line-height: var(--text-3xl-line-height, 2.25rem);
     margin-bottom: 1rem;
     text-wrap: balance;
     width: 100%;
 }
 
 #whatisincluded p {
-    font-size: 1.125rem;
-    color: #495565;
-    line-height: 2rem;
+    font-size: var(--text-lg, 1.125rem);
+    color: var(--text-gray, #495565);
+    line-height: var(--text-lg-line-height, 1.75rem);
     margin-bottom: 3rem;
     text-wrap: balance;
 }
@@ -24,7 +24,7 @@ body {
 /* md 48rem (768px) */
 @media (min-width: 48rem) {
     #whatisincluded h1 {
-        font-size: 3rem;
+        font-size: var(--text-5xl, 3rem);
         margin-inline: auto;
         max-width: 42rem;
         text-align: center;
@@ -35,4 +35,11 @@ body {
         max-width: 56rem;
         text-align: center;
     }
+}
+
+.section {
+    margin-inline: auto;
+    max-width: 80rem;
+    padding: 4rem 1rem;
+    width: 100%;
 }

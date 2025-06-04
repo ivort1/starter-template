@@ -1,18 +1,11 @@
-// Section.js
-import { getPresetSheet } from '../presetStyles.js';
-
 class SectionComponent extends HTMLElement {
   constructor() {
     super();
-    // Attach the shadow DOM
-    this.attachShadow({ mode: 'open' });
+    this.attachShadow({ mode: "open" });
   }
 
   async connectedCallback() {
-    // Load the global preset stylesheet
-    const presetSheet = await getPresetSheet();
 
-    // Create component-specific stylesheet
     const localSheet = new CSSStyleSheet();
     localSheet.replaceSync(`
       .section {
@@ -24,18 +17,18 @@ class SectionComponent extends HTMLElement {
     `);
 
     // Adopt both the preset and local styles into the shadow DOM
-    this.shadowRoot.adoptedStyleSheets = [presetSheet, localSheet];
+    this.shadowRoot.adoptedStyleSheets = [localSheet];
 
     // Create the component structure
-    const container = document.createElement('section');
-    container.classList.add('section');
+    const container = document.createElement("section");
+    container.classList.add("section");
 
     // Create and attach a slot for any child content
-    const slot = document.createElement('slot');
+    const slot = document.createElement("slot");
     container.appendChild(slot);
 
     this.shadowRoot.appendChild(container);
   }
 }
 
-customElements.define('section-component', SectionComponent);
+customElements.define("section-component", SectionComponent);

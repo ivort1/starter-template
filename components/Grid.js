@@ -32,7 +32,7 @@ class GridComponent extends HTMLElement {
     const localSheet = new CSSStyleSheet();
     localSheet.replaceSync(`
       .grid {
-          width: 100%;
+          width: var(--max-w-full, 100%);
 
           display: grid;
           grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -48,15 +48,15 @@ class GridComponent extends HTMLElement {
       }
 
       h3 {
-        font-size: 1.125rem;
-        font-weight: 600;
+        font-size: var(--text-lg, 1.125rem);
+        font-weight: var(--font-semibold, 600);
         color: #121212;
         line-height: 2rem;
       }
 
       p {
-        font-size: 1.125rem;
-        color: #495565;
+        font-size: var(--text-lg, 1.125rem);
+        color: var(--text-gray, #4B5563);
         line-height: 2rem;
       }
 
