@@ -21,7 +21,16 @@
           features for engaging your audience, creating customer loyalty, and driving sales.
         </p>
 
-        <div class="services grid"></div>
+        <div class="services grid">
+
+          <div class="card grid-col" id="services--card-single">
+            <div>
+              <p class="service">Looking to Grow Your Business?</p>
+              <p class="description">Elevate your online presence with custom web solutions engineered to drive traffic. Visit our Services page for full details and pricing.</p>
+            </div>
+            <a href="/services" class="href">Our Services →</a>
+          </div>
+        </div>
       </section>
 
         <!-- WHY US -->
@@ -74,7 +83,7 @@
             </div>
 
             <h1 class="section-subheader">Pricing</h1>
-            <p class="section-header">Choose the right plan for you</p>
+            <p class="section-header">Choose the Right Plan For You</p>
             <p class="section-description">
               Choose an affordable plan that’s packed with the best
               features for engaging your audience, creating customer loyalty, and driving sales.
@@ -149,6 +158,8 @@
   window.addEventListener("DOMContentLoaded", () => {
     // SERVICES
     const servicesSection = document.querySelector(".services");
+    const singleCard = document.getElementById("services--card-single");
+
     services.forEach(({ icon, service, description, href }) => {
       const card = document.createElement("div");
       card.classList.add("card");
@@ -162,7 +173,7 @@
         <a class="href" href=${href}>Get started →</a>
       `;
 
-      servicesSection.appendChild(card);
+      singleCard.insertAdjacentElement("beforebegin", card);
     })
 
     // WHY US?

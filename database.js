@@ -15,42 +15,41 @@ import circularQuestionMark from "./assets/icons/circularQuestionMark.js";
 
 // SERVICES
 export const services = [
-    {
-        icon: `${webDesign}`,
-        service: "Website Design",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sint quibusdam officiis reiciendis minima corporis aperiam quod quam facere.",
-        href: "/"
-    },
-    {
-        icon: `${laptopCode}`,
-        service: "Website Development",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sint quibusdam officiis reiciendis minima corporis aperiam quod quam facere.",
-        href: "/"
-    },
-    {
-        icon: `${logoDesign}`,
-        service: "Logo Design",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sint quibusdam officiis reiciendis minima corporis aperiam quod quam facere.",
-        href: "/"
-    },
-    {
-        icon: `${seo}`,
-        service: "SEO Optimization",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sint quibusdam officiis reiciendis minima corporis aperiam quod quam facere.",
-        href: "/"
-    },
-    {
-        icon: `${copywriting}`,
-        service: "Content & Copywriting",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sint quibusdam officiis reiciendis minima corporis aperiam quod quam facere.",
-        href: "/"
-    },
-    {
-        icon: `${circularQuestionMark}`,
-        service: "Something Else?",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sint quibusdam officiis reiciendis minima corporis aperiam quod quam facere.",
-        href: "/"
-    }
+  {
+    icon: `${webDesign}`,
+    service: "Website Design",
+    description:
+      "Custom, responsive designs that capture your brand and convert visitors into customers.",
+    href: "/",
+  },
+  {
+    icon: `${laptopCode}`,
+    service: "Website Development",
+    description:
+      "Fast, secure static sites built with modern code to deliver peak performance and a seamless user experience.",
+    href: "/",
+  },
+  {
+    icon: `${logoDesign}`,
+    service: "Logo Design",
+    description:
+      "Distinctive logo designs that boost brand recognition and create a memorable identity.",
+    href: "/",
+  },
+  {
+    icon: `${seo}`,
+    service: "SEO Optimization",
+    description:
+      "Strategic on-page SEO enhancements designed to boost your small business’s search rankings and drive organic traffic.",
+    href: "/",
+  },
+  {
+    icon: `${copywriting}`,
+    service: "Content & Copywriting",
+    description:
+      "Persuasive, SEO-friendly content that engages your audience and elevates your online presence.",
+    href: "/",
+  },
 ];
 
 // WHY US?
