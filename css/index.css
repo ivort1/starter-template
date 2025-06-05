@@ -1,3 +1,112 @@
+.services .card {
+    position: relative;
+    border-radius: 25px;
+    padding: 2rem;
+    text-align: center;
+    color: #FFFFFF;
+    overflow: hidden;
+    background-image: url("/assets/backgrounds/maze-green_dark.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: background-color 0.3s ease-in-out, transform 0.15s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.services .card > * {
+    position: relative;
+    z-index: 2;
+}
+
+.services .card::before {
+    content: "";
+    position: absolute;
+    top: 74px;
+    left: 50%;
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--color-accent);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.services .card:hover {
+    transform: translateY(-3px);
+}
+
+.services .card:hover::before {
+    transform: translate(-50%, -50%) scale(20);
+}
+
+.services .card:hover .service,
+.services .card:hover .description,
+.services .card:hover .href {
+    color: #FFFFFF;
+}
+
+.services .card:hover .icon {
+    background-color: var(--color-accent-hover);
+    box-shadow: 0px 10px 50px 0px #505050;
+}
+
+.services .service {
+    font-size: var(--text-lg);
+    line-height: var(--text-base-line-height, 1.5rem);
+    font-weight: var(--text-semibold, 600);
+    transition: color ease-in-out 0.3s;
+}
+
+.services .description {
+    color: var(--color-gray-dark);
+    font-size: var(--text-base, 1rem);
+    line-height: var(--text-base-line-height, 1.5rem);
+    margin-top: 0.5rem;
+    text-wrap: balance;
+    transition: color ease-in-out 0.3s;
+}
+
+.services .href {
+    color: var(--color-accent);
+    font-size: var(--text-base, 1rem);
+    font-weight: var(--text-semibold, 600);
+    line-height: var(--text-base-line-height, 1.5rem);
+    transition: color ease-in-out 0.3s;
+}
+
+.services .icon {
+    background-color: var(--color-accent);
+    border-radius: 50%;
+    padding: 1rem;
+    transition: background-color ease-in-out 0.3s, box-shadow ease-in-out 0.3s;
+}
+
+.services svg {
+    min-width: 3rem;
+    width: 3rem;
+}
+
+/* sm 40rem 640px */
+@media (min-width: 40rem) {
+    .services.grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+}
+
+/* md 48rem (768px) */
+@media (min-width: 48rem) {
+    .services.grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+/* ----- END: SERVICES ----- */
+
 /* ----- WHY US -----*/
 #why-us-features {
     display: flex;
@@ -40,7 +149,9 @@
 
 .why-us img {
     border-radius: 25px;
-    margin: auto 0;
+    margin: auto auto;
+    max-width: var(--max-w-md, 28rem);
+    width: 100%;
 }
 
 /* md 48rem (768px) */
@@ -72,114 +183,6 @@
     }
 }
 /* ----- END: WHY US -----*/
-
-/* ----- SERVICES ----- */
-.services .wallet {
-  --bg-color: var(--color-accent);
-  --bg-color-light: var(--color-accent-hover);
-  --text-color-hover: #fff;
-  --box-shadow-color: rgba(206, 178, 252, 0.48);
-}
-
-.services .card {
-    background: url(/assets/backgrounds/maze-green_dark.svg);
-  width: 220px;
-  height: 321px;
-  border-radius: 25px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  box-shadow: 0 14px 26px rgba(0,0,0,0.04);
-  transition: all 0.3s ease-out;
-  text-decoration: none;
-}
-
-.services .card:hover {
-  transform: translateY(-5px) scale(1.005) translateZ(0);
-  box-shadow: 0 24px 36px rgba(0,0,0,0.11),
-    0 24px 46px var(--box-shadow-color);
-}
-
-.services .card:hover .overlay {
-  transform: scale(4) translateZ(0);
-}
-
-.services .card:hover .circle {
-  border-color: var(--bg-color-light);
-  background: var(--bg-color);
-}
-
-.services .card:hover .circle:after {
-  background: var(--bg-color-light);
-}
-
-.services .card:hover p {
-  color: var(--text-color-hover);
-}
-
-.services .card:active {
-  transform: scale(1) translateZ(0);
-  box-shadow: 0 15px 24px rgba(0,0,0,0.11),
-    0 15px 24px var(--box-shadow-color);
-}
-
-.services .card p {
-  font-size: 17px;
-  color: var(--color-gray-dark);
-  margin-top: 30px;
-  z-index: 1000;
-  transition: color 0.3s ease-out;
-}
-
-.services .circle {
-  width: 131px;
-  height: 131px;
-  border-radius: 50%;
-  background: #fff;
-  border: 3px solid var(--bg-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 1;
-  transition: all 0.3s ease-out;
-}
-
-.services .circle:after {
-  content: "";
-  width: 118px;
-  height: 118px;
-  display: block;
-  position: absolute;
-  background: var(--bg-color);
-  border-radius: 50%;
-  transition: opacity 0.3s ease-out;
-}
-
-.services .circle svg {
-    color: #FFFFFF;
-  z-index: 10000;
-  transform: translateZ(0);
-  min-width: 3rem;
-  width: 3rem;
-}
-
-.services .overlay {
-  width: 118px;
-  position: absolute;
-  height: 118px;
-  border-radius: 50%;
-  background: var(--bg-color);
-  top: 70px;
-  left: 50px;
-  z-index: 0;
-  transition: transform 0.3s ease-out;
-}
-
-/* ----- END: SERVICES ----- */
 
 /* ----- CTA ----- */
 .cta {

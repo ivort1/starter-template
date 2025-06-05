@@ -5,7 +5,53 @@ import server from "./assets/icons/server.js";
 import worldWideWeb from "./assets/icons/worldWideWeb.js";
 import googleBusiness from "./assets/icons/googleBusiness.js";
 import googleAnalytics from "./assets/icons/googleAnalytics.js";
-import digitalPayments from "./assets/icons/digitalPayments.js";
+import dollar from "./assets/icons/dollar.js";
+import webDesign from "./assets/icons/webDesign.js";
+import laptopCode from "./assets/icons/laptopCode.js";
+import logoDesign from "./assets/icons/logoDesign.js";
+import seo from "./assets/icons/seo.js";
+import copywriting from "./assets/icons/copywriting.js";
+import circularQuestionMark from "./assets/icons/circularQuestionMark.js";
+
+// SERVICES
+export const services = [
+    {
+        icon: `${webDesign}`,
+        service: "Website Design",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sint quibusdam officiis reiciendis minima corporis aperiam quod quam facere.",
+        href: "/"
+    },
+    {
+        icon: `${laptopCode}`,
+        service: "Website Development",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sint quibusdam officiis reiciendis minima corporis aperiam quod quam facere.",
+        href: "/"
+    },
+    {
+        icon: `${logoDesign}`,
+        service: "Logo Design",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sint quibusdam officiis reiciendis minima corporis aperiam quod quam facere.",
+        href: "/"
+    },
+    {
+        icon: `${seo}`,
+        service: "SEO Optimization",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sint quibusdam officiis reiciendis minima corporis aperiam quod quam facere.",
+        href: "/"
+    },
+    {
+        icon: `${copywriting}`,
+        service: "Content & Copywriting",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sint quibusdam officiis reiciendis minima corporis aperiam quod quam facere.",
+        href: "/"
+    },
+    {
+        icon: `${circularQuestionMark}`,
+        service: "Something Else?",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sint quibusdam officiis reiciendis minima corporis aperiam quod quam facere.",
+        href: "/"
+    }
+];
 
 // WHY US?
 export const whyUs = [
@@ -61,7 +107,7 @@ export const features = [
       "description": "Gain actionable insights with integrated Google Analytics, helping you track user behavior, optimize performance, and drive conversions."
     },
     {
-      "icon": `${digitalPayments}`,
+      "icon": `${dollar}`,
       "feature": "Accept Digital Payments",
       "description": "Streamline your online transactions with Stripe or Square Up and provide a frictionless and efficient e-commerce payment experience for your customers."
     }

@@ -21,20 +21,8 @@
           features for engaging your audience, creating customer loyalty, and driving sales.
         </p>
 
-        <div class="services">
-          <a class="card wallet" href="#">
-            <div class="overlay"></div>
-            <div class="circle">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="fi_3573187" fill="currentColor">
-                  <path d="m1.293 12.707 4 4a1 1 0 1 0 1.414-1.414l-3.293-3.293 3.293-3.293a1 1 0 1 0 -1.414-1.414l-4 4a1 1 0 0 0 0 1.414z"></path>
-                  <path d="m18.707 7.293a1 1 0 1 0 -1.414 1.414l3.293 3.293-3.293 3.293a1 1 0 1 0 1.414 1.414l4-4a1 1 0 0 0 0-1.414z"></path>
-                  <path d="m13.039 4.726-4 14a1 1 0 0 0 .686 1.236 1.053 1.053 0 0 0 .275.038 1 1 0 0 0 .961-.726l4-14a1 1 0 1 0 -1.922-.548z"></path>
-              </svg>
-            </div>
-            <p>Wallet</p>
-          </a>
-        </div>
-        </section>
+        <div class="services grid"></div>
+      </section>
 
         <!-- WHY US -->
         <section id="why-us-section">
@@ -56,7 +44,7 @@
             </div>
 
             <div class="grid-col">
-              <img src="./assets/images/customer_support.avif" alt="customer support" />
+              <img src="./assets/images/customer_support.webp" alt="customer support" />
             </div>
           </div>
         </section>
@@ -153,12 +141,30 @@
 </body>
 
 <script type="module">
-  import { whyUs, features } from "./database.js";
+  import { services, whyUs, features } from "./database.js";
   import checkmark from "./assets/icons/checkmark.js";
   import diamondCheckmark from "./assets/icons/diamondCheckmark.js";
   import dashedArrow from "./assets/icons/dashedArrow.js";
 
   window.addEventListener("DOMContentLoaded", () => {
+    // SERVICES
+    const servicesSection = document.querySelector(".services");
+    services.forEach(({ icon, service, description, href }) => {
+      const card = document.createElement("div");
+      card.classList.add("card");
+      card.classList.add("grid-col");
+      card.innerHTML = `
+        <div class="icon">${icon}</div>
+        <div>
+          <p class="service">${service}</p>
+          <p class="description">${description}</p>
+        </div>
+        <a class="href" href=${href}>Get started →</a>
+      `;
+
+      servicesSection.appendChild(card);
+    })
+
     // WHY US?
     const whyUsFeatures = document.getElementById("why-us-features");
     whyUs.forEach(({ feature, description }) => {
