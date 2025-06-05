@@ -6,24 +6,23 @@ import worldWideWeb from "./assets/icons/worldWideWeb.js";
 import googleBusiness from "./assets/icons/googleBusiness.js";
 import googleAnalytics from "./assets/icons/googleAnalytics.js";
 import dollar from "./assets/icons/dollar.js";
-import webDesign from "./assets/icons/webDesign.js";
-import laptopCode from "./assets/icons/laptopCode.js";
+import designTools from "./assets/icons/designTools.js";
+import codeWindow from "./assets/icons/codeWindow.js";
 import logoDesign from "./assets/icons/logoDesign.js";
 import seo from "./assets/icons/seo.js";
-import copywriting from "./assets/icons/copywriting.js";
-import circularQuestionMark from "./assets/icons/circularQuestionMark.js";
+import typewriter from "./assets/icons/typewriter.js";
 
 // SERVICES
 export const services = [
   {
-    icon: `${webDesign}`,
+    icon: `${designTools}`,
     service: "Website Design",
     description:
       "Custom, responsive designs that capture your brand and convert visitors into customers.",
     href: "/",
   },
   {
-    icon: `${laptopCode}`,
+    icon: `${codeWindow}`,
     service: "Website Development",
     description:
       "Fast, secure static sites built with modern code to deliver peak performance and a seamless user experience.",
@@ -44,7 +43,7 @@ export const services = [
     href: "/",
   },
   {
-    icon: `${copywriting}`,
+    icon: `${typewriter}`,
     service: "Content & Copywriting",
     description:
       "Persuasive, SEO-friendly content that engages your audience and elevates your online presence.",
