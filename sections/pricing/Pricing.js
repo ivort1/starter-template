@@ -85,8 +85,8 @@ class PricingSection extends HTMLElement {
         #card--monthly {
             background-color: #121212;
             color: #FFFFFF;
-            height: 105%;
-            padding: 7rem 3rem;
+            height: 115%;
+            padding: 3rem;
             position: relative;
         }
 
@@ -166,6 +166,11 @@ class PricingSection extends HTMLElement {
 
             #card--annually {
                 border-radius: 1.5rem 0 0 1.5rem;
+            }
+
+            #card--annually .pricing--subscription-type {    
+                flex-direction: row;
+                gap: 1rem;
             }
         }
     `);
