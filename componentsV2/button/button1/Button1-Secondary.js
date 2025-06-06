@@ -1,6 +1,6 @@
 import { getPresetCss } from "../../../js/presetCss.js";
 
-class Button1Primary extends HTMLElement {
+class Button1Secondary extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
@@ -18,19 +18,19 @@ class Button1Primary extends HTMLElement {
         }
 
         a {
-          background-color: var(--bg-color, #252525);
+          background-color: var(--bg-color, #404040);
           border: none;
           border-radius: 8px;
-          color: ghostwhite;
+          color: var(--color-accent);
           cursor: pointer;
           display: block;
-          font-size: var(--text-xl, 1.25rem);
+          font-size: var(--font-size, 1.25rem);
           font-weight: var(--text-semibold, 600);
           line-height: var(--text-xl-line-height, 1.75rem);
           margin: 0;
-          outline: none;
+          outline: var(--color-accent) solid 1px;
           overflow: hidden;
-          padding: var(--padding, 0.75rem 1rem);
+          padding: 0.75rem 1rem;
           position: relative;
         }
 
@@ -61,7 +61,7 @@ class Button1Primary extends HTMLElement {
         }
 
         a::before {
-          background: var(--bg-color-before, #404040);
+          background: var(--bg-color-before, #FFFFFF);
           content: "";
           left: -10%;
           transform: skew(30deg);
@@ -88,9 +88,9 @@ class Button1Primary extends HTMLElement {
 
       this.shadowRoot.appendChild(button);
     } catch (error) {
-      console.error("Error initializing Button1Primary:", error);
+      console.error("Error initializing Button1Secondary:", error);
     }
   }
 }
 
-customElements.define("button1-primary", Button1Primary);
+customElements.define("button1-secondary", Button1Secondary);

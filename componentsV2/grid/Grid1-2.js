@@ -16,14 +16,14 @@ class Grid12 extends HTMLElement {
 
             display: grid;
             grid-template-columns: repeat(1, minmax(0, 1fr));
-            gap: 3rem;
+            gap: var(--gap, 3rem);
         }
 
         /* md 48rem (768px) */
         @media (min-width: 48rem) {
             .grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: 2rem;
+                gap: var(--md-gap, 2rem);
             }
         }
     `);
@@ -32,6 +32,7 @@ class Grid12 extends HTMLElement {
 
     const grid = document.createElement("div");
     grid.classList.add("grid");
+    grid.setAttribute("part", "grid");
 
     const slot = document.createElement("slot");
     grid.appendChild(slot);

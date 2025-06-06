@@ -1,4 +1,5 @@
 import { getPresetCss } from "../../js/presetCss.js";
+import "../../componentsV2/pill/Pill.js";
 
 class PricingSection extends HTMLElement {
   constructor() {
@@ -6,7 +7,11 @@ class PricingSection extends HTMLElement {
     this.attachShadow({ mode: "open" });
   }
 
-  async connectedCallback() {
+  connectedCallback() {
+    this.init();
+  }
+
+  async init() {
     const presetCss = await getPresetCss();
 
     const css = new CSSStyleSheet();
@@ -36,6 +41,7 @@ class PricingSection extends HTMLElement {
 
         .card {
             border-radius: 1.5rem;
+            display: block;
             padding: 5rem 3rem;
             width: 100%;
 
@@ -64,67 +70,158 @@ class PricingSection extends HTMLElement {
             gap: 2rem;
         }
 
-        #card--annually .pill {
-            background-color: #cffff2;
+        #card--annually pill-component::part(pill) {
+            background-color: var(--color-accent-light);
             border: 1px solid var(--color-accent);
-            border-radius: 25px;
             color: var(--color-accent);
-            font-size: var(--text-xs);
-            font-weight: var(--text-bold);
-            line-height: var(--text-xs-line-height);
-            padding: 0.5rem 1rem;
+        }
+
+        #card--annually button1-secondary::part(button1) {
+            background-color: var(--color-accent-hover);
+            outline: 0.5px solid var(--color-accent-hover);
+            color: var(--color-accent);
+        }
+
+        #card--monthly {
+            background-color: #121212;
+            color: #FFFFFF;
+            height: 105%;
+            padding: 7rem 3rem;
+            position: relative;
+        }
+
+        #card--monthly pill-component::part(pill) {
+            background-color: var(--color-accent);
+            border: 1px solid var(--color-accent);
+            color: #FFFFFF;
+            position: absolute;
+            top: -1rem;
+            left: 3rem;
+        }
+
+        #card--monthly button1-primary::part(button1) {
+            background-color: var(--color-accent-hover);
+            // outline: 0.5px solid var(--color-accent);
+            color: #FFFFFF;
+        }
+
+        #card--monthly button1-primary::part(button1)::before {
+            background-color: var(--color-accent);
+        }
+
+        #card--monthly .pricing--description,
+        #card--monthly .pricing--per,
+        #card--monthly li {
+            color: var(--color-gray-dark);
+        }
+
+        .pricing--subscription-type {
+            color: var(--color-accent);
+            font-size: var(--text-sm);
+            font-weight: var(--text-semibold);
+            line-height: var(--text-sm-line-height);
+            width: 100%;
+        }
+
+        .pricing--price-amount {
+            font-size: var(--text-5xl);
+            font-weight: var(--text-semibold);
+            line-height: var(--text-5xl-line-height);
+        }
+
+        .pricing--per {
+            font-size: var(--text-base);
+            line-height: var(--text-base-line-height);
+        }
+
+        .pricing ul li:not(:last-child) {
+            margin-bottom: 0.75rem;
+        }
+
+        .pricing li {
+            font-size: var(--text-sm);
+            line-height: var(--text-sm-line-height);
+
+            /* Flexbox */
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 0.5rem;
+        }
+
+        .pricing .icon {
+            color: var(--color-accent);
+            display: inline-block;
+            min-width: 1.5rem;
+            width: 1.5rem;
+        }
+
+        /* md 48rem (768px) */
+        @media (min-width: 48rem) {
+            grid-1-2::part(grid) {
+                align-items: center;
+                gap: 0;
+            }
+
+            #card--annually {
+                border-radius: 1.5rem 0 0 1.5rem;
+            }
         }
     `);
 
     this.shadowRoot.adoptedStyleSheets = [presetCss, css];
 
-    const pricingSection = document.createElement("section-component");
-    pricingSection.innerHTML = `
-        <div class="pricing">
-            <div class="gradient-wrapper" aria-hidden="true">
-                <div class="gradient-inner"></div>
+    const template = document.createElement("template");
+    template.innerHTML = `
+        <section-component>
+            <div class="pricing">
+                <div class="gradient-wrapper" aria-hidden="true">
+                    <div class="gradient-inner"></div>
+                </div>
+
+                <section-header><slot name="header"></slot></section-header>
+                <section-subheader><slot name="subheader"></slot></section-subheader>
+                <section-paragraph><slot name="description"></slot></section-paragraph>
+
+                <grid-1-2>
+                    <div class="card" id="card--annually">
+                        <div>
+                        <p class="pricing--subscription-type">
+                            <slot name="annual-label"></slot>
+                            <pill-component><slot name="annual-pill"></slot></pill-component>
+                        </p>
+                        <p class="pricing--price">
+                            <span class="pricing--price-amount"><slot name="annual-price-amount"></slot></span>
+                            <span class="pricing--per"><slot name="annual-per">/year</slot></span>
+                        </p>
+                        </div>
+                        <p class="pricing--description"><slot name="annual-description"></slot></p>
+                        <ul class="pricing--features text-base"><slot name="annual-features"></slot></ul>
+                        <button1-secondary><slot name="annual-button"></slot></button1-secondary>
+                    </div>
+
+                    <div class="card" id="card--monthly">
+                        <pill-component><slot name="monthly-pill"></slot></pill-component>
+                        <div>
+                            <p class="pricing--subscription-type"><slot name="monthly-label"></slot></p>
+                            <p class="pricing--price">
+                                <span class="pricing--price-amount"><slot name="monthly-price-amount"></slot></span>
+                                <span class="pricing--per"><slot name="monthly-per">/month</slot></span>
+                            </p>
+                        </div>
+                        <p class="pricing--per"><slot name="monthly-description"></slot></p>
+                        <ul class="pricing--features">
+                            <slot name="monthly-features"></slot>
+                        </ul>
+                        <button1-primary><slot name="monthly-button"></slot></button1-primary>
+                    </div>
+                </grid-1-2>
             </div>
-
-            <section-header>Pricing</section-header>
-            <section-subheader>Choose the Right Plan For You</section-subheader>
-            <section-paragraph>
-                Choose an affordable plan that’s packed with the best features for engaging your audience, creating
-                customer loyalty, and driving sales. 
-            </section-paragraph>
-        
-            <grid-1-2>
-                <div class="card" id="card--annually">
-                    <div>
-                        <h3 class="pricing--subscription-type">Annual Subscription <span class="pill">Save $600!</span></h3>
-                        <p class="pricing--price"><span class="pricing--price-amount">$3000</span> <span class="pricing--per">/year</span></p>
-                    </div>
-
-                    <p class="pricing--description">The best value – equates to $250 per month.</p>
-                    <ul class="pricing--features text-base" id="pricing--annual-features"></ul>
-
-                    <button1-primary>
-                        TEST!!!!!
-                    </button1-primary>
-                </div>
-
-                <div class="card" id="card--monthly">
-                    <span class="pill">Popular 🔥</span>
-                    <div>
-                        <h3 class="pricing--subscription-type">Monthly Subscription</h3>
-                        <p class="pricing--price"><span class="pricing--price-amount">$300</span> <span class="pricing--per">/month</span></p>
-                    </div>
-                    <p class="pricing--per">Our best-selling plan.</p>
-                    <ul class="pricing--features text-base" id="pricing--monthly-features"></ul>
-
-                    <button1-primary>
-                        TEST!!!!!
-                    </button1-primary>
-                </div>
-            </grid-1-2>
-        </div>
+        </section-component>
     `;
-    
-    this.shadowRoot.appendChild(pricingSection);
+
+    this.shadowRoot.appendChild(template.content.cloneNode(true));
   }
 }
 
