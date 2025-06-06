@@ -220,7 +220,7 @@ section {
     margin-inline: auto;
     max-width: var(--max-w-4xl, 56rem);
     padding: 2rem 1rem;
-    width: var(--max-w-full, 100%)
+    width: 100%;
 }
 
 .section-subheader {
