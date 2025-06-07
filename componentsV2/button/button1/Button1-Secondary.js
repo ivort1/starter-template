@@ -61,7 +61,7 @@ class Button1Secondary extends HTMLElement {
         }
 
         a::before {
-          background: var(--bg-color-before, #FFFFFF);
+          background-color: var(--bg-color-before, #FFFFFF);
           content: "";
           left: -10%;
           transform: skew(30deg);

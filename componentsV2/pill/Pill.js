@@ -17,10 +17,10 @@ class PillComponent extends HTMLElement {
           border: var(--border, 1px solid rgb(190, 190, 190));
           border-radius: var(--border-radius, 25px);
           color: var(--color, rgb(190, 190, 190));
-          font-size: var(--font-size, var(--text-sm));
+          font-size: var(--font-size, var(--text-xs));
           font-weight: var(--font-weight, var(--text-bold));
-          line-height: var(--line-height, var(--text-sm-line-height));
-          padding: var(--padding, 0.5rem 1rem);
+          line-height: var(--line-height, var(--text-xs-line-height));
+          padding: var(--padding, 3px 10px);
         }
       `);
 

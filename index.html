@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/css/preset.css">
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/index2.css">
 </head>
 <body>
     <main>
@@ -23,10 +24,9 @@
         <span slot="annual-price-amount">$2100</span>
         <span slot="annual-per">/year</span>
         <span slot="annual-description">The best value – equates to $175 per month.</span>
-        <ul slot="annual-features">
-          <li>Feature 1</li>
-          <li><icon-check></icon-check> Feature 2</li>
-        </ul>
+        <span slot="annual-features">
+          <ul class="pricing--features" id="pricing--annual-features"></ul>
+        </span>
         <span slot="annual-button">Get started today</span>
 
         <span slot="monthly-pill">Popular 🔥</span>
@@ -34,11 +34,10 @@
         <span slot="monthly-price-amount">$200</span>
         <span slot="monthly-per">/month</span>
         <span slot="monthly-description">Our best-selling plan.</span>
-        <ul slot="monthly-features">
-          <li><icon-check></icon-check> Feature A</li>
-          <li><icon-check></icon-check> Feature B</li>
-          <li><icon-check></icon-check> Feature B</li>
-        </ul>
+        <span slot="monthly-features">
+          <ul class="pricing--features" id="pricing--monthly-features"></ul>
+        </span>
+        
         <span slot="monthly-button">Get started today</span>
       </pricing-section>
 
@@ -225,15 +224,15 @@
     // PRICING
     const pricingAnnualFeatures = document.getElementById("pricing--annual-features");
     pricingAnnualFeatures.innerHTML = `
-      <li><span class="icon">${checkmark}</span> One-time annual payment</li>
-      <li><span class="icon">${checkmark}</span> Cancel anytime after 12 months</li>
+      <li>${checkmark} One-time annual payment</li>
+      <li>${checkmark} Cancel anytime after 12 months</li>
     `;
 
     const pricingMonthlyFeatures = document.getElementById("pricing--monthly-features");
     pricingMonthlyFeatures.innerHTML = `
-      <li><span class="icon">${checkmark}</span> No upfront fees with $0 down</li>
-      <li><span class="icon">${checkmark}</span> Cancel anytime after 12 months</li>
-      <li><span class="icon">${checkmark}</span> Month-to-month afterwards</li>
+      <li>${checkmark} No upfront fees with $0 down</li>
+      <li>${checkmark} Cancel anytime after 12 months</li>
+      <li>${checkmark} Month-to-month afterwards</li>
     `;
 
     const dashedArrowIcon = document.getElementById("dashed-arrow-icon");

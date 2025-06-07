@@ -1,4 +1,5 @@
 import { getPresetCss } from "../../js/presetCss.js";
+import { getIndexCss } from "../../js/indexCss.js";
 import "../../componentsV2/pill/Pill.js";
 
 class PricingSection extends HTMLElement {
@@ -13,6 +14,7 @@ class PricingSection extends HTMLElement {
 
   async init() {
     const presetCss = await getPresetCss();
+    const indexCss = await getIndexCss();
 
     const css = new CSSStyleSheet();
     css.replaceSync(`
@@ -93,7 +95,10 @@ class PricingSection extends HTMLElement {
         #card--monthly pill-component::part(pill) {
             background-color: var(--color-accent);
             border: 1px solid var(--color-accent);
+            border-radius: 8px;
             color: #FFFFFF;
+            font-size: var(--text-base);
+            padding: 0.5rem 1rem;
             position: absolute;
             top: -1rem;
             left: 3rem;
@@ -134,29 +139,6 @@ class PricingSection extends HTMLElement {
             line-height: var(--text-base-line-height);
         }
 
-        .pricing ul li:not(:last-child) {
-            margin-bottom: 0.75rem;
-        }
-
-        .pricing li {
-            font-size: var(--text-sm);
-            line-height: var(--text-sm-line-height);
-
-            /* Flexbox */
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: flex-start;
-            gap: 0.5rem;
-        }
-
-        .pricing .icon {
-            color: var(--color-accent);
-            display: inline-block;
-            min-width: 1.5rem;
-            width: 1.5rem;
-        }
-
         /* md 48rem (768px) */
         @media (min-width: 48rem) {
             grid-1-2::part(grid) {
@@ -175,7 +157,7 @@ class PricingSection extends HTMLElement {
         }
     `);
 
-    this.shadowRoot.adoptedStyleSheets = [presetCss, css];
+    this.shadowRoot.adoptedStyleSheets = [presetCss, indexCss, css];
 
     const template = document.createElement("template");
     template.innerHTML = `
@@ -202,7 +184,9 @@ class PricingSection extends HTMLElement {
                         </p>
                         </div>
                         <p class="pricing--description"><slot name="annual-description"></slot></p>
-                        <ul class="pricing--features text-base"><slot name="annual-features"></slot></ul>
+                        
+                        <ul class="pricing--features" id="pricing--annual-features"><slot name="annual-features"></slot></ul>
+                        
                         <button1-secondary><slot name="annual-button"></slot></button1-secondary>
                     </div>
 
@@ -216,9 +200,9 @@ class PricingSection extends HTMLElement {
                             </p>
                         </div>
                         <p class="pricing--per"><slot name="monthly-description"></slot></p>
-                        <ul class="pricing--features">
-                            <slot name="monthly-features"></slot>
-                        </ul>
+                        
+                        <slot name="monthly-features"></slot>
+
                         <button1-primary><slot name="monthly-button"></slot></button1-primary>
                     </div>
                 </grid-1-2>

@@ -282,7 +282,7 @@
 #card--annually .pricing--description,
 #card--annually .pricing--per,
 #card--annually li {
-  color: var(--color-gray-light);
+  /* color: var(--color-gray-light); */
 }
 
 #card--annually .pricing--subscription-type {    
