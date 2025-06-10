@@ -103,3 +103,25 @@
     width: 100%;
 }
 /* ----- END: PRICING ----- */
+
+
+/* ----- FOOTER ----- */
+.footer--links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.footer--links a {
+    color: #121212;
+    font-weight: var(--text-semibold);
+    transition: 0.3s;
+}
+
+.footer--links a:hover {
+    color: var(--color-accent);
+}
+/* ----- END: FOOTER ----- */
