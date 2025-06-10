@@ -15,7 +15,7 @@ class SectionComponent extends HTMLElement {
     css.replaceSync(`
       .section {
         margin-inline: auto;
-        max-width: var(--max-w-5xl, 64rem); /* 1024px */
+        max-width: var(--max-width, var(--max-w-5xl, 64rem)); /* 1024px */
         padding: 2rem 1rem;
         width: 100%;
       }
@@ -26,6 +26,7 @@ class SectionComponent extends HTMLElement {
 
     // Create the section container.
     const section = document.createElement("section");
+    section.setAttribute("part", "section");
     section.classList.add("section");
 
     // Create a slot so that any content provided in the light DOM is rendered.

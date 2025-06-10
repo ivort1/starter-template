@@ -35,7 +35,7 @@ class PillComponent extends HTMLElement {
 
       this.shadowRoot.appendChild(pill);
     } catch (error) {
-      console.error("Error initializing PillComponent:", error);
+        console.error("Error initializing PillComponent: ", error);
     }
   }
 }

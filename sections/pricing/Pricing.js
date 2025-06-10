@@ -185,7 +185,7 @@ class PricingSection extends HTMLElement {
                         </div>
                         <p class="pricing--description"><slot name="annual-description"></slot></p>
                         
-                        <ul class="pricing--features" id="pricing--annual-features"><slot name="annual-features"></slot></ul>
+                        <slot name="annual-features"></slot>
                         
                         <button1-secondary><slot name="annual-button"></slot></button1-secondary>
                     </div>
@@ -206,6 +206,8 @@ class PricingSection extends HTMLElement {
                         <button1-primary><slot name="monthly-button"></slot></button1-primary>
                     </div>
                 </grid-1-2>
+
+                <slot name="additional-content"></slot>
             </div>
         </section-component>
     `;

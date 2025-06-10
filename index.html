@@ -13,7 +13,26 @@
 </head>
 <body>
     <main>
-      <!-- HERO -->
+      <!-- SERVICES -->
+      <services-section>
+        <span slot="header">What We Offer</span>
+        <span slot="subheader">We Handle Your Website So You Can Focus on What Matters</span>
+        <span slot="description">
+          Unlock your business’s full potential with our optimized web services—
+          from custom design to lightning-fast static development.
+          We manage your digital presence so you can focus on growing your brand.
+        </span>
+
+        <grid-1-2-3 slot="cards" id="services--cards"></grid-1-2-3>
+      </services-section>
+
+      <features-2-section>
+        
+
+      </features-2-section>
+
+
+      <!-- PRICING -->
       <pricing-section>
         <span slot="header">Pricing</span>
         <span slot="subheader">Choose the Right Plan For You</span>
@@ -37,31 +56,28 @@
         <span slot="monthly-features">
           <ul class="pricing--features" id="pricing--monthly-features"></ul>
         </span>
-        
         <span slot="monthly-button">Get started today</span>
+
+        <span slot="additional-content">
+          <div class="pricing--everything-you-get">
+            <div id="dashed-arrow-icon"></div>
+            <p>Everything you get 🤩✨</p>
+          </div>
+        </spanslot>
       </pricing-section>
 
-      
-      <!-- SERVICES -->
-      <section>
-        <h1 class="section-subheader">What We Offer</h1>
-        <p class="section-header">We Handle Your Website So You Can Focus on What Matters</p>
-        <p class="section-description">
-              Unlock your business’s full potential with our optimized web services—from custom design to lightning-fast static development.
-              We manage your digital presence so you can focus on growing your brand.
-        </p>
+      <!-- FEATURES -->
+       <features-section>
+        <span slot="header">Features</span>
+        <span slot="subheader">What's Included With Your Subscription</span>
+        <span slot="description">
+          Both our monthly and annual subscriptions offer small businesses a complete,
+          hands-off web solution featuring custom design, unlimited revisions, proactive
+          maintenance, secure hosting, and SEO optimization.
+        </span>
 
-        <div class="services grid">
-
-          <div class="card grid-col" id="services--card-single">
-            <div>
-              <p class="service">Looking to Grow Your Business?</p>
-              <p class="description">Elevate your online presence with custom web solutions engineered to drive traffic. Visit our Services page for full details and pricing.</p>
-            </div>
-            <a href="/services" class="href">Our Services →</a>
-          </div>
-        </div>
-      </section>
+        <grid-1-2 slot="cards" id="features--cards"></grid-1-2>
+       </features-section>
 
         <!-- WHY US -->
         <section id="why-us-section">
@@ -104,78 +120,6 @@
             </a>
           </div>
         </section>
-
-        <!-- PRICING -->
-        <section>
-          <div class="pricing">
-            <div class="gradient-wrapper" aria-hidden="true">
-              <div class="gradient-inner"></div>
-            </div>
-
-            <h1 class="section-subheader">Pricing</h1>
-            <p class="section-header">Choose the Right Plan For You</p>
-            <p class="section-description">
-              Choose an affordable plan that’s packed with the best
-              features for engaging your audience, creating customer loyalty, and driving sales.
-            </p>
-          
-            <div class="grid">
-                <div class="grid-col">
-                    <div class="card" id="card--annually">
-                      <div>
-                        <h3 class="pricing--subscription-type">Annual Subscription <span class="pill">Save $600!</span></h3>
-                        <p class="pricing--price"><span class="pricing--price-amount">$3000</span> <span class="pricing--per">/year</span></p>
-                      </div>
-
-                      <p class="pricing--description">The best value – equates to $250 per month.</p>
-                      <ul class="pricing--features text-base" id="pricing--annual-features"></ul>
-
-                      <a href="" class="button-1">
-                          <span class="button-1-content">
-                              Get started today
-                          </span>
-                      </a>
-                    </div>
-                </div>
-
-                <div class="grid-col">
-                  <div class="card" id="card--monthly">
-                    <span class="pill">Popular 🔥</span>
-                    <div>
-                      <h3 class="pricing--subscription-type">Monthly Subscription</h3>
-                      <p class="pricing--price"><span class="pricing--price-amount">$300</span> <span class="pricing--per">/month</span></p>
-                    </div>
-                    <p class="pricing--per">Our best-selling plan.</p>
-                    <ul class="pricing--features text-base" id="pricing--monthly-features"></ul>
-
-                    <a href="" class="button-1">
-                        <span class="button-1-content">
-                            Get started today
-                        </span>
-                    </a>
-                  </div>
-                </div>
-            </div>
-          </div>
-
-          <div class="pricing--everything-you-get">
-            <div id="dashed-arrow-icon"></div>
-            <p>Everything you get 🤩✨</p>
-          </div>
-        </section>
-
-        <!-- FEATURES -->
-        <section>
-          <h1 class="section-subheader">Features</h1>
-          <p class="section-header">What’s Included With Your Subscription</p>
-          <p class="section-description">
-              Both our monthly and annual subscriptions offer small businesses a complete,
-              hands-off web solution featuring custom design, unlimited revisions, proactive
-              maintenance, secure hosting, and SEO optimization.
-          </p>
-          <div class="features grid"></div>
-      </section>
-
     </main>
 </body>
 
@@ -187,24 +131,77 @@
 
   window.addEventListener("DOMContentLoaded", () => {
     // SERVICES
-    const servicesSection = document.querySelector(".services");
-    const singleCard = document.getElementById("services--card-single");
+    const servicesCards = document.getElementById("services--cards");
 
     services.forEach(({ icon, service, description, href }) => {
-      const card = document.createElement("div");
-      card.classList.add("card");
-      card.classList.add("grid-col");
-      card.innerHTML = `
-        <div class="icon">${icon}</div>
-        <div>
-          <p class="service">${service}</p>
-          <p class="description">${description}</p>
-        </div>
-        <a class="href" href=${href}>Get started →</a>
-      `;
+      const card = document.createElement("card-component");
+      card.setAttribute("href", href);
 
-      singleCard.insertAdjacentElement("beforebegin", card);
-    })
+      const iconSlot = document.createElement("span");
+      iconSlot.setAttribute("slot", "icon");
+      iconSlot.innerHTML = icon;
+
+      const serviceSlot = document.createElement("span");
+      serviceSlot.setAttribute("slot", "service");
+      serviceSlot.textContent = service;
+
+      const descriptionSlot = document.createElement("span");
+      descriptionSlot.setAttribute("slot", "description");
+      descriptionSlot.textContent = description;
+
+      card.appendChild(iconSlot);
+      card.appendChild(serviceSlot);
+      card.appendChild(descriptionSlot);
+
+      servicesCards.appendChild(card);
+
+    });
+    
+    const singleCard = document.createElement("card-component");
+    singleCard.setAttribute("href", "/");
+
+    const serviceSlot = document.createElement("span");
+    serviceSlot.setAttribute("slot", "service");
+    serviceSlot.textContent = "Looking to Grow Your Business?";
+
+    const descriptionSlot = document.createElement("span");
+    descriptionSlot.setAttribute("slot", "description");
+    descriptionSlot.textContent = "Elevate your online presence with custom web solutions engineered to drive traffic. Visit our Services page for full details and pricing.";
+
+    const linkSlot = document.createElement("span");
+    linkSlot.setAttribute("slot", "link");
+    linkSlot.textContent = "Our services →";
+
+    singleCard.style="--justify-content:center;";
+    singleCard.appendChild(serviceSlot);
+    singleCard.appendChild(descriptionSlot);
+    singleCard.appendChild(linkSlot);
+
+    servicesCards.appendChild(singleCard);
+
+    // FEATURES
+    const featuresCards = document.getElementById("features--cards");
+    features.forEach(({ icon, feature, description}) => {
+      const card = document.createElement("card-2-component");
+      
+      const iconSlot = document.createElement("span");
+      iconSlot.setAttribute("slot", "icon");
+      iconSlot.innerHTML = icon;
+
+      const featureSlot = document.createElement("span");
+      featureSlot.setAttribute("slot", "feature");
+      featureSlot.textContent = feature;
+
+      const descriptionSlot = document.createElement("span");
+      descriptionSlot.setAttribute("slot", "description");
+      descriptionSlot.textContent = description;
+
+      card.appendChild(iconSlot);
+      card.appendChild(featureSlot);
+      card.appendChild(descriptionSlot);
+
+      featuresCards.appendChild(card);
+    });
 
     // WHY US?
     const whyUsFeatures = document.getElementById("why-us-features");
@@ -237,23 +234,6 @@
 
     const dashedArrowIcon = document.getElementById("dashed-arrow-icon");
     dashedArrowIcon.innerHTML = dashedArrow;
-
-    // FEATURES
-    const featuresSectionGrid = document.querySelector(".features");
-
-    features.forEach(({ icon, feature, description}) => {
-      const gridCol = document.createElement("div");
-      gridCol.className = "grid-col";
-      gridCol.innerHTML = `
-        <div class="icon">${icon}</div>
-
-        <div>
-          <h3>${feature}</h3>
-          <p>${description}</p>
-        </div>
-      `;
-      featuresSectionGrid.appendChild(gridCol);
-    });
   });
 
   
@@ -264,11 +244,16 @@
 <script type="module" src="./componentsV2/section/SectionParagraph.js"></script>
 
 <script type="module" src="./componentsV2/grid/Grid1-2.js"></script>
+<script type="module" src="./componentsV2/grid/Grid1-2-3.js"></script>
 <script type="module" src="./componentsV2/grid/grid-col/GridCol.js"></script>
 
 <script type="module" src="./componentsV2/button/button1/Button1-Primary.js"></script>
 <script type="module" src="./componentsV2/button/button1/Button1-Secondary.js"></script>
 
 
+<script type="module" src="./sections/services/Services.js"></script>
 <script type="module" src="./sections/pricing/Pricing.js"></script>
+<script type="module" src="./sections/features/Features.js"></script>
+<script type="module" src="./componentsV2/card/Card.js"></script>
+<script type="module" src="./componentsV2/card/Card2.js"></script>
 </html>
