@@ -35,13 +35,14 @@ class SectionSubheader extends HTMLElement {
 
     this.shadowRoot.adoptedStyleSheets = [presetCss, css];
 
-    const section = document.createElement("p");
-    section.classList.add("section-subheader");
+    const sectionSubheader = document.createElement("p");
+    sectionSubheader.setAttribute("part", "section-subheader");
+    sectionSubheader.classList.add("section-subheader");
 
     const slot = document.createElement("slot");
-    section.appendChild(slot);
+    sectionSubheader.appendChild(slot);
 
-    this.shadowRoot.appendChild(section);
+    this.shadowRoot.appendChild(sectionSubheader);
   }
 }
 

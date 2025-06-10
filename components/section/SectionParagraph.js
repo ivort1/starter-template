@@ -33,13 +33,14 @@ class SectionParagraph extends HTMLElement {
 
     this.shadowRoot.adoptedStyleSheets = [presetCss, css];
 
-    const section = document.createElement("p");
-    section.classList.add("section-paragraph");
+    const sectionParagraph = document.createElement("p");
+    sectionParagraph.setAttribute("part", "section-paragraph");
+    sectionParagraph.classList.add("section-paragraph");
 
     const slot = document.createElement("slot");
-    section.appendChild(slot);
+    sectionParagraph.appendChild(slot);
 
-    this.shadowRoot.appendChild(section);
+    this.shadowRoot.appendChild(sectionParagraph);
   }
 }
 

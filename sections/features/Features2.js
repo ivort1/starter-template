@@ -18,6 +18,17 @@ class Features2Section extends HTMLElement {
     
         const css = new CSSStyleSheet();
         css.replaceSync(`
+          section-header::part(section-header),
+          section-subheader::part(section-subheader),
+          section-paragraph::part(section-paragraph) {
+            text-align: left;
+          }
+
+          .image-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
         `);
     
         this.shadowRoot.adoptedStyleSheets = [presetCss, indexCss, css];
@@ -26,11 +37,17 @@ class Features2Section extends HTMLElement {
         template.innerHTML = `
             <section-component>
               <grid-1-2>
-                <section-header><slot name="header"></slot></section-header>
-                <section-subheader><slot name="subheader"></slot></section-subheader>
-                <section-paragraph><slot name="description"></slot></section-paragraph>
+                <div>
+                  <section-header><slot name="header"></slot></section-header>
+                  <section-subheader><slot name="subheader"></slot></section-subheader>
+                  <section-paragraph><slot name="description"></slot></section-paragraph>
 
-                <slot name="cards"></slot>
+                  <slot name="list"></slot>
+                </div>
+
+                <div class="image-container">
+                  <slot name="image"></slot>
+                </div>
               </grid-1-2>
             </section-component>
         `;

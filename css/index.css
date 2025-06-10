@@ -1,488 +1,105 @@
-.services .card {
-    position: relative;
-    border-radius: 25px;
-    padding: 2rem;
-    text-align: center;
-    color: #FFFFFF;
-    overflow: hidden;
-    background-image: url("/assets/backgrounds/maze-green_dark.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    transition: background-color 0.3s ease-in-out, transform 0.15s ease-in-out;
+/* ----- WHY WORK WITH US? ----- */
+#why-us--list {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-}
-
-#services--card-single {
-    justify-content: center;
-}
-
-.services .card > * {
-    position: relative;
-    z-index: 2;
-}
-
-.services .card::before {
-    content: "";
-    position: absolute;
-    top: 74px;
-    left: 50%;
-    width: 3rem;
-    height: 3rem;
-    background-color: var(--color-accent);
-    border-radius: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    transition: transform 0.3s ease-in-out;
-    z-index: 1;
-}
-
-.services .card:hover {
-    transform: translateY(-3px);
-}
-
-.services .card:hover::before {
-    transform: translate(-50%, -50%) scale(20);
-}
-
-.services .card:hover .service,
-.services .card:hover .description,
-.services .card:hover .href {
-    color: #FFFFFF;
-}
-
-.services .card:hover .icon {
-    background-color: var(--color-accent-hover);
-    box-shadow: 0px 10px 50px 0px #505050;
-}
-
-.services .service {
-    font-size: var(--text-lg);
-    line-height: var(--text-base-line-height, 1.5rem);
-    font-weight: var(--text-semibold, 600);
-    transition: color ease-in-out 0.3s;
-}
-
-.services .description {
-    color: var(--color-gray-dark);
-    font-size: var(--text-base, 1rem);
-    line-height: var(--text-base-line-height, 1.5rem);
-    margin-top: 0.5rem;
-    text-wrap: balance;
-    transition: color ease-in-out 0.3s;
-}
-
-.services .href {
-    color: var(--color-accent);
-    font-size: var(--text-base, 1rem);
-    font-weight: var(--text-semibold, 600);
-    line-height: var(--text-base-line-height, 1.5rem);
-    transition: color ease-in-out 0.3s;
-}
-
-.services .icon {
-    background-color: var(--color-accent);
-    border-radius: 50%;
-    padding: 1rem;
-    transition: background-color ease-in-out 0.3s, box-shadow ease-in-out 0.3s;
-}
-
-.services svg {
-    min-width: 3rem;
-    width: 3rem;
-}
-
-/* sm 40rem 640px */
-@media (min-width: 40rem) {
-    .services.grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1rem;
-    }
-}
-
-/* md 48rem (768px) */
-@media (min-width: 48rem) {
-    .services.grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-}
-/* ----- END: SERVICES ----- */
-
-/* ----- WHY US -----*/
-#why-us-features {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     justify-content: flex-start;
+    align-items: flex-start;
     gap: 2rem;
 }
 
-#why-us-features li {
+#why-us--list .card {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 1rem;
 }
 
-#why-us-features svg {
-    height: auto;
+#why-us--list svg {
     min-width: 2rem;
     width: 2rem;
 }
 
-#why-us-features p {
-    text-wrap: balance;
-}
-
 .why-us--feature {
-    color: var(--color-black);
-    line-height: var(--text-base-line-height);
-    font-size: var(--text-base);
     font-weight: var(--text-semibold);
 }
 
 .why-us--description {
-    color: var(--color-gray-light);
-    line-height: var(--text-base-line-height);
-    font-size: var(--text-base);
+    color: var(--color-gray);
 }
 
-.why-us img {
-    border-radius: 25px;
-    margin: auto auto;
-    max-width: var(--max-w-md, 28rem);
+#why-us--img {
     width: 100%;
 }
+/* ----- END: WHY WORK WITH US? ----- */
 
-/* md 48rem (768px) */
-@media (min-width: 48rem) {
-    #why-us-section {
-        max-width: var(--max-w-6xl);
-    }
-
-    .why-us .section-subheader {
-      text-align: left;
-    }
-
-    .why-us .section-header {
-        text-align: left;
-    }
-
-    .why-us .section-description {
-        margin: 0;
-        text-align: left;
-    }
-
-    .why-us .grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .why-us .grid-col {
-        flex-direction: column;
-        gap: 3rem;
-    }
-}
-/* ----- END: WHY US -----*/
 
 /* ----- CTA ----- */
-.cta {
-    background: url(/assets/backgrounds/maze-green_dark.svg);
-    border-radius: 8px;
-    padding: 5rem 1rem;
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-.cta .section-header {
-    color: #FFFFFF;
-}
-
-.cta .section-description {
-    color: #e6e6e6;
-    margin-bottom: 2rem;
-}
-
-.cta .button-1-content {
+#cta--button-content {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 0.75rem;
+    gap: 1rem;
 }
 
-.cta .button-1-content svg {
-    height: 1.5rem;
-    margin-top: 0.25rem;
-    width: 1.5rem;
-}
-
-/* sm 40rem (640px) */
-@media (min-width: 40rem) {
-    .cta {
-        align-items: center;
-    }
-
-    .cta .section-header {
-        font-size: var(--text-5xl, 3rem);
-        line-height: var(--text-5xl-line-height, 1);
-        margin-inline: auto;
-        max-width: var(--max-w-2xl, 42rem);
-        text-align: center;
-    }
+#cta--button-content svg {
+    display: block;
+    height: 2rem;
+    width: 2rem;
 }
 /* ----- END: CTA ----- */
 
+
 /* ----- PRICING ----- */
-.pricing {
-    position: relative;
-}
-
-.gradient-wrapper {
-    position: absolute;
-    left: 15rem;
-    top: 13rem;
-    z-index: -10;
-    transform: translateZ(0);
-    overflow: hidden;
-    filter: blur(8rem);
-}
-
-.gradient-inner {
-    aspect-ratio: 1155 / 678;
-    background: linear-gradient(var(--color-accent), rgb(115, 222, 255));
-    opacity: 0.4;
-    height: 150px;
-    width: 900px;
-    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
-}
-
-.pricing .card {
-    border-radius: 1.5rem;
-    padding: 5rem 3rem;
-    width: var(--max-w-full, 100%);
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 1.5rem;
-}
-
-#card--annually {
-    border: solid 1.5px #dedede;
-}
-
-#card--annually .pricing--description,
-#card--annually .pricing--per,
-#card--annually li {
-  /* color: var(--color-gray-light); */
-}
-
-#card--annually .pricing--subscription-type {    
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 2rem;
-}
-
-#card--annually .pill {
-  background-color: #cffff2;
-  font-weight: var(--text-bold);
-}
-
-#card--annually .button-1 {
-    color: var(--color-accent);
-    outline: var(--color-accent) solid 1px !important;
-}
-
-#card--annually .button-1::before {
-    background-color: #FFFFFF;
-}
-
-#card--monthly {
-    background-color: #121212;
-    color: #FFFFFF;
-    padding: 7rem 3rem;
-    position: relative;
-}
-
-#card--monthly .pill {
-    background-color: var(--color-accent);
-    border-radius: 8px;
-    font-size: var(--text-base);
-    font-weight: var(--text-semibold);
-    line-height: var(--text-base-line-height);
-    position: absolute;
-    top: -1rem;
-    left: 3rem;
-}
-
-#card--monthly .pricing--description,
-#card--monthly .pricing--per,
-#card--monthly li {
-  color: var(--color-gray-dark);
-}
-
-.pricing--subscription-type {
-  color: var(--color-accent);
-  font-size: var(--text-base);
-  font-weight: var(--text-semibold);
-  line-height: var(--text-base-line-height);
-  width: var(--max-w-full, 100%);
-}
-
-.pricing--price-amount {
-    font-size: var(--text-5xl);
-    font-weight: var(--text-semibold);
-    line-height: var(--text-5xl-line-height);
-}
-
-.pricing--per {
-    font-size: var(--text-base);
-    line-height: var(--text-base-line-height);
-}
-
-.pricing ul li:not(:last-child) {
-    margin-bottom: 0.75rem;
-}
-
-.pricing li {
+.pricing--features li {
     font-size: var(--text-sm);
     line-height: var(--text-sm-line-height);
-
+    
     /* Flexbox */
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
-.pricing .icon {
+.pricing--features li:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+
+.pricing--features li svg {
     color: var(--color-accent);
-    display: inline-block;
-    min-width: 1.5rem;
-    width: 1.5rem;
+    height: var(--text-lg);
+    width: var(--text-lg);
 }
 
-.pricing .button-1 {
-    padding: 0.75rem 1rem;
-    width: var(--max-w-full, 100%);
+#pricing--annual-features li {
+    color: var(--color-gray-light);
 }
 
-.pricing .button-1-content {
-    font-size: var(--text-sm);
-    line-height: var(--text-sm-line-height);
+#pricing--monthly-features li {
+    color: var(--color-gray-dark);
+}
+
+.pricing--everything-you-get {
+    color: var(--color-gray-light);
+    font-weight: var(--text-semibold);
+    font-size: var(--text-base);
+    line-height: var(--text-base-line-height);
+    margin-top: 4rem;
 
     /* Flexbox */
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
 }
 
-/* md 48rem (768px) */
-@media (min-width: 48rem) {
-    .pricing .grid {
-        align-items: center;
-        gap: 0;
-    }
-
-    #card--annually {
-      border-radius: 1.5rem 0 0 1.5rem;
-    }
-
-    #card--annually .pricing--subscription-type {    
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 1rem;
-    }
+#dashed-arrow-icon {
+    rotate: calc(90deg);
+    max-width: var(--max-w-xs);
+    width: 100%;
 }
 /* ----- END: PRICING ----- */
-
-/* ----- FEATURES ----- */
-.features .icon {
-    background-color: #303030;
-    border-radius: 8px;
-    color: #FFFFFF;
-    min-width: 3rem;
-    padding: 0.5rem;
-    width: 3rem;
-}
-
-.features p {
-    font-size: var(--text-base, 1rem);
-    color: var(--color-gray, #495565);
-    line-height: var(--text-base-line-height, 1.5rem);
-}
-/* ----- END: FEATURES ----- */
-
-/* 
-***
-***
- 
------ COMPONENTS -----
-
-***
-*** */
-
-/* Button1 */
-.button-1 {
-    background: var(--color-accent-hover);
-    border: none;
-    border-radius: 8px;
-    color: ghostwhite;
-    cursor: pointer;
-    display: inline-block;
-    font-size: var(--text-xl);
-    font-weight: var(--text-semibold);
-    line-height: var(--text-xl-line-height);
-    margin: 0;
-    outline: none;
-    overflow: hidden;
-    padding: 0.9rem 3rem;
-    position: relative;
-}
-
-.button-1 span {
-    position: relative;
-    transition: color 0.4s;
-    z-index: 10;
-}
-
-.button-1:hover span {
-    color: black;
-}
-
-.button-1::before,
-.button-1::after {
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 0;
-}
-
-.button-1::before {
-    background: var(--color-accent);
-    content: "";
-    left: -10%;
-    transform: skew(30deg);
-    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
-    width: 120%;
-}
-
-.button-1:hover::before {
-    transform: translate3d(100%, 0, 0);
-}

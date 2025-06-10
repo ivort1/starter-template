@@ -1,6 +1,5 @@
 import { getPresetCss } from "../../js/presetCss.js";
 import { getIndexCss } from "../../js/indexCss.js";
-import "../../componentsV2/pill/Pill.js";
 
 class PricingSection extends HTMLElement {
   constructor() {

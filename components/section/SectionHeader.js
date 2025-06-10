@@ -31,13 +31,14 @@ class SectionHeader extends HTMLElement {
 
     this.shadowRoot.adoptedStyleSheets = [presetCss, css];
 
-    const section = document.createElement("h1");
-    section.classList.add("section-header");
+    const sectionHeader = document.createElement("h1");
+    sectionHeader.setAttribute("part", "section-header");
+    sectionHeader.classList.add("section-header");
 
     const slot = document.createElement("slot");
-    section.appendChild(slot);
+    sectionHeader.appendChild(slot);
 
-    this.shadowRoot.appendChild(section);
+    this.shadowRoot.appendChild(sectionHeader);
   }
 }
 

@@ -1,5 +1,5 @@
 export async function getIndexCss() {
-  const response = await fetch("../css/index2.css");
+  const response = await fetch("../css/index.css");
   if (!response.ok) {
     throw new Error("Could not load index.css");
   }
