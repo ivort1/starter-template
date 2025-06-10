@@ -16,7 +16,7 @@ class SectionComponent extends HTMLElement {
       .section {
         margin-inline: auto;
         max-width: var(--max-width, var(--max-w-5xl, 64rem)); /* 1024px */
-        padding: 2rem 1rem;
+        padding: 5rem 1rem;
         width: 100%;
       }
     `);

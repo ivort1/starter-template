@@ -18,8 +18,11 @@ class FooterSection extends HTMLElement {
     
         const css = new CSSStyleSheet();
         css.replaceSync(`
-            .footer {
+            section-component::part(section) {
                 border-top: solid 1px var(--color-muted);
+            }
+
+            .footer {
                 color: var(--color-gray);
 
                 display: flex;
