@@ -11,12 +11,17 @@ class SectionSubheader extends HTMLElement {
 
     const css = new CSSStyleSheet();
     css.replaceSync(`
+      :host {
+        display: block;     
+        width: 100%;
+      }
+        
       .section-subheader {
             font-size: var(--text-3xl, 1.875rem);
             font-weight: var(--text-semibold, 600);
             letter-spacing: -1.2px;
             line-height: var(--text-3xl-line-height, 2.25rem);
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
             text-wrap: balance;
             width: 100%;
         }

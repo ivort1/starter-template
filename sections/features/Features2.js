@@ -42,7 +42,7 @@ class Features2Section extends HTMLElement {
                   <section-subheader><slot name="subheader"></slot></section-subheader>
                   <section-paragraph><slot name="description"></slot></section-paragraph>
 
-                  <slot name="list"></slot>
+                  <slot name="content"></slot>
                 </div>
 
                 <div class="image-container">

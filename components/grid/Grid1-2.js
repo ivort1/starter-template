@@ -11,21 +11,26 @@ class Grid12 extends HTMLElement {
 
     const css = new CSSStyleSheet();
     css.replaceSync(`
-        .grid {
-            width: 100%;
+      :host {
+        display: block;     
+        width: 100%;
+      }
 
-            display: grid;
-            grid-template-columns: repeat(1, minmax(0, 1fr));
-            gap: var(--gap, 3rem);
-        }
+      .grid {
+          width: 100%;
 
-        /* md 48rem (768px) */
-        @media (min-width: 48rem) {
-            .grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: var(--md-gap, 2rem);
-            }
-        }
+          display: grid;
+          grid-template-columns: repeat(1, minmax(0, 1fr));
+          gap: var(--gap, 3rem);
+      }
+
+      /* md 48rem (768px) */
+      @media (min-width: 48rem) {
+          .grid {
+              grid-template-columns: repeat(2, minmax(0, 1fr));
+              gap: var(--md-gap, 2rem);
+          }
+      }
     `);
 
     this.shadowRoot.adoptedStyleSheets = [presetCss, css];

@@ -11,12 +11,17 @@ class SectionHeader extends HTMLElement {
 
     const css = new CSSStyleSheet();
     css.replaceSync(`
+      :host {
+        display: block;     
+        width: 100%;
+      }
+
       .section-header {
             color: var(--color-accent);
             font-size: var(--text-base);
             font-weight: var(--text-semibold);
             line-height: var(--text-base-line-height);
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.5rem;
             margin-inline: auto;
             text-align: left;
         }

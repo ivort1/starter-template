@@ -23,11 +23,11 @@ class CtaSection extends HTMLElement {
                 background-size: cover;
                 border-radius: 25px;
                 padding: 5rem 1rem;
-                text-align: left;
+                text-align: center;
 
                 display: flex;
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: center;
                 justify-content: center;
                 gap: 1rem;
             }
@@ -57,8 +57,6 @@ class CtaSection extends HTMLElement {
             /* sm 40rem (640px) */
             @media (min-width: 40rem) {
                 .cta {
-                    text-align: center;
-                    align-items: center;
                     gap: 2rem;
                 }
 

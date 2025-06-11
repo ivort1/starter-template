@@ -1,5 +1,30 @@
+/* ----- HERO ----- */
+button1-primary-large::part(button1){
+  --bg-color:        var(--color-accent-hover);   /* on <a>          */
+  --bg-color-before: var(--color-accent);         /* on ::before     */
+}
+
+.hero--highlighted {
+    background-color: var(--color-accent-light);
+    font-weight: var(--text-semibold);
+    padding: 2px 8px;
+}
+
+.hero--bold {
+    text-decoration: underline;
+    text-decoration-color: var(--color-accent);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 8px;
+}
+
+#hero--img {
+    width: 100%;
+}
+/* ----- END: HERO ----- */
+
+
 /* ----- WHY WORK WITH US? ----- */
-#why-us--list {
+#why-us--content ul {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -7,7 +32,7 @@
     gap: 2rem;
 }
 
-#why-us--list .card {
+#why-us--content .list-item {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -15,7 +40,7 @@
     gap: 1rem;
 }
 
-#why-us--list svg {
+#why-us--content svg {
     min-width: 2rem;
     width: 2rem;
 }
@@ -45,8 +70,16 @@
 
 #cta--button-content svg {
     display: block;
-    height: 2rem;
-    width: 2rem;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+/* md: 48rem (768px) */
+@media (min-width: 48rem) {
+    #cta--button-content svg {
+        height: 2rem;
+        width: 2rem;
+    }
 }
 /* ----- END: CTA ----- */
 

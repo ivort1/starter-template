@@ -13,11 +13,21 @@ class SectionComponent extends HTMLElement {
     // Create a component-specific CSSStyleSheet.
     const css = new CSSStyleSheet();
     css.replaceSync(`
+      :host {
+        display: block;     
+        width: 100%;
+      }
+
       .section {
         margin-inline: auto;
         max-width: var(--max-width, var(--max-w-5xl, 64rem)); /* 1024px */
-        padding: 5rem 1rem;
+        padding: 3rem 1rem;
         width: 100%;
+      }
+
+      /* md 48rem (768px) */
+      @media (min-width: 48rem) {
+        padding: 5rem 1rem;
       }
     `);
 

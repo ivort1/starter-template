@@ -12,6 +12,24 @@
 </head>
 <body>
     <main>
+      <!-- HERO -->
+      <features-2-section>
+        <span slot="header">Custom Website Design & Code</span>
+        <span slot="subheader">Small Business Website Design & Development</span>
+        <span slot="description">
+            Custom designed and coded websites, logo design and branding, copywriting, SEO, and more.
+            All starting at <span class="hero--highlighted mask">$200 a month</span> with <span class="hero--bold">$0 down</span>.
+        </span>
+
+        <span slot="content">
+          <button1-primary-large>Get started</button1-primary-large>
+        </span>
+
+        <span slot="image">
+          <img id="hero--img" src="./assets/images/computer.webp" alt="computer" />
+        </span>
+      </features-2-section>
+
       <!-- SERVICES -->
       <services-section>
         <span slot="header">What We Offer</span>
@@ -35,7 +53,7 @@
             to concentrate on growing your business.
         </span>
 
-        <span slot="list" id="why-us--list"></span>
+        <span slot="content" id="why-us--content"></span>
 
         <span slot="image">
           <img id="why-us--img" src="./assets/images/customer_support.webp" alt="customer support" />
@@ -168,11 +186,14 @@
     servicesCards.appendChild(singleCard);
 
     // WHY WORK WITH US?
-    const whyUsList = document.getElementById("why-us--list");
+    const whyUsContent = document.getElementById("why-us--content");
+    const ul = document.createElement("ul");
+    whyUsContent.appendChild(ul);
+
     whyUs.forEach(({ feature, description }) => {
-      const card = document.createElement("div");
-      card.classList.add("card");
-      card.innerHTML = `
+      const li = document.createElement("li");
+      li.classList.add("list-item");
+      li.innerHTML = `
         ${diamondCheckmark}
         
         <p>
@@ -180,8 +201,7 @@
           <span class="why-us--description">${description}</span>
         </p>
       `;
-
-      whyUsList.appendChild(card);
+      ul.appendChild(li);
     })
 
     // CTA

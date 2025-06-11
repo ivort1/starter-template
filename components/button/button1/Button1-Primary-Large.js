@@ -22,6 +22,7 @@ class Button1PrimaryLarge extends HTMLElement {
             background-color: var(--bg-color, #252525);
             border: none;
             border-radius: 8px;
+            color: var(--color, #FFFFFF);
             cursor: pointer;
             display: block;
             margin: 0;
@@ -32,10 +33,9 @@ class Button1PrimaryLarge extends HTMLElement {
           }
           
         #button-content {
-            color: var(--color, #FFFFFF);
-            font-size: var(--text-lg, 0.875rem);
+            font-size: var(--text-base);
             font-weight: var(--text-semibold, 600);
-            line-height: var(--text-lg-line-height, 1.25rem);
+            line-height: var(--text-base-line-height);
             position: relative;
             transition: color 0.4s;
             z-index: 10;
@@ -48,7 +48,7 @@ class Button1PrimaryLarge extends HTMLElement {
         }
 
         a:hover span {
-            color: var(--color-hover, #FFFFFF);
+            color: var(--color-hover, #121212);
         }
 
         a::before,
@@ -72,6 +72,14 @@ class Button1PrimaryLarge extends HTMLElement {
 
         a:hover::before {
             transform: translate3d(100%, 0, 0);
+        }
+
+        /* md 48rem (768px) */
+        @media (min-width: 48rem) {
+           #button-content {
+            font-size: var(--text-lg, 0.875rem);
+            line-height: var(--text-lg-line-height, 1.25rem);
+          }
         }
       `);
 
