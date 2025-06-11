@@ -41,7 +41,7 @@ class FooterSection extends HTMLElement {
         const template = document.createElement("template");
         template.innerHTML = `
             <section-component>
-                <div class="footer">
+                <footer class="footer">
                     <slot name="content"></slot>
                     © ${year} Golden Bear Digital, LLC. All rights reserved.
                 </div>

@@ -27,7 +27,9 @@ class SectionComponent extends HTMLElement {
 
       /* md 48rem (768px) */
       @media (min-width: 48rem) {
-        padding: 5rem 1rem;
+        .section {
+          padding: 4rem 1rem;
+        }
       }
     `);
 

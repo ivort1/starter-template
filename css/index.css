@@ -151,7 +151,7 @@ button1-primary-large::part(button1){
 .footer--links a {
     color: #121212;
     font-weight: var(--text-semibold);
-    transition: 0.3s;
+    transition: color 0.3s ease-in-out;
 }
 
 .footer--links a:hover {
