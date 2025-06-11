@@ -5,9 +5,8 @@ button1-primary-large::part(button1){
 }
 
 .hero--highlighted {
-    background-color: var(--color-accent-light);
+    color: var(--color-accent);
     font-weight: var(--text-semibold);
-    padding: 2px 8px;
 }
 
 .hero--bold {

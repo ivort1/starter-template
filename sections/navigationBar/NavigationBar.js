@@ -62,7 +62,7 @@ class NavigationBar extends HTMLElement {
             background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px); /* Safari support */
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+            /* box-shadow: 0 5px 15px -12px rgba(0,0,0,0.25); */
             width: 100%;
         }
         
@@ -145,7 +145,7 @@ class NavigationBar extends HTMLElement {
           flex-direction: column;
           align-items: flex-start;
           justify-content: center;
-          gap: 1.25rem; /* 5 */
+          gap: 1.5rem;
         }
 
         li {
@@ -179,8 +179,8 @@ class NavigationBar extends HTMLElement {
           }
         }
 
-
-        @media (min-width: 915px) {
+        /* lg: 64rem (1024px) */
+        @media (min-width: 1024px) {
           section-component::part(section) {
             flex-direction: row;
           }
@@ -199,7 +199,7 @@ class NavigationBar extends HTMLElement {
             flex-direction: row;
             justify-content: flex-end;
             align-items: center;
-            gap: 2rem;
+            gap: 3rem;
           }
           li {
             opacity: 1 !important;
