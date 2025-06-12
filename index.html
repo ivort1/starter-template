@@ -47,21 +47,23 @@
       </services-section>
 
       <!-- WHY WORK WITH US? -->
-      <features-2-section>
-        <span slot="header">Why Work With Us?</span>
-        <span slot="subheader">Piece of Mind & Support</span>
-        <span slot="description">
-            We take care of every detail—from UI/UX design,
-            to coding and development, and ongoing maintenance and support—allowing you
-            to concentrate on growing your business.
-        </span>
-
-        <span slot="content" id="why-us--content"></span>
-
-        <span slot="image">
-          <img id="why-us--img" src="./assets/images/customer_support.webp" alt="customer support" />
-        </span>
-      </features-2-section>
+       <div class="why-us">
+         <features-2-section>
+           <span slot="header">Why Work With Us?</span>
+           <span slot="subheader">Piece of Mind & Support</span>
+           <span slot="description">
+               We take care of every detail—from UI/UX design,
+               to coding and development, and ongoing maintenance and support—allowing you
+               to concentrate on growing your business.
+           </span>
+   
+           <span slot="content" id="why-us--content"></span>
+   
+           <span slot="image">
+             <img id="why-us--img" src="./assets/images/customer_support.webp" alt="customer support" />
+           </span>
+         </features-2-section>
+       </div>
       
       <!-- CTA -->
        <cta-section>
@@ -134,7 +136,7 @@
 <script type="module">
   import { services, whyUs, features } from "./database.js";
   import checkmark from "./assets/icons/checkmark.js";
-  import diamondCheckmark from "./assets/icons/diamondCheckmark.js";
+  import circleCheckmark from "./assets/icons/circleCheckmark.js";
   import dashedArrow from "./assets/icons/dashedArrow.js";
   import calendarClock from "./assets/icons/calendarClock.js";
 
@@ -197,7 +199,7 @@
       const li = document.createElement("li");
       li.classList.add("list-item");
       li.innerHTML = `
-        ${diamondCheckmark}
+        ${circleCheckmark}
         
         <p>
           <span class="why-us--feature">${feature}</span>

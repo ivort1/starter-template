@@ -23,6 +23,10 @@ button1-primary-large::part(button1){
 
 
 /* ----- WHY WORK WITH US? ----- */
+.why-us {
+    background-color: var(--color-accent-light);
+}
+
 #why-us--content ul {
     display: flex;
     flex-direction: column;
@@ -40,6 +44,8 @@ button1-primary-large::part(button1){
 }
 
 #why-us--content svg {
+    color: var(--color-accent);
+    margin-top: 3px;
     min-width: 2rem;
     width: 2rem;
 }
