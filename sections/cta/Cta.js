@@ -19,8 +19,9 @@ class CtaSection extends HTMLElement {
         const css = new CSSStyleSheet();
         css.replaceSync(`
             .cta {
-                background-image: url(/assets/backgrounds/maze-green_dark.svg);
+                background-image: url(/assets/backgrounds/maze-green-light.svg);
                 background-size: cover;
+                border: solid 1px rgb(236, 236, 236);
                 border-radius: 25px;
                 padding: 5rem 1rem;
                 text-align: center;
@@ -33,14 +34,16 @@ class CtaSection extends HTMLElement {
             }
 
             h2 {
-                color: var(--color, #FFFFFF);
+                color: var(--color, #121212);
+                filter: drop-shadow(0 1px 1px rgb(205, 205, 205));
                 font-size: var(--text-3xl);
                 font-weight: var(--text-semibold);
                 line-height: var(--text-3xl-line-height);
             }
 
             p {
-                color: var(--color, var(--color-gray-dark));
+                color: var(--color, var(--color-gray-light));
+                filter: drop-shadow(0 1px 1px rgb(205, 205, 205));
                 font-size: var(--text-lg);
                 line-height: var(--text-lg-line-height);
             }

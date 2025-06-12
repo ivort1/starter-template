@@ -24,10 +24,11 @@ class CardComponent extends HTMLElement {
         }
 
         .card {
-            background-image: url("/assets/backgrounds/maze-green_dark.svg");
+            background-image: url("/assets/backgrounds/maze-green-vertical.svg");
             background-position: center;
-            background-repeat: no-repeat;
+            background-repeat: repeat;
             background-size: cover;
+            border: solid 1px rgb(236, 236, 236);
             border-radius: 25px;
             color: #FFFFFF;
             min-height: 25rem;
@@ -83,7 +84,8 @@ class CardComponent extends HTMLElement {
         }
 
         .service {
-            color: #FFFFFF;
+            color: #121212;
+            filter: drop-shadow(0 1px 1px rgb(205, 205, 205));
             font-size: var(--text-lg);
             line-height: var(--text-base-line-height, 1.5rem);
             font-weight: var(--text-semibold, 600);
@@ -91,7 +93,8 @@ class CardComponent extends HTMLElement {
         }
 
         .description {
-            color: var(--color-gray-dark);
+            color: var(--color-gray-light);
+            filter: drop-shadow(0 1px 1px rgb(205, 205, 205));
             font-size: var(--text-base, 1rem);
             line-height: var(--text-base-line-height, 1.5rem);
             margin-top: 0.5rem;

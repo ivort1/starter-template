@@ -59,11 +59,11 @@ export const whyUs = [
   },
   {
     "feature": "Unrivaled Customer Support.",
-    "description": "Our dedicated 24/7 support team ensures your site runs flawlessly—even in emergencies—so you never have to worry about technical issues."
+    "description": "Around the clock support ensures your site runs flawlessly 24/7—even in emergencies—so you never have to worry about technical issues."
   },
   {
     "feature": "Opt-Out Assurance.",
-    "description": "Once your website goes live, we offer a 30-day trial and your total spend is capped at the cost of your first month. Experience our hands-free service with minimal commitment."
+    "description": "Once your website goes live, we offer a 30-day trial and your total spend is capped at the charges incurred up to that point—no additional fees will be applied. Experience our hands-free service with minimal commitment."
   },
 ];
 

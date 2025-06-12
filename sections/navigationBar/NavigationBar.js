@@ -59,7 +59,7 @@ class NavigationBar extends HTMLElement {
         }
         
         nav {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px); /* Safari support */
             /* box-shadow: 0 5px 15px -12px rgba(0,0,0,0.25); */
@@ -67,6 +67,7 @@ class NavigationBar extends HTMLElement {
         }
         
         section-component::part(section) {
+          padding: 2rem 1rem;
           max-width: var(--max-w-7xl);
 
           display: flex;
@@ -157,9 +158,9 @@ class NavigationBar extends HTMLElement {
         }
 
         a {
-            font-size: var(--text-sm);
+            font-size: var(--text-base);
             font-weight: var(--text-semibold);
-            line-height: var(--text-sm-line-height);
+            line-height: var(--text-base-line-height);
             text-transform: capitalize;
             transition: color 0.3s ease-in-out;
         }
@@ -232,11 +233,11 @@ class NavigationBar extends HTMLElement {
             <div id="links">
               <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/#what-we-do">Services</a></li>
-                <li><a href="/ourwork">Our Work</a></li>
-                <li><a href="/#pricing">Pricing</a></li>
-                <li><a href="/faqs">FAQs</a></li>
-                <li><a href="/contactus">Contact Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="./pages/use-cases.html">Use Cases</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#faqs">FAQs</a></li>
+                <li><a href="./pages/contact-us.html">Contact Us</a></li>
               </ul>
             </div>
           </section-component>

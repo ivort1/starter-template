@@ -1,4 +1,10 @@
 /* ----- HERO ----- */
+.hero {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 button1-primary-large::part(button1){
   --bg-color:        var(--color-accent-hover);   /* on <a>          */
   --bg-color-before: var(--color-accent);         /* on ::before     */
@@ -16,14 +22,29 @@ button1-primary-large::part(button1){
     text-underline-offset: 8px;
 }
 
+.hero--image-container {
+    position: relative;
+}
+
 #hero--img {
-    width: 100%;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.hero svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50rem;
+  z-index: -1;
 }
 /* ----- END: HERO ----- */
 
 
 /* ----- WHY WORK WITH US? ----- */
-.why-us {
+#why-us {
     background-color: var(--color-accent-light);
 }
 
@@ -79,13 +100,6 @@ button1-primary-large::part(button1){
     width: 1.5rem;
 }
 
-/* md: 48rem (768px) */
-@media (min-width: 48rem) {
-    #cta--button-content svg {
-        height: 2rem;
-        width: 2rem;
-    }
-}
 /* ----- END: CTA ----- */
 
 
@@ -163,3 +177,19 @@ button1-primary-large::part(button1){
     color: var(--color-accent);
 }
 /* ----- END: FOOTER ----- */
+
+
+/* ---------- MEDIA QUERIES ---------- */
+/* md: 48rem (768px) */
+@media (min-width: 48rem) {
+    /* HERO */
+    .hero svg {
+        width: 70rem;
+    }
+
+    /* CTA */
+    #cta--button-content svg {
+        height: 2rem;
+        width: 2rem;
+    }
+}

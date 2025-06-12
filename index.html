@@ -16,25 +16,27 @@
 
     <main>
       <!-- HERO -->
-      <features-2-section>
-        <span slot="header">Custom Website Design & Code</span>
-        <span slot="subheader">Small Business Website Design & Development</span>
-        <span slot="description">
-            Custom designed and coded websites, logo design and branding, copywriting, SEO, and more.
-            All starting at <span class="hero--highlighted mask">$200 a month</span> with <span class="hero--bold">$0 down</span>.
-        </span>
-
-        <span slot="content">
-          <button1-primary-large>Get started</button1-primary-large>
-        </span>
-
-        <span slot="image">
-          <img id="hero--img" src="./assets/images/computer.webp" alt="computer" />
-        </span>
-      </features-2-section>
+       <div class="hero">
+         <features-2-section>
+           <span slot="header">Custom Website Design & Code</span>
+           <span slot="subheader">Small Business Website Design & Development</span>
+           <span slot="description">
+               Custom designed and coded websites, logo design and branding, copywriting, SEO, and more.
+               All starting at <span class="hero--highlighted mask">$200 a month</span> with <span class="hero--bold">$0 down</span>.
+           </span>
+   
+           <span slot="content">
+             <button1-primary-large>Get started</button1-primary-large>
+           </span>
+   
+           <span slot="image" class="hero--image-container">
+             <img id="hero--img" src="./assets/images/computer.webp" alt="computer" />
+           </span>
+         </features-2-section>
+       </div>
 
       <!-- SERVICES -->
-      <services-section>
+      <services-section id="services">
         <span slot="header">What We Offer</span>
         <span slot="subheader">We Handle Your Website So You Can Focus on What Matters</span>
         <span slot="description">
@@ -47,7 +49,7 @@
       </services-section>
 
       <!-- WHY WORK WITH US? -->
-       <div class="why-us">
+       <div id="why-us">
          <features-2-section>
            <span slot="header">Why Work With Us?</span>
            <span slot="subheader">Piece of Mind & Support</span>
@@ -73,7 +75,7 @@
        </cta-section>
 
       <!-- PRICING -->
-      <pricing-section>
+      <pricing-section id="pricing">
         <span slot="header">Pricing</span>
         <span slot="subheader">Choose the Right Plan For You</span>
         <span slot="description">Choose an affordable plan…</span>
@@ -107,7 +109,7 @@
       </pricing-section>
 
       <!-- FEATURES -->
-       <features-section>
+       <features-section id="features">
         <span slot="header">Features</span>
         <span slot="subheader">What's Included With Your Subscription</span>
         <span slot="description">
@@ -139,8 +141,13 @@
   import circleCheckmark from "./assets/icons/circleCheckmark.js";
   import dashedArrow from "./assets/icons/dashedArrow.js";
   import calendarClock from "./assets/icons/calendarClock.js";
+  import hexagon from "./assets/icons/hexagon.js";
 
   window.addEventListener("DOMContentLoaded", () => {
+    // HERO
+    const heroContainer = document.querySelector(".hero--image-container");
+    heroContainer.insertAdjacentHTML("beforeend", hexagon);
+
     // SERVICES
     const servicesCards = document.getElementById("services--cards");
 
