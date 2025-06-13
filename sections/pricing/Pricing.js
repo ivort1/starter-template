@@ -140,6 +140,10 @@ class PricingSection extends HTMLElement {
 
         /* md 48rem (768px) */
         @media (min-width: 48rem) {
+            section-paragraph::part(section-paragraph) {
+                margin-bottom: 6rem;
+            }
+
             grid-1-2::part(grid) {
                 align-items: center;
                 gap: 0;

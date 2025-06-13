@@ -55,8 +55,8 @@ button1-primary-large::part(button1){
 }
 
 .hero--contact-section img {
-    min-width: 1.5rem;
-    width: 1.5rem;
+    min-width: 1.75rem;
+    width: 1.75rem;
 }
 
 .hero--contact-information-header {
