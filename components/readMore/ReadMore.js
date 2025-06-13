@@ -50,33 +50,37 @@ class ReadMoreComponent extends HTMLElement {
           display: none;
         }
         
-        /* The description p is initially limited in height */
+        /* Collapsed state: show 3 lines with ellipsis */
         .description {
-            color: var(--color-gray);
-          margin-bottom: 0.5rem;
-          max-height: 3rem; /* You can adjust this as necessary */
+          color: var(--color-gray);
+          display: -webkit-box;
+          margin-top: 0.5rem;
           overflow: hidden;
-          transition: max-height 0.3s ease-in-out;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+          /* Note: remove max-height if it's interfering */
         }
         
-        /* When the checkbox is checked, remove the height limit */
+        /* Expanded state: remove the line clamp to show full text */
         input[type="checkbox"]:checked ~ .description {
-          max-height: none;
+          -webkit-line-clamp: unset;
+          display: block;
         }
         
         /* Styling for the labels (read more / read less) */
         .read-more-label {
           color: var(--color-gray);
+          display: inline-block;
           font-size: var(--text-sm);
           line-height: var(--text-sm-line-height);
-          margin-top: 5px;
+          margin-top: 1rem;
           text-decoration: underline;
           cursor: pointer;
         }
         
         /* Show "Read more" label only when not checked */
         input[type="checkbox"]:not(:checked) ~ .read-more {
-          display: inline;
+          display: inline-block;
         }
         input[type="checkbox"]:checked ~ .read-more {
           display: none;
@@ -84,7 +88,7 @@ class ReadMoreComponent extends HTMLElement {
         
         /* Show "Read less" label only when checked */
         input[type="checkbox"]:checked ~ .read-less {
-          display: inline;
+          display: inline-block;
         }
         input[type="checkbox"]:not(:checked) ~ .read-less {
           display: none;

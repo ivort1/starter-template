@@ -69,13 +69,6 @@ class Step1Component extends HTMLElement {
         line-height: var(--text-xl-line-height);
         margin-top: 1.5rem;
       }
-
-      .step--description {
-        color: var(--color-gray-light);
-        font-size: var(--text-base);
-        margin-top: 0.5rem;
-
-      }
     `);
 
     this.shadowRoot.adoptedStyleSheets = [presetCss, indexCss, css];
@@ -108,10 +101,12 @@ class Step1Component extends HTMLElement {
   render() {
     if (!this.shadowRoot) return;
 
+    const lineHtml = (this._step !== "5") ? `<span class="step--line" aria-hidden="true"></span>` : "";
+
     // Populate the template with the current property values.
     this.shadowRoot.innerHTML = `
       <li class="step">
-        <span class="step--line" aria-hidden="true"></span>
+        ${lineHtml}
         <div class="step--number">
           ${this._step}
         </div>
@@ -119,7 +114,7 @@ class Step1Component extends HTMLElement {
         <div>
           <div class="step--icon">${this._icon || ""}</div>
           <h2 class="step--title">${this._title || ""}</h2>
-          <read-more-component text="${this._description}"></read-more-component>
+          <read-more-component text="${this._description || ""}"></read-more-component>
         </div>
       </li>
     `;
