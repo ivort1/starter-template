@@ -1,21 +1,37 @@
-import code from "./assets/icons/code.js";
-import pencil from "./assets/icons/pencil.js";
-import maintenance from "./assets/icons/maintenance.js";
-import server from "./assets/icons/server.js";
-import worldWideWeb from "./assets/icons/worldWideWeb.js";
-import googleBusiness from "./assets/icons/googleBusiness.js";
-import googleAnalytics from "./assets/icons/googleAnalytics.js";
-import dollar from "./assets/icons/dollar.js";
-import designTools from "./assets/icons/designTools.js";
-import codeWindow from "./assets/icons/codeWindow.js";
-import logoDesign from "./assets/icons/logoDesign.js";
-import seo from "./assets/icons/seo.js";
-import typewriter from "./assets/icons/typewriter.js";
 import calendarClock from "./assets/icons/calendarClock.js";
-import heartHandshake from "./assets/icons/heartHandshake.js";
+import code from "./assets/icons/code.js";
+import codeWindow from "./assets/icons/codeWindow.js";
 import designComputer from "./assets/icons/designComputer.js";
-import rocket from "./assets/icons/rocket.js";
+import designTools from "./assets/icons/designTools.js";
+import dollar from "./assets/icons/dollar.js";
+import envelope from "./assets/icons/envelope.js";
+import googleAnalytics from "./assets/icons/googleAnalytics.js";
+import googleBusiness from "./assets/icons/googleBusiness.js";
+import heartHandshake from "./assets/icons/heartHandshake.js";
 import laptopCode from "./assets/icons/laptopCode.js";
+import logoDesign from "./assets/icons/logoDesign.js";
+import maintenance from "./assets/icons/maintenance.js";
+import pencil from "./assets/icons/pencil.js";
+import mobilePhone from "./assets/icons/mobilePhone.js";
+import rocket from "./assets/icons/rocket.js";
+import seo from "./assets/icons/seo.js";
+import server from "./assets/icons/server.js";
+import typewriter from "./assets/icons/typewriter.js";
+import worldWideWeb from "./assets/icons/worldWideWeb.js";
+
+// CONTACT INFORMATION
+export const contactInformation = [
+  {
+    icon: `${envelope}`,
+    title: "Email",
+    information: "sales@goldenbeardigital.com"
+  },
+  {
+    icon: `${mobilePhone}`,
+    title: "Phone",
+    information: "(626) 384-7075"
+  },
+];
 
 // SERVICES
 export const services = [
@@ -116,7 +132,7 @@ export const features = [
     }
 ];
 
-// STEPS
+// WHAT'S NEXT STEPS (ContactUs.html)
 export const steps = [
     {
       "step": "1",
@@ -148,4 +164,140 @@ export const steps = [
       "title": "Ongoing Support",
       "description": "Once your website is launched, our dedicated team continuously monitors and maintains your online presence—ensuring your site stays secure, fast, and search engine optimized. Our subscription-based service includes regular performance updates, proactive troubleshooting, and 24/7 technical assistance to keep your website operating at peak efficiency. We empower your business to focus on growth without worrying about digital downtime and with our reliable ongoing support, your online presence remains cutting-edge, fully optimized for search engines, and perfectly aligned with your business objectives."
     }
+];
+
+// SERVICES (Services.html)
+export const servicesInDepth = [
+  {
+    includedInSubscription: true,
+    price: "0",
+    per: null,
+    integration: false,
+    link: "‣ Web Design",
+    href: "webDesign",
+    header: "Website Design",
+    content: `
+      Our web design service is all about creating modern, visually stunning websites that reflect your brand’s unique identity. We build custom,
+      responsive web designs that not only look amazing but also deliver a seamless user experience across desktops, tablets, and smartphones. With a
+      focus on mobile-first principles and intuitive navigation, every design is crafted to increase visitor engagement and improve conversion rates.
+      
+      <p>
+        Our process includes:
+        <ul>
+          <li><span class="list-item-header">• User Experience (UX) Design:</span> Meticulous planning and wireframing ensure your site is easy to navigate so customers quickly find the information they need.</li>
+          <li><span class="list-item-header">• Responsive & Mobile-First Layouts:</span> Designs that automatically adapt to any device, ensuring your website always looks professional and loads quickly.</li>
+          <li><span class="list-item-header">• SEO-Friendly Design Elements:</span> Clean, semantic HTML and fast-loading pages help your site rank higher, driving meaningful organic traffic from search engines.</li>
+        </ul> 
+      </p>
+    `
+  },
+  {
+    includedInSubscription: true,
+    price: "0",
+    per: null,
+    integration: false,
+    link: "‣ Web Development",
+    href: "webDevelopment",
+    header: "Website Development",
+    content: `
+      Our web development service transforms elegant designs into fully functional websites with lightning-fast performance. We use industry best practices and modern static site techniques to code websites that are both secure and scalable. Every site is built with clean HTML, CSS, and JavaScript, ensuring optimal performance, quick load times, and a seamless browsing experience for your customers.
+    `
+  },
+  {
+    includedInSubscription: true,
+    price: "0",
+    per: null,
+    integration: true,
+    link: "‣ Digital Payments",
+    href: "digitalPayments",
+    header: "Digital Payments",
+    content: `
+      We integrate secure payment processing systems, such as Stripe and Square Up, that allow you to accept online payments with ease. These systems are embedded directly into your website, enabling smooth e-commerce functionality while safeguarding customer data.    `
+  },
+  {
+    includedInSubscription: false,
+    price: "10.00",
+    per: "/month",
+    integration: true,
+    link: "‣ Scheduling/Appointments",
+    href: "scheduling",
+    header: "Scheduling / Appointments",
+    content: `
+      Seamless appointment scheduling is a must for service-based businesses. We integrate leading scheduling solutions, such as Calendly, into your website so customers can book appointments directly online—quickly, efficiently, and without the need for manual coordination.
+    `
+  },
+  {
+    includedInSubscription: false,
+    price: "20.00",
+    per: "/month",
+    integration: true,
+    link: "‣ Blog",
+    href: "blog",
+    header: "Blog",
+    content: `
+      Content is at the heart of online engagement and SEO. By integrating a robust blog system into your website, we make it easy to publish regular, SEO-optimized articles. This not only helps improve your search engine visibility but also builds your brand as an authority in your industry.
+    `
+  },
+  {
+    includedInSubscription: false,
+    price: "200.00",
+    per: "(one-time payment)",
+    integration: false,
+    link: "‣ Logo Creation",
+    href: "logo",
+    header: "Logo Creation",
+    content: `
+      Your logo is the cornerstone of your brand identity—it tells your story in a single visual image. Our logo design service combines creativity with strategy to produce a unique, memorable logo that represents the essence of your business.
+      <p>
+        We focus on:
+        <ul>
+          <li><span class="list-item-header">• Brand Identity and Recognition:</span> A well-crafted logo helps you stand out from the competition and builds trust with your customers.</li>
+          <li><span class="list-item-header">• Clean, Modern Aesthetics:</span> Our designs are minimal yet striking, ensuring your logo remains versatile across digital and print media.</li>
+          <li><span class="list-item-header">• Customized Concepts:</span> Whether you need a bold, dynamic mark or a sleek, modern emblem, our designs are tailored to resonate with your target audience.</li>
+        </ul>
+      </p>
+    `
+  },
+  {
+    includedInSubscription: true,
+    price: "0",
+    per: null,
+    integration: false,
+    link: "‣ On-Page SEO",
+    href: "onPageSeo",
+    header: "On-Page Search Engine Optimization",
+    content: `
+      In today’s digital landscape, your website’s visibility is everything. Our SEO optimization service is designed to help your site rank higher in search engine results, driving organic traffic and increasing your online presence. We implement best practices and advanced techniques to ensure your website is fully optimized for search engines from day one.
+    
+      <p>
+        Our approach includes:
+        <ul>
+          <li><span class="list-item-header">• On-Page SEO:</span> Every page is built with clean, semantic code, optimized meta tags, header hierarchies, and structured data to help search engines understand your content.</li>
+          <li><span class="list-item-header">• Technical SEO:</span> We improve site speed, mobile performance, and URL structures, which are critical ranking factors for Google and other search engines.</li>
+          <li><span class="list-item-header">• Local SEO Integration:</span> For small businesses, capturing local search traffic is key. We enhance your site’s local SEO to ensure you’re visible to customers in your area.</li>
+        </ul>
+      </p>  
+    `
+  },
+  {
+    includedInSubscription: false,
+    price: "500.00",
+    per: "(one-time payment)",
+    integration: false,
+    link: "‣ Copywriting/Content",
+    href: "copywriting",
+    header: "Copywriting / Content Creation",
+    content: `
+      In today’s digital landscape, your website’s visibility is everything. Our SEO optimization service is designed to help your site rank higher in search engine results, driving organic traffic and increasing your online presence. We implement best practices and advanced techniques to ensure your website is fully optimized for search engines from day one.
+    
+      <p>
+        Our approach includes:
+        <ul>
+          <li><span class="list-item-header">• On-Page SEO:</span> Every page is built with clean, semantic code, optimized meta tags, header hierarchies, and structured data to help search engines understand your content.</li>
+          <li><span class="list-item-header">• Technical SEO:</span> We improve site speed, mobile performance, and URL structures, which are critical ranking factors for Google and other search engines.</li>
+          <li><span class="list-item-header">• Local SEO Integration:</span> For small businesses, capturing local search traffic is key. We enhance your site’s local SEO to ensure you’re visible to customers in your area.</li>
+        </ul>
+      </p>  
+    `
+  },
 ];

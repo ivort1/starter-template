@@ -233,9 +233,9 @@ class NavigationBar extends HTMLElement {
             <div id="links">
               <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="#services">Services</a></li>
+                <li><a href="./index.html#services">Services</a></li>
                 <li><a href="./pages/use-cases.html">Use Cases</a></li>
-                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="/index.html#pricing">Pricing</a></li>
                 <li><a href="#faqs">FAQs</a></li>
                 <li><a href="./pages/contact-us.html">Contact Us</a></li>
               </ul>

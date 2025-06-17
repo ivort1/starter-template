@@ -23,7 +23,7 @@
            <span slot="description">
                 <p>
                     At Golden Bear Digital, we provide an all-in-one website solution designed specifically for small businesses. Our comprehensive subscription service covers every
-                    detail—from innovative UI/UX design and cutting-edge coding to reliable hosting, domain egistration, custom logo creation, and ongoing maintenance and support.
+                    detail—from innovative UI/UX design and cutting-edge coding to reliable hosting, domain registration, custom logo creation, and ongoing maintenance and support.
                 </p>
 
                 <br>
@@ -34,24 +34,9 @@
            </span>
    
            <span slot="content">
-             <button1-primary-large id="hero--button-content"></button1-primary-large>
+              <button1-primary-large id="hero--button-content"></button1-primary-large>
 
-             <div class="hero--contact-section">
-                <div class="hero--contact-column">
-                    <img src="../assets/icons/svg/envelope.svg" alt="envelope"/>
-                    <div class="hero--contact-information">
-                        <p class="hero--contact-information-header">Email</p>
-                        <a class="hero--contact-information-contact">emailme69@gmail.com</a>
-                    </div>
-                </div>
-                <div class="hero--contact-column">
-                    <img src="../assets/icons/svg/mobilePhone.svg" alt="mobile phone"/>
-                    <div class="hero--contact-information">
-                        <p class="hero--contact-information-header">Phone</p>
-                        <a class="hero--contact-information-contact">(911) 123-4567</a>
-                    </div>
-                </div>
-             </div>
+              <contact-component id="contact-component"></contact-component>
            </span>
    
            <span slot="image" class="hero--image-container">
@@ -83,7 +68,7 @@
 </body>
 
 <script type="module">
-  import { steps } from "../database.js";
+  import { contactInformation, steps } from "../database.js";
   import calendarClock from "../assets/icons/calendarClock.js";
   import vortex from "../assets/icons/vortex.js";
 
@@ -94,6 +79,9 @@
 
     const heroButtonContent = document.getElementById("hero--button-content");
     heroButtonContent.innerHTML = `${calendarClock} Schedule a call`;
+
+    const contactComponent = document.getElementById("contact-component");
+    contactComponent.contactInformation = contactInformation;
 
     // STEPS
     const steps1Section = document.getElementById("steps1-section");
@@ -107,7 +95,7 @@
 <script type="module" src="../components/section/SectionParagraph.js"></script>
 <script type="module" src="../components/grid/Grid1-2.js"></script>
 <script type="module" src="../components/grid/Grid1-2-3.js"></script>
-<script type="module" src="../components/grid/grid-col/GridCol.js"></script>
+<script type="module" src="../components/contact/Contact.js"></script>
 <script type="module" src="../components/button/button1/Button1-Primary-Large.js"></script>
 <script type="module" src="../components/readMore/ReadMore.js"></script>
 

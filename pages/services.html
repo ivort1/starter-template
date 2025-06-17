@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/preset.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/services.css">
+</head>
+<body>
+  <!-- NAV BAR -->
+    <navigation-bar></navigation-bar>
+
+    <main>
+      <!-- HERO -->
+       <div class="hero">
+         <features-2-section>
+           <span slot="header">Our Services</span>
+           <span slot="subheader">Everything We Offer</span>
+           <span slot="description">
+                <p>
+                  At Golden Bear Digital, we specialize in crafting beautiful, fully optimized static websites that propel small businesses into the
+                  digital spotlight. We understand that every business is unique, and our mission is to deliver custom web design and development
+                  solutions that provide a fast, secure, and scalable online presence. Our team of experienced web developers and designers work hand-in-hand
+                  with you to build a website that not only looks stunning but also converts visitors into customers.
+                </p>
+                
+                <br>
+                
+                <p>
+                 Our comprehensive approach to static website design means that your site will load lightning fast, be highly responsive, and rank well on search engines.
+                 Whether you’re launching a new local business or updating an existing brand, our services are tailored to meet your specific needs.
+               </p>
+           </span>
+   
+           <span slot="content">
+              <button1-primary-large id="hero--button-content"></button1-primary-large>
+           </span>
+   
+           <span slot="image" class="hero--image-container">
+             <img id="hero--img" src="../assets/images/tools.webp" alt="computer" />
+           </span>
+         </features-2-section>
+       </div>
+
+       <!-- SERVICES -->
+       <section-component>
+          <services-section id="services-section"></services-section>
+       </section-component>
+
+
+       <!-- FOOTER -->
+       <footer-section>
+          <span slot="content">
+            <div class="footer--links">
+              <a href="#about">About</a>
+              <a href="#about">Our Services</a>
+              <a href="#about">Features</a>
+              <a href="#about">Contact Us</a>
+            </div>
+          </span>
+       </footer-section>
+    </main>
+</body>
+
+<script type="module">
+  import { servicesInDepth } from "../database.js";
+  import calendarClock from "../assets/icons/calendarClock.js";
+  import customShape from "../assets/icons/customShape.js";
+
+  window.addEventListener("DOMContentLoaded", () => {
+    // HERO
+    const heroContainer = document.querySelector(".hero--image-container");
+    heroContainer.insertAdjacentHTML("beforeend", customShape);
+
+    const heroButtonContent = document.getElementById("hero--button-content");
+    heroButtonContent.innerHTML = `${calendarClock} Schedule a call`;
+
+    const servicesSection = document.getElementById("services-section");
+    servicesSection.servicesInDepth = servicesInDepth;
+  });
+</script>
+
+<!-- Components -->
+<script type="module" src="../components/section/Section.js"></script>
+<script type="module" src="../components/section/SectionHeader.js"></script>
+<script type="module" src="../components/section/SectionSubheader.js"></script>
+<script type="module" src="../components/section/SectionParagraph.js"></script>
+<script type="module" src="../components/grid/Grid1-2.js"></script>
+<script type="module" src="../components/button/button1/Button1-Primary-Large.js"></script>
+
+<!-- Sections -->
+<script type="module" src="../sections/navigationBar/NavigationBar.js"></script>
+<script type="module" src="../sections/features/Features2.js"></script>
+<script type="module" src="../components/section/curvedSection/CurvedSection.js"></script>
+<script type="module" src="../sections/services/Services.js"></script>
+<script type="module" src="../sections/footer/Footer.js"></script>
+</html>

@@ -24,7 +24,7 @@ class PricingSection extends HTMLElement {
         .gradient-wrapper {
             position: absolute;
             left: 15rem;
-            top: 13rem;
+            top: 18rem;
             z-index: -10;
             transform: translateZ(0);
             overflow: hidden;

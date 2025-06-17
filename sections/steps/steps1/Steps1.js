@@ -77,7 +77,7 @@ class Steps1Section extends HTMLElement {
     this.shadowRoot.appendChild(template.content.cloneNode(true));
 
     // Render steps if the steps data was set before initialization
-    if (this._steps.length) {
+    if (this._steps.length > 0) {
       this.renderSteps();
     }
   }
