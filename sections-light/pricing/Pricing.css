@@ -1,0 +1,178 @@
+/* ============================================================
+   Pricing Section Specific Styles (Scoped under #pricing)
+   ============================================================ */
+#pricing {
+  position: relative;
+}
+
+/* Gradient Decorative Elements */
+#pricing .gradient-wrapper {
+  position: absolute;
+  left: 15rem;
+  top: 18rem;
+  z-index: -10;
+  transform: translateZ(0);
+  overflow: hidden;
+  filter: blur(8rem);
+}
+
+#pricing .gradient-inner {
+  aspect-ratio: 1155 / 678;
+  background: linear-gradient(var(--color-accent), rgb(115, 222, 255));
+  opacity: 0.4;
+  height: 150px;
+  width: 900px;
+  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+}
+
+/* Pricing Cards */
+#pricing .pricing__card {
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 5rem 3rem;
+  width: 100%;
+}
+
+/* Annual Card overrides */
+#pricing #pricing__card-annually {
+  border: solid 1.5px #dedede;
+}
+
+#pricing #pricing__card-annually #pricing__description,
+#pricing #pricing__card-annually #pricing__per,
+#pricing #pricing__card-annually li {
+  color: var(--color-gray-light);
+}
+
+#pricing__card-annually .pricing__subscription-type {    
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+#pricing__card-annually .pricing__annual-pill {
+    background-color: var(--color-accent-light);
+    border: solid 1px var(--color-accent);
+    border-radius: 25px;
+    color: var(--color-accent);
+    font-size: var(--text-xs);
+    font-weight: var(--text-bold);
+    line-height: var(--text-xs-line-height);
+    padding: 3px 10px;
+}
+
+/* Monthly Card Specifics */
+#pricing #pricing__card-monthly {
+  background-color: #121212;
+  color: #FFFFFF;
+  padding: 6rem 3rem;
+  position: relative;
+}
+
+#pricing .pricing__monthly-pill {
+  background-color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  border-radius: 8px;
+  color: #FFFFFF;
+  font-size: var(--text-base);
+  font-weight: var(--text-bold);
+  line-height: var(--text-base-line-height);
+  padding: 0.5rem 1rem;
+  position: absolute;
+  top: -1rem;
+  left: 3rem;
+}
+
+#pricing #pricing__card-monthly .pricing__description,
+#pricing #pricing__card-monthly .pricing__per,
+#pricing #pricing__card-monthly li {
+  color: var(--color-gray-dark);
+}
+
+/* Text and Price Styling */
+#pricing .pricing__subscription-type {
+  color: var(--color-accent);
+  font-size: var(--text-sm);
+  font-weight: var(--text-semibold);
+  line-height: var(--text-sm-line-height);
+  width: 100%;
+}
+
+#pricing .pricing__price-amount {
+  font-size: var(--text-6xl);
+  font-weight: var(--text-semibold);
+  line-height: var(--text-6xl-line-height);
+}
+
+#pricing .pricing__per {
+  font-size: var(--text-base);
+  line-height: var(--text-base-line-height);
+}
+
+#pricing ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+#pricing li {
+    font-size: var(--text-sm);
+    line-height: var(--text-sm-line-height);
+
+    /* Flexbox */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+#pricing li svg {
+    color: var(--color-accent);
+    width: 1.5rem;
+}
+
+.pricing__everything-you-get {
+    color: var(--color-gray-light);
+    font-weight: var(--text-semibold);
+    font-size: var(--text-base);
+    line-height: var(--text-base-line-height);
+    margin-top: 4rem;
+
+    /* Flexbox */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#dashed-arrow-icon svg {
+    rotate: calc(90deg);
+    max-width: var(--max-w-xs);
+    width: 100%;
+}
+
+@media (min-width: 48rem) {
+  #pricing .global--grid-1-2 {
+    align-items: center;
+    gap: 0;
+  }
+
+  #pricing #pricing__card-annually {
+    border-radius: 1.5rem 0 0 1.5rem;
+  }
+  
+  #pricing__card-annually .pricing__subscription-type {    
+    flex-direction: row;
+    gap: 1rem;
+  }
+}

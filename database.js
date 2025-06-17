@@ -34,46 +34,53 @@ export const contactInformation = [
 ];
 
 // SERVICES
-export const services = [
+export const whatWeOffer = [
   {
     icon: `${designTools}`,
     service: "Website Design",
-    description:
-      "Custom, responsive designs that capture your brand and convert visitors into customers.",
+    description: "Custom, responsive designs that capture your brand and convert visitors into customers.",
     href: "/",
+    link: "Get started →"
   },
   {
     icon: `${codeWindow}`,
     service: "Website Development",
-    description:
-      "Fast, secure static sites built with modern code to deliver peak performance and a seamless user experience.",
+    description: "Fast, secure static sites built with modern code to deliver peak performance and a seamless user experience.",
     href: "/",
+    link: "Get started →"
   },
   {
     icon: `${logoDesign}`,
     service: "Logo Design",
-    description:
-      "Distinctive logo designs that boost brand recognition and create a memorable identity.",
+    description: "Distinctive logo designs that boost brand recognition and create a memorable identity.",
     href: "/",
+    link: "Get started →"
   },
   {
     icon: `${seo}`,
     service: "SEO Optimization",
-    description:
-      "Strategic on-page SEO enhancements designed to boost your small business’s search rankings and drive organic traffic.",
+    description: "Strategic on-page SEO enhancements designed to boost your small business’s search rankings and drive organic traffic.",
     href: "/",
+    link: "Get started →"
   },
   {
     icon: `${typewriter}`,
     service: "Content & Copywriting",
-    description:
-      "Persuasive, SEO-friendly content that engages your audience and elevates your online presence.",
+    description: "Persuasive, SEO-friendly content that engages your audience and elevates your online presence.",
     href: "/",
+    link: "Get started →"
+  },
+  {
+    icon: null,
+    service: "Looking to Grow Your Business?",
+    description: "Elevate your online presence with custom web solutions engineered to drive traffic. Visit our Services page for full details and pricing.",
+    href: "/",
+    link: "Our services →"
   },
 ];
 
-// WHY US?
-export const whyUs = [
+// WHY WORK WITH US?
+export const whyWorkWithUs = [
    {
     "feature": "Based in the United States.",
     "description": "Working out of Southern California, our experts deliver personalized, industry-leading web solutions that keep your business ahead—without you lifting a finger."
@@ -87,6 +94,19 @@ export const whyUs = [
     "description": "Once your website goes live, we offer a 30-day trial and your total spend is capped at the charges incurred up to that point—no additional fees will be applied. Experience our hands-free service with minimal commitment."
   },
 ];
+
+// PRICING ANNUAL FEATURES
+export const annualFeatures = [
+  "One-time annual payment",
+  "Cancel anytime after 12 months"
+]
+
+// PRICING MONTHLY FEATURES
+export const monthlyFeatures = [
+  "No upfront fees with $0 down",
+  "Cancel anytime after 12 months",
+  "Month-to-month afterwards"
+]
 
 // FEATURES
 export const features = [

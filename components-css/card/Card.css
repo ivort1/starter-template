@@ -1,0 +1,98 @@
+.card {
+    background-image: url("/assets/backgrounds/maze-green-vertical.svg");
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    border: solid 1px rgb(236, 236, 236);
+    border-radius: 25px;
+    color: #FFFFFF;
+    height: 100%;
+    min-height: 25rem;
+    overflow: hidden;
+    padding: 2rem;
+    position: relative;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out, transform 0.15s ease-in-out;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: var(--justify-content, space-between);
+    gap: 2rem;
+}
+
+.card > * {
+    position: relative;
+    z-index: 2;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 74px;
+    left: 50%;
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--color-accent);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.card:hover::before {
+    transform: translate(-50%, -50%) scale(20);
+}
+
+.card:hover .service,
+.card:hover .description,
+.card:hover .href {
+    color: #FFFFFF;
+}
+
+.card:hover .icon {
+    background-color: var(--color-accent-hover);
+    box-shadow: 0px 10px 50px 0px #505050;
+}
+
+.card .service {
+    color: #121212;
+    filter: drop-shadow(0 1px 1px rgb(205, 205, 205));
+    font-size: var(--text-lg);
+    line-height: var(--text-base-line-height, 1.5rem);
+    font-weight: var(--text-semibold, 600);
+    text-wrap: balance;
+    transition: color ease-in-out 0.3s;
+}
+
+.card .description {
+    color: var(--color-gray-light);
+    filter: drop-shadow(0 1px 1px rgb(205, 205, 205));
+    font-size: var(--text-base, 1rem);
+    line-height: var(--text-base-line-height, 1.5rem);
+    margin-top: 0.5rem;
+    text-wrap: balance;
+    transition: color ease-in-out 0.3s;
+}
+
+.card .href {
+    color: var(--color-accent);
+    font-size: var(--text-base, 1rem);
+    font-weight: var(--text-semibold, 600);
+    line-height: var(--text-base-line-height, 1.5rem);
+    transition: color ease-in-out 0.3s;
+}
+
+.card .icon {
+    background-color: var(--color-accent);
+    border-radius: 50%;
+    color: #FFFFFF;
+    padding: 1.5rem;
+    transition: background-color ease-in-out 0.3s, box-shadow ease-in-out 0.3s;
+    min-width: 6rem;
+    width: 6rem;
+}
