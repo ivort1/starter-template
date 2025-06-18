@@ -5,55 +5,145 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <!-- Preload images -->
+    <link rel="preload" as="image" href="/assets/images/rocket.webp" imagesrcset="/assets/images/rocket.webp 1x, /assets/images/rocket@2x.webp 2x" imagesizes="(max-width: 40rem) 100vw, 40rem" type="image/webp">
+    <link rel="preload" as="image" href="/assets/icons/svg/vortex.svg" type="image/svg+xml">
+
+    <!-- Above the fold CSS -->
+    <style>
+      #hero .hero__image-container {
+        position: relative;
+        width: 100%;
+      }
+
+      #hero .hero__image-container-background {
+        left: 50%;
+        max-width: none;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 40rem;
+        z-index: -1;
+      }
+
+      #hero .hero__image-container-foreground {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(25deg);
+        z-index: 1;
+      }
+
+      #hero #contact-component {
+        margin-top: 3rem;
+      }
+
+      #hero #contact-component svg {
+        height: auto;
+        width: 1.75rem;
+      }
+
+      #hero #contact-component a {
+        color: var(--color-accent);
+        text-decoration: underline;
+        text-underline-offset: 5px;
+      }
+    </style>
+
     <!-- CSS -->
     <link rel="stylesheet" href="/css/preset.css">
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/contactUs.css">
+    <link rel="stylesheet" href="/sections-light/navigationBar/NavigationBar.css">
+    <link rel="stylesheet" href="/components-css/button/Button.css">
+    <link rel="stylesheet" href="/components-css/contact/Contact.css">
 </head>
 <body>
-  <!-- NAV BAR -->
-    <navigation-bar></navigation-bar>
+    <!-- NAV BAR -->
+    <nav>
+        <div class="global--section">
+            <div class="nav__content">
+                <a class="nav__title" href="/">Golden Bear Digital</a>
+                <button class="nav__toggle-menu" aria-expanded="false" aria-label="Toggle menu">
+                <div id="nav__bar-1"></div>
+                <div id="nav__bar-2"></div>
+                <div id="nav__bar-3"></div>
+                </button>
+            </div>
+
+            <div class="nav__links">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/#services">Services</a></li>
+                    <li><a href="/pages/use-cases.html">Use Cases</a></li>
+                    <li><a href="/#pricing">Pricing</a></li>
+                    <li><a href="/pages/faqs.html">FAQs</a></li>
+                    <li><a href="/pages/contact-us.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <main>
-      <!-- HERO -->
-       <div class="hero">
-         <features-2-section>
-           <span slot="header">Ready to Start?</span>
-           <span slot="subheader">Contact Us Today</span>
-           <span slot="description">
-                <p>
-                    At Golden Bear Digital, we provide an all-in-one website solution designed specifically for small businesses. Our comprehensive subscription service covers every
-                    detail—from innovative UI/UX design and cutting-edge coding to reliable hosting, domain registration, custom logo creation, and ongoing maintenance and support.
-                </p>
+      <!-- SECTION: HERO -->
+      <section class="global--section" id="hero">
+          <div class="global--grid-1-2">
+              <div>
+                  <h1 class="global--section-header">Ready to Start?</h1>
+                  <p class="global--section-subheader">Contact Us Today</p>
+                  <div class="global--section-paragraph">
+                    <p>
+                      At Golden Bear Digital, we provide an all-in-one website solution designed specifically for small businesses. Our comprehensive subscription service covers every
+                      detail—from innovative UI/UX design and cutting-edge coding to reliable hosting, domain registration, custom logo creation, and ongoing maintenance and support.
+                    </p>
 
-                <br>
-               
-               <p>
-                   Let our expert team manage your entire online presence so you can focus on growing your business. Reach out now to transform your digital footprint and drive lasting results. 
-               </p>
-           </span>
-   
-           <span slot="content">
-              <button1-primary-large id="hero--button-content"></button1-primary-large>
+                    <br>
 
-              <contact-component id="contact-component"></contact-component>
-           </span>
-   
-           <span slot="image" class="hero--image-container">
-             <img id="hero--img" src="../assets/images/rocket.webp" alt="computer" />
-           </span>
-         </features-2-section>
-       </div>
+                    <p>
+                      Let our expert team manage your entire online presence so you can focus on growing your business. Reach out now to transform your digital footprint and drive lasting results. 
+                    </p>
+                  </div>
 
-       <!-- STEPS -->
-       <steps1-section id="steps1-section">
+                  <a href="/pages/contact-us.html" class="button button--primary button--lg">
+                      <span>Get started</span>
+                  </a>
+
+                  <ul id="contact-component"></ul>
+              </div>
+
+              <div class="hero__image-container">
+                <img
+                  class="hero__image-container-background"
+                  src="/assets/icons/svg/vortex.svg"
+                  alt="vortex pattern"
+                  width="800" 
+                  height="800"
+                  loading="eager"
+                  fetchpriority="high"
+                >
+
+                <img
+                  class="hero__image-container-foreground"
+                  src="/assets/images/rocket.webp"
+                  srcset="/assets/images/rocket.webp 1x, /assets/images/rocket@2x.webp 2x"
+                  sizes="(max-width: 40rem) 100vw, 40rem"
+                  width="188"
+                  height="428"
+                  alt="rocket"
+                  loading="eager"
+                  fetchpriority="high"
+                >
+              </div>
+          </div>
+      </section>
+
+       <!-- <steps1-section id="steps1-section">
           <span slot="header">What's Next?</span>
           <span slot="subheader">Our Process</span>
           <span slot="paragraph">Get your website up and running in 5 easy steps.</span>
       </steps1-section>
 
 
-       <!-- FOOTER -->
        <footer-section>
           <span slot="content">
             <div class="footer--links">
@@ -63,46 +153,17 @@
               <a href="#about">Contact Us</a>
             </div>
           </span>
-       </footer-section>
+       </footer-section> -->
     </main>
 </body>
 
 <script type="module">
-  import { contactInformation, steps } from "../database.js";
-  import calendarClock from "../assets/icons/calendarClock.js";
-  import vortex from "../assets/icons/vortex.js";
-
   window.addEventListener("DOMContentLoaded", () => {
-    // HERO
-    const heroContainer = document.querySelector(".hero--image-container");
-    heroContainer.insertAdjacentHTML("beforeend", vortex);
-
-    const heroButtonContent = document.getElementById("hero--button-content");
-    heroButtonContent.innerHTML = `${calendarClock} Schedule a call`;
-
-    const contactComponent = document.getElementById("contact-component");
-    contactComponent.contactInformation = contactInformation;
-
-    // STEPS
-    const steps1Section = document.getElementById("steps1-section");
-    steps1Section.steps = steps;
   });
 </script>
 <!-- Components -->
-<script type="module" src="../components/section/Section.js"></script>
-<script type="module" src="../components/section/SectionHeader.js"></script>
-<script type="module" src="../components/section/SectionSubheader.js"></script>
-<script type="module" src="../components/section/SectionParagraph.js"></script>
-<script type="module" src="../components/grid/Grid1-2.js"></script>
-<script type="module" src="../components/grid/Grid1-2-3.js"></script>
-<script type="module" src="../components/contact/Contact.js"></script>
-<script type="module" src="../components/button/button1/Button1-Primary-Large.js"></script>
-<script type="module" src="../components/readMore/ReadMore.js"></script>
+<script type="module" src="../components-css/contact/Contact.js"></script>
 
 <!-- Sections -->
-<script type="module" src="../sections/navigationBar/NavigationBar.js"></script>
-<script type="module" src="../sections/steps/steps1/Steps1.js"></script>
-<script type="module" src="../sections/steps/steps1/Step1.js"></script>
-<script type="module" src="../sections/features/Features2.js"></script>
-<script type="module" src="../sections/footer/Footer.js"></script>
+<script type="module" src="../sections-light/navigationBar/NavigationBar.js"></script>
 </html>

@@ -33,16 +33,16 @@ nav .nav__content {
 }
 
 nav .nav__title {
-  font-size: var(--text-lg);
-  font-weight: var(--text-bold);
-  line-height: var(--text-lg-line-height);
+  font-size: var(--text-2xl);
+  font-weight: var(--text-semibold);
+  line-height: var(--text-2xl-line-height);
   text-decoration: none;
   width: 100%;
 }
 
 nav .nav__toggle-menu {
   background:rgb(245, 245, 245);
-  border-radius: 25px;
+  border-radius: 8px;
   cursor: pointer;
   padding: 1rem 0.5rem;
 
@@ -84,10 +84,18 @@ button.toggle #nav__bar-3 {
 
 nav .nav__links {
   height: 0;
-  margin-top: 0;
   overflow: hidden;
-  transition: height 0.5s ease, margin-top 0.5s ease;
+  margin-top: 0;
+  transition: margin-top 0.5s ease, height 0.5s ease;
   width: 100%;
+}
+
+nav .nav__links.is-open {
+  margin-top: 2rem;
+}
+
+nav .fade-in {
+  animation: mobileNavLinkFadeIn 0.3s ease forwards var(--delay);
 }
 
 nav ul {
@@ -140,10 +148,8 @@ nav a:hover {
     margin-bottom: 0;
   }
   nav .nav__links {
-    height: auto !important;
-    margin-top: 0 !important;
+    height: auto;
     overflow: visible;
-    width: auto;
   }
 
   nav ul {
@@ -154,7 +160,7 @@ nav a:hover {
   }
 
   nav li {
-    opacity: 1 !important;
+    opacity: 1;
   }
 
   button.nav__toggle-menu {

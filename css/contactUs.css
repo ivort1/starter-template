@@ -1,42 +1,11 @@
 /* ----- HERO ----- */
-.hero {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
-button1-primary-large::part(button1){
-  --bg-color: var(--color-accent-hover);
-  --bg-color-before: var(--color-accent);
+/* ---------- MEDIA QUERIES ---------- */
+/* md: 48rem (768px) */
+@media (min-width: 48rem) {
+  #hero .global--section-header,
+  #hero .global--section-subheader,
+  #hero .global--section-paragraph {
+    text-align: left;
+  }
 }
-
-.hero--image-container {
-    position: relative;
-}
-
-#hero--img {
-  position: relative;
-  transform: rotate(25deg);
-  z-index: 1;
-  width: 100%;
-}
-
-.hero--image-container svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 40rem;
-  z-index: -1;
-}
-
-#hero--button-content svg {
-    display: block;
-    height: 1.5rem;
-    width: 1.5rem;
-}
-
-contact-component::part(contact-component) {
-    margin-top: 2.5rem;
-}
-/* ----- END: HERO ----- */
