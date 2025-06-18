@@ -101,7 +101,14 @@
   font-size: var(--text-sm);
   font-weight: var(--text-semibold);
   line-height: var(--text-sm-line-height);
+  margin-bottom: 1rem;
   width: 100%;
+
+  /* Flexbox */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 #pricing .pricing__price-amount {

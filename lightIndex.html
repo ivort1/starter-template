@@ -13,9 +13,35 @@
     <link rel="stylesheet" href="/components-css/card/Card.css">
     <link rel="stylesheet" href="/components-css/card/Card2.css">
     <link rel="stylesheet" href="sections-light/pricing/Pricing.css">
+    <link rel="stylesheet" href="/sections-light/navigationBar/NavigationBar.css">
 </head>
 <body>
   <main>
+    <!-- NAV BAR -->
+    <nav>
+        <div class="global--section">
+            <div class="nav__content">
+                <a class="nav__title" href="/">Golden Bear Digital</a>
+                <button class="nav__toggle-menu" aria-expanded="false" aria-label="Toggle menu">
+                <div id="nav__bar-1"></div>
+                <div id="nav__bar-2"></div>
+                <div id="nav__bar-3"></div>
+                </button>
+            </div>
+
+            <div id="nav__links">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="./index.html#services">Services</a></li>
+                    <li><a href="./pages/use-cases.html">Use Cases</a></li>
+                    <li><a href="/index.html#pricing">Pricing</a></li>
+                    <li><a href="#faqs">FAQs</a></li>
+                    <li><a href="./pages/contact-us.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <!-- SECTION: HERO -->
     <section class="global--section" id="hero">
         <div class="global--grid-1-2">
@@ -185,91 +211,94 @@ import circleCheckmark from "./assets/icons/circleCheckmark.js";
 import checkmark from "./assets/icons/checkmark.js";
 import dashedArrow from "./assets/icons/dashedArrow.js";
 
-// WHAT WE OFFER
-const whatWeOfferCards = document.getElementById("what-we-offer--cards");
+document.addEventListener('DOMContentLoaded', function () {
+    // WHAT WE OFFER
+    const whatWeOfferCards = document.getElementById("what-we-offer--cards");
 
-whatWeOffer.forEach(({ icon, service, description, href, link }) => {
-    const card = document.createElement("div");
-    card.classList.add("card");
+    whatWeOffer.forEach(({ icon, service, description, href, link }) => {
+        const card = document.createElement("div");
+        card.classList.add("card");
 
-    if(!icon) {
-        card.classList.add("card--no-icon");
-    }
+        if(!icon) {
+            card.classList.add("card--no-icon");
+        }
 
-    card.innerHTML = `
-        ${icon ? `<div class="icon">${icon}</div>` : ""}
-        
-        <div>
-            <p class="service">${service}</p>
-            <p class="description">${description}</p>
-        </div>
-        
-        <a href="${href}" class="href">${link}</a>
-    `;
+        card.innerHTML = `
+            ${icon ? `<div class="icon">${icon}</div>` : ""}
+            
+            <div>
+                <p class="service">${service}</p>
+                <p class="description">${description}</p>
+            </div>
+            
+            <a href="${href}" class="href">${link}</a>
+        `;
 
-    whatWeOfferCards.appendChild(card);
-})
+        whatWeOfferCards.appendChild(card);
+    })
 
-// WHY WORK WITH US?
-const whyWorkWithUsUl = document.getElementById("why-work-with-us--ul");
+    // WHY WORK WITH US?
+    const whyWorkWithUsUl = document.getElementById("why-work-with-us--ul");
 
-whyWorkWithUs.forEach(({ feature, description }) => {
-    const li = document.createElement("li");
-    li.innerHTML = `
-        ${circleCheckmark}
-        
-        <p>
-            <span class="why-work-with-us--feature">${feature}</span>
-            <span class="why-work-with-us--description">${description}</span>
-        </p>
-    `;
-    whyWorkWithUsUl.appendChild(li);
-})
+    whyWorkWithUs.forEach(({ feature, description }) => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+            ${circleCheckmark}
+            
+            <p>
+                <span class="why-work-with-us--feature">${feature}</span>
+                <span class="why-work-with-us--description">${description}</span>
+            </p>
+        `;
+        whyWorkWithUsUl.appendChild(li);
+    })
 
-// PRICING
-const annualFeaturesUl = document.querySelector(".pricing__annual-features");
-const monthlyFeaturesUl = document.querySelector(".pricing__monthly-features");
+    // PRICING
+    const annualFeaturesUl = document.querySelector(".pricing__annual-features");
+    const monthlyFeaturesUl = document.querySelector(".pricing__monthly-features");
 
-annualFeatures.forEach(feature => {
-    const li = document.createElement("li");
-    li.innerHTML = `
-        ${checkmark}
-        ${feature}
-    `;
-    annualFeaturesUl.appendChild(li);
-})
+    annualFeatures.forEach(feature => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+            ${checkmark}
+            ${feature}
+        `;
+        annualFeaturesUl.appendChild(li);
+    })
 
-monthlyFeatures.forEach(feature => {
-    const li = document.createElement("li");
-    li.innerHTML = `
-        ${checkmark}
-        ${feature}
-    `;
-    monthlyFeaturesUl.appendChild(li);
-})
+    monthlyFeatures.forEach(feature => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+            ${checkmark}
+            ${feature}
+        `;
+        monthlyFeaturesUl.appendChild(li);
+    })
 
-const dashedArrowIcon = document.getElementById("dashed-arrow-icon");
-dashedArrowIcon.innerHTML = dashedArrow;
+    const dashedArrowIcon = document.getElementById("dashed-arrow-icon");
+    dashedArrowIcon.innerHTML = dashedArrow;
 
-// FEATURES
-const featuresCards = document.getElementById("features--cards");
+    // FEATURES
+    const featuresCards = document.getElementById("features--cards");
 
-features.forEach(({ icon, feature, description }) => {
-    const card = document.createElement("div");
-    card.classList.add("card-2");
+    features.forEach(({ icon, feature, description }) => {
+        const card = document.createElement("div");
+        card.classList.add("card-2");
 
-    card.innerHTML = `
-        <div class="icon">${icon}</div>
+        card.innerHTML = `
+            <div class="icon">${icon}</div>
 
-        <div>
-            <h3>${feature}</h3>
-            <p>${description}</p>
-        </div>
-    `;
+            <div>
+                <h3>${feature}</h3>
+                <p>${description}</p>
+            </div>
+        `;
 
-    featuresCards.appendChild(card);
-})
+        featuresCards.appendChild(card);
+    })
+});
 </script>
 
 <script type="module" src="./components/section/Section.js"></script>
+<script type="module" src="js/NavigationBar.js"></script>
 </html>

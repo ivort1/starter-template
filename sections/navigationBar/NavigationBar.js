@@ -100,7 +100,7 @@ class NavigationBar extends HTMLElement {
           cursor: pointer;
           border-radius: 0.75rem;
           padding: 1rem 0.5rem;
-          display: flex;
+          display: flex;nav
           flex-direction: column;
           justify-content: center;
           align-items: center;
@@ -145,7 +145,7 @@ class NavigationBar extends HTMLElement {
           display: flex;
           flex-direction: column;
           align-items: flex-start;
-          justify-content: center;
+          justify-content: center;nav__bar-1
           gap: 1.5rem;
         }
 
