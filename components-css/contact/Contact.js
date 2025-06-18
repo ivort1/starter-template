@@ -38,4 +38,5 @@ document.addEventListener("DOMContentLoaded", () => {
   list.appendChild(fragment);
   // 2) trigger the fade-in
   list.style.opacity = "1";
+  list.style.transform = "translateY(0)";
 });

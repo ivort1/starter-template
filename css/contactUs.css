@@ -1,4 +1,15 @@
 /* ----- HERO ----- */
+#next-steps {
+  background-color: var(--color-accent-light);
+}
+
+.next-steps__divider {
+  color: var(--color-accent-light);
+  margin: 0 auto;
+  max-width: var(--max-w-5xl);
+  transform: rotate(180deg);
+  width: 100%;
+}
 
 /* ---------- MEDIA QUERIES ---------- */
 /* md: 48rem (768px) */
@@ -7,5 +18,9 @@
   #hero .global--section-subheader,
   #hero .global--section-paragraph {
     text-align: left;
+  }
+
+  #next-steps {
+    padding: 0 8rem 3rem 8rem;
   }
 }

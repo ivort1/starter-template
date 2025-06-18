@@ -9,7 +9,7 @@
 #pricing .gradient-wrapper {
   position: absolute;
   left: 15rem;
-  top: 18rem;
+  top: 25rem;
   z-index: -10;
   transform: translateZ(0);
   overflow: hidden;
@@ -123,6 +123,11 @@
 }
 
 #pricing ul {
+    opacity: 0;
+    transform: var(--js-translate-y); 
+    transition: all var(--js-fade-in) ease-in; 
+    
+    /* Flexbox */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

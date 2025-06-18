@@ -153,7 +153,7 @@ export const features = [
 ];
 
 // WHAT'S NEXT STEPS (ContactUs.html)
-export const steps = [
+export const nextSteps = [
     {
       "step": "1",
       "icon": `${calendarClock}`,

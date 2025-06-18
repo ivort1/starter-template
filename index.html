@@ -8,286 +8,245 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/css/preset.css">
     <link rel="stylesheet" href="/css/global.css">
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/lightIndex.css">
+    <link rel="stylesheet" href="/components-css/button/Button.css">
+    <link rel="stylesheet" href="/components-css/card/card/Card.css">
+    <link rel="stylesheet" href="/components-css/card/Card2.css">
+    <link rel="stylesheet" href="sections-light/pricing/Pricing.css">
+    <link rel="stylesheet" href="/sections-light/navigationBar/NavigationBar.css">
 </head>
 <body>
-  <!-- NAV BAR -->
-    <navigation-bar></navigation-bar>
-
-    <main>
-      <!-- HERO -->
-       <div class="hero">
-         <features-2-section>
-           <span slot="header">Custom Website Design & Code</span>
-           <span slot="subheader">Small Business Website Design & Development</span>
-           <span slot="description">
-               Custom designed and coded websites, logo design and branding, copywriting, SEO, and more.
-               All starting at <span class="hero--highlighted mask">$200 a month</span> with <span class="hero--bold">$0 down</span>.
-           </span>
-   
-           <span slot="content">
-             <button1-primary-large>Get started</button1-primary-large>
-           </span>
-   
-           <span slot="image" class="hero--image-container">
-             <img id="hero--img" src="./assets/images/computer.webp" alt="computer" />
-           </span>
-         </features-2-section>
-       </div>
-
-      <!-- SERVICES -->
-      <services-section id="services">
-        <span slot="header">What We Offer</span>
-        <span slot="subheader">We Handle Your Website So You Can Focus on What Matters</span>
-        <span slot="description">
-          Unlock your business’s full potential with our optimized web services—
-          from custom design to lightning-fast static development.
-          We manage your digital presence so you can focus on growing your brand.
-        </span>
-
-        <grid-1-2-3 slot="cards" id="services--cards"></grid-1-2-3>
-      </services-section>
-
-      <!-- WHY WORK WITH US? -->
-       <div id="why-us">
-         <features-2-section>
-           <span slot="header">Why Work With Us?</span>
-           <span slot="subheader">Piece of Mind & Support</span>
-           <span slot="description">
-               We take care of every detail—from UI/UX design,
-               to coding and development, and ongoing maintenance and support—allowing you
-               to concentrate on growing your business.
-           </span>
-   
-           <span slot="content" id="why-us--content"></span>
-   
-           <span slot="image">
-             <img id="why-us--img" src="./assets/images/customer_support.webp" alt="customer support" />
-           </span>
-         </features-2-section>
-       </div>
-      
-      <!-- CTA -->
-       <cta-section>
-        <span slot="header">Ready to Get Started?</span>
-        <span slot="paragraph">Give us a call today to get the ball rolling.</span>
-        <span slot="button-content" id="cta--button-content"></span>
-       </cta-section>
-
-      <!-- PRICING -->
-      <pricing-section id="pricing">
-        <span slot="header">Pricing</span>
-        <span slot="subheader">Choose the Right Plan For You</span>
-        <span slot="description">
-          Discover our flexible pricing options designed to meet your unique needs. Our annual subscription
-          offers unbeatable value—with a one-time payment of $2100 per year. While our monthly plan is
-          available for $200/month with no upfront fees and the freedom to cancel anytime after 12 months.
-        </span>
-
-        <span slot="annual-label">Annual Subscription</span>
-        <span slot="annual-pill">Save $300!</span>
-        <span slot="annual-price-amount">$2100</span>
-        <span slot="annual-per">/year</span>
-        <span slot="annual-description">The best value – equates to $175 per month.</span>
-        <span slot="annual-features">
-          <ul class="pricing--features" id="pricing--annual-features"></ul>
-        </span>
-        <span slot="annual-button">Get started today</span>
-
-        <span slot="monthly-pill">Popular 🔥</span>
-        <span slot="monthly-label">Monthly Subscription</span>
-        <span slot="monthly-price-amount">$200</span>
-        <span slot="monthly-per">/month</span>
-        <span slot="monthly-description">Our best-selling plan.</span>
-        <span slot="monthly-features">
-          <ul class="pricing--features" id="pricing--monthly-features"></ul>
-        </span>
-        <span slot="monthly-button">Get started today</span>
-
-        <span slot="additional-content">
-          <div class="pricing--everything-you-get">
-            <div id="dashed-arrow-icon"></div>
-            <p>Everything you get 🤩✨</p>
-          </div>
-        </spanslot>
-      </pricing-section>
-
-      <!-- FEATURES -->
-       <features-section id="features">
-        <span slot="header">Features</span>
-        <span slot="subheader">What's Included With Your Subscription</span>
-        <span slot="description">
-          Both our monthly and annual subscriptions offer small businesses a complete,
-          hands-off web solution featuring custom design, unlimited revisions, proactive
-          maintenance, secure hosting, and SEO optimization.
-        </span>
-
-        <grid-1-2 slot="cards" id="features--cards"></grid-1-2>
-       </features-section>
-
-       <!-- FOOTER -->
-       <footer-section>
-          <span slot="content">
-            <div class="footer--links">
-              <a href="#about">About</a>
-              <a href="#about">Our Services</a>
-              <a href="#about">Features</a>
-              <a href="#about">Contact Us</a>
+  <main>
+    <!-- NAV BAR -->
+    <nav>
+        <div class="global--section">
+            <div class="nav__content">
+                <a class="nav__title" href="/">Golden Bear Digital</a>
+                <button class="nav__toggle-menu" aria-expanded="false" aria-label="Toggle menu">
+                <div id="nav__bar-1"></div>
+                <div id="nav__bar-2"></div>
+                <div id="nav__bar-3"></div>
+                </button>
             </div>
-          </span>
-       </footer-section>
-    </main>
+
+            <div class="nav__links">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/pages/services.html">Services</a></li>
+                    <li><a href="/pages/use-cases.html">Use Cases</a></li>
+                    <li><a href="/#pricing">Pricing</a></li>
+                    <li><a href="/pages/faqs.html">FAQs</a></li>
+                    <li><a href="/pages/contact-us.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECTION: HERO -->
+    <section class="global--section" id="hero">
+        <div class="global--grid-1-2">
+            <div>
+                <h1 class="global--section-header">Custom Website Design & Code</h1>
+                <p class="global--section-subheader">Small Business Website Design & Development</p>
+                <p class="global--section-paragraph">
+                    Custom designed and coded websites, logo design and branding, copywriting, SEO, and more. All starting at <span class="hero--green-text">$200</span> a month with <span class="hero--green-underline">$0 down</span>. 
+                </p>
+
+                <a href="/pages/contact-us.html" class="button button--primary button--lg">
+                    <span>Get started</span>
+                </a>
+            </div>
+
+            <div class="hero--image-container">
+                <img id="hero--image-container-foreground" src="/assets/images/computer.webp" alt="computer" />
+                <img id="hero--image-container-background" src="/assets/icons/svg/hexagon.svg" alt="hexagon pattern" />
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: WHAT WE OFFER -->
+    <section class="global--section" id="what-we-offer">
+        <h1 class="global--section-header">What We Offer</h1>
+        <p class="global--section-subheader">We Handle Your Website So You Can Focus on What Matters</p>
+        <p class="global--section-paragraph">
+            Unlock your business’s full potential with our optimized web services—
+            from custom design to lightning-fast static development.
+            We manage your digital presence so you can focus on growing your brand.
+        </p>
+
+        <div class="global--grid-1-2-3" id="what-we-offer--cards"></div>
+    </section>
+
+    <!-- SECTION: WHY WORK WITH US -->
+    <section class="global--section" id="why-work-with-us">
+        <div class="global--grid-1-2">
+            <div>
+                <h1 class="global--section-header">Why Work With Us?</h1>
+                <p class="global--section-subheader">Piece of Mind & Support</p>
+                <p class="global--section-paragraph">
+                    We take care of every detail—from UI/UX design, to coding and development, and ongoing maintenance and support—allowing you to concentrate on growing your business. 
+                </p>
+
+                <ul id="why-work-with-us--ul"></ul>
+            </div>
+
+            <div class="why-work-with-us--image-container">
+                <img src="/assets/images/customer_support.webp" alt="customer support heart" />
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="global--section" id="cta">
+        <h1 class="global--section-header">Transform Your Online Presence</h1>
+        <p class="global--section-subheader"> Ready to Elevate Your Business?</p>
+        <p class="global--section-paragraph">
+            Reach out today for a free consultation, and let’s build a fast, modern site that drives results.
+        </p>
+
+        <a href="/pages/contact-us.html" class="button button--primary button--lg">
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.5,11.039c-3.584,0-6.5,2.916-6.5,6.5,0,3.563,2.916,6.461,6.5,6.461s6.5-2.916,6.5-6.5c0-3.563-2.916-6.461-6.5-6.461Zm0,11.961c-3.032,0-5.5-2.45-5.5-5.461,0-3.033,2.468-5.5,5.5-5.5s5.5,2.45,5.5,5.461c0,3.033-2.468,5.5-5.5,5.5Zm1.354-4.854c.195,.195,.195,.512,0,.707-.098,.098-.226,.146-.354,.146s-.256-.049-.354-.146l-1-1c-.094-.094-.146-.221-.146-.354v-2c0-.276,.224-.5,.5-.5s.5,.224,.5,.5v1.793l.854,.854Zm.646-16.146h-1.5V.5c0-.276-.224-.5-.5-.5s-.5,.224-.5,.5v1.5H7V.5c0-.276-.224-.5-.5-.5s-.5,.224-.5,.5v1.5h-1.5C2.019,2,0,4.019,0,6.5v13c0,2.481,2.019,4.5,4.5,4.5h6c.276,0,.5-.224,.5-.5s-.224-.5-.5-.5H4.5c-1.93,0-3.5-1.57-3.5-3.5V9H23v1.5c0,.276,.224,.5,.5,.5s.5-.224,.5-.5V6.5c0-2.481-2.019-4.5-4.5-4.5ZM1,8v-1.5c0-1.93,1.57-3.5,3.5-3.5h15c1.93,0,3.5,1.57,3.5,3.5v1.5H1Z"/>
+                </svg>
+
+                Schedule a call
+            </span>
+        </a>
+    </section>
+
+    <!-- SECTION: PRICING -->
+    <section class="global--section" id="pricing">
+        
+        <div class="gradient-wrapper" aria-hidden="true">
+            <div class="gradient-inner"></div>
+        </div>
+
+        <h1 class="global--section-header">Pricing</h1>
+        <p class="global--section-subheader">Choose the Right Plan For You</p>
+        <p class="global--section-paragraph">
+            Discover our flexible pricing options designed to meet your unique needs. Our annual subscription offers unbeatable value—with a one-time payment
+            of $2100 per year. While our monthly plan is available for $200/month with no upfront fees and the freedom to cancel anytime after 12 months. 
+        </p>
+
+        <div class="global--grid-1-2">
+            <div class="pricing__card" id="pricing__card-annually">
+                <div>
+                    <p class="pricing__subscription-type">
+                        <span class="pricing__annual-label">Annual Subscription</span>
+                        <span class="pricing__annual-pill">Save $300!</span>
+                    </p>
+
+                    <p class="pricing__price">
+                        <span class="pricing__price-amount">$2100</span>
+                        <span class="pricing__per">/year</span>
+                    </p>
+                </div>
+                <p class="pricing__description">
+                    The best value – equates to $175 per month.
+                </p>
+
+                <ul class="pricing__annual-features"></ul>
+
+                <a class="button button--secondary">
+                    <span>
+                        Get started today
+                    </span>
+                </a>
+            </div>
+
+            <div class="pricing__card" id="pricing__card-monthly">
+                <span class="pricing__monthly-pill">Popular 🔥</span>
+                <div>
+                    <p class="pricing__subscription-type">Monthly Subscription</p>
+                    
+                    <p class="pricing__price">
+                        <span class="pricing__price-amount">$200</span>
+                        <span class="pricing__per">/month</span>
+                    </p>
+                </div>
+                <p class="pricing__description">
+                    Our best-selling plan.
+                </p>
+
+                <ul class="pricing__monthly-features"></ul>
+
+                <a class="button button--primary">
+                    <span>
+                        Get started today
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <div class="pricing__everything-you-get">
+            <span id="dashed-arrow-icon"></span>
+            <p>Everything you get 🤩✨</p>
+        </div>
+    </section>
+
+    <!-- SECTION: FEATURES -->
+    <section class="global--section" id="features">
+        <h1 class="global--section-header">Features</h1>
+        <p class="global--section-subheader">What's Included With Your Subscription</p>
+        <p class="global--section-paragraph">
+            Both our monthly and annual subscriptions offer small businesses a complete,
+            hands-off web solution featuring custom design, unlimited revisions, proactive
+            maintenance, secure hosting, and SEO optimization.
+        </p>
+
+        <div class="global--grid-1-2" id="features--cards"></div>
+    </section>
+  </main>
 </body>
 
+<!--
+   ============================================================
+                            JavaScript
+   ============================================================
+-->
 <script type="module">
-  import { services, whyUs, features } from "./database.js";
-  import checkmark from "./assets/icons/checkmark.js";
-  import circleCheckmark from "./assets/icons/circleCheckmark.js";
-  import dashedArrow from "./assets/icons/dashedArrow.js";
-  import calendarClock from "./assets/icons/calendarClock.js";
-  import hexagon from "./assets/icons/hexagon.js";
+import { whyWorkWithUs, features } from "./database.js";
+import circleCheckmark from "./assets/icons/circleCheckmark.js";
 
-  window.addEventListener("DOMContentLoaded", () => {
-    // HERO
-    const heroContainer = document.querySelector(".hero--image-container");
-    heroContainer.insertAdjacentHTML("beforeend", hexagon);
-
-    // SERVICES
-    const servicesCards = document.getElementById("services--cards");
-
-    services.forEach(({ icon, service, description, href }) => {
-      const card = document.createElement("card-component");
-      card.setAttribute("href", href);
-
-      const iconSlot = document.createElement("span");
-      iconSlot.setAttribute("slot", "icon");
-      iconSlot.innerHTML = icon;
-
-      const serviceSlot = document.createElement("span");
-      serviceSlot.setAttribute("slot", "service");
-      serviceSlot.textContent = service;
-
-      const descriptionSlot = document.createElement("span");
-      descriptionSlot.setAttribute("slot", "description");
-      descriptionSlot.textContent = description;
-
-      card.appendChild(iconSlot);
-      card.appendChild(serviceSlot);
-      card.appendChild(descriptionSlot);
-
-      servicesCards.appendChild(card);
-
-    });
-    
-    const singleCard = document.createElement("card-component");
-    singleCard.setAttribute("href", "/");
-
-    const serviceSlot = document.createElement("span");
-    serviceSlot.setAttribute("slot", "service");
-    serviceSlot.textContent = "Looking to Grow Your Business?";
-
-    const descriptionSlot = document.createElement("span");
-    descriptionSlot.setAttribute("slot", "description");
-    descriptionSlot.textContent = "Elevate your online presence with custom web solutions engineered to drive traffic. Visit our Services page for full details and pricing.";
-
-    const linkSlot = document.createElement("span");
-    linkSlot.setAttribute("slot", "link");
-    linkSlot.textContent = "Our services →";
-
-    singleCard.style="--justify-content:center;";
-    singleCard.appendChild(serviceSlot);
-    singleCard.appendChild(descriptionSlot);
-    singleCard.appendChild(linkSlot);
-
-    servicesCards.appendChild(singleCard);
-
+document.addEventListener('DOMContentLoaded', function () {
     // WHY WORK WITH US?
-    const whyUsContent = document.getElementById("why-us--content");
-    const ul = document.createElement("ul");
-    whyUsContent.appendChild(ul);
+    const whyWorkWithUsUl = document.getElementById("why-work-with-us--ul");
 
-    whyUs.forEach(({ feature, description }) => {
-      const li = document.createElement("li");
-      li.classList.add("list-item");
-      li.innerHTML = `
-        ${circleCheckmark}
-        
-        <p>
-          <span class="why-us--feature">${feature}</span>
-          <span class="why-us--description">${description}</span>
-        </p>
-      `;
-      ul.appendChild(li);
+    whyWorkWithUs.forEach(({ feature, description }) => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+            ${circleCheckmark}
+            
+            <p>
+                <span class="why-work-with-us--feature">${feature}</span>
+                <span class="why-work-with-us--description">${description}</span>
+            </p>
+        `;
+        whyWorkWithUsUl.appendChild(li);
     })
-
-    // CTA
-    const ctaButtonContent = document.getElementById("cta--button-content");
-    ctaButtonContent.innerHTML = `${calendarClock} Schedule a call`;
-
-    // PRICING
-    const pricingAnnualFeatures = document.getElementById("pricing--annual-features");
-    pricingAnnualFeatures.innerHTML = `
-      <li>${checkmark} One-time annual payment</li>
-      <li>${checkmark} Cancel anytime after 12 months</li>
-    `;
-
-    const pricingMonthlyFeatures = document.getElementById("pricing--monthly-features");
-    pricingMonthlyFeatures.innerHTML = `
-      <li>${checkmark} No upfront fees with $0 down</li>
-      <li>${checkmark} Cancel anytime after 12 months</li>
-      <li>${checkmark} Month-to-month afterwards</li>
-    `;
-
-    const dashedArrowIcon = document.getElementById("dashed-arrow-icon");
-    dashedArrowIcon.innerHTML = dashedArrow;
 
     // FEATURES
     const featuresCards = document.getElementById("features--cards");
-    features.forEach(({ icon, feature, description}) => {
-      const card = document.createElement("card-2-component");
-      
-      const iconSlot = document.createElement("span");
-      iconSlot.setAttribute("slot", "icon");
-      iconSlot.innerHTML = icon;
 
-      const featureSlot = document.createElement("span");
-      featureSlot.setAttribute("slot", "feature");
-      featureSlot.textContent = feature;
+    features.forEach(({ icon, feature, description }) => {
+        const card = document.createElement("div");
+        card.classList.add("card-2");
 
-      const descriptionSlot = document.createElement("span");
-      descriptionSlot.setAttribute("slot", "description");
-      descriptionSlot.textContent = description;
+        card.innerHTML = `
+            <div class="icon">${icon}</div>
 
-      card.appendChild(iconSlot);
-      card.appendChild(featureSlot);
-      card.appendChild(descriptionSlot);
+            <div>
+                <h3>${feature}</h3>
+                <p>${description}</p>
+            </div>
+        `;
 
-      featuresCards.appendChild(card);
-    });
-
-  });
+        featuresCards.appendChild(card);
+    })
+});
 </script>
-
-<script type="module" src="./components/section/Section.js"></script>
-<script type="module" src="./components/section/SectionHeader.js"></script>
-<script type="module" src="./components/section/SectionSubheader.js"></script>
-<script type="module" src="./components/section/SectionParagraph.js"></script>
-
-<script type="module" src="./components/grid/Grid1-2.js"></script>
-<script type="module" src="./components/grid/Grid1-2-3.js"></script>
-
-<script type="module" src="./components/button/button1/Button1-Primary.js"></script>
-<script type="module" src="./components/button/button1/Button1-Primary-Large.js"></script>
-<script type="module" src="./components/button/button1/Button1-Secondary.js"></script>
-<script type="module" src="./components/pill/Pill.js"></script>
-
-<script type="module" src="./sections/navigationBar/NavigationBar.js"></script>
-<script type="module" src="./sections/services/Services.js"></script>
-<script type="module" src="./sections/pricing/Pricing.js"></script>
-<script type="module" src="./sections/features/Features.js"></script>
-<script type="module" src="./sections/features/Features2.js"></script>
-<script type="module" src="./sections/cta/Cta.js"></script>
-<script type="module" src="./sections/footer/Footer.js"></script>
-<script type="module" src="./components/card/Card.js"></script>
-<script type="module" src="./components/card/Card2.js"></script>
+<script type="module" src="/sections-light/navigationBar/NavigationBar.js"></script>
+<script type="module" defer src="/sections-light/pricing/Pricing.js"></script>
+<script type="module" defer src="/components-css/card/card/Cards.js"></script>
 </html>

@@ -1,0 +1,65 @@
+.steps-section {
+    opacity: 0;
+    transform: var(--js-translate-y);
+    transition: all var(--js-fade-in) ease-in;
+
+    /* Flexbox */
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* Individual Step */
+.step {
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.step__line {
+    position: absolute;
+    left: 18px;
+    top: 3.5rem;
+    height: calc(100% - 32px);
+    width: 1px;
+    background-color: var(--color-black);
+}
+
+.step__number {
+    background-color: var(--color-black);
+    border-radius: 8px;
+    color: var(--color-white);
+    font-size: var(--text-xl);
+    font-weight: var(--text-semibold);
+    line-height: var(--text-xl-line-height);
+    padding: 0.5rem 1rem;
+    transition: all 0.15s ease-in-out;
+}
+
+.step:hover .step__number {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+.step__icon {
+    width: 2rem;
+    height: 2rem;
+}
+
+.step__title {
+    color: var(--color-black);
+    font-size: var(--text-xl);
+    font-weight: var(--text-semibold);
+    line-height: var(--text-xl-line-height);
+    margin-top: 1.5rem;
+}
+
+.step__description {
+    color: var(--color-gray);
+    font-size: var(--text-base);
+    line-height: var(--text-base-line-height);
+}

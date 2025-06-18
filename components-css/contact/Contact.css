@@ -1,6 +1,7 @@
 #contact-component {
-    opacity: 0; 
-    transition: opacity .1s ease-in; 
+    opacity: 0;
+    transform: var(--js-translate-y); 
+    transition: all var(--js-fade-in) ease-in; 
 
     display: flex;
     flex-direction: column;

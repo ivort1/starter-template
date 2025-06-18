@@ -9,10 +9,33 @@
     <link rel="stylesheet" href="/css/preset.css">
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/services.css">
+    <link rel="stylesheet" href="/sections-light/navigationBar/NavigationBar.css">
 </head>
 <body>
-  <!-- NAV BAR -->
-    <navigation-bar></navigation-bar>
+    <!-- NAV BAR -->
+    <nav>
+        <div class="global--section">
+            <div class="nav__content">
+                <a class="nav__title" href="/">Golden Bear Digital</a>
+                <button class="nav__toggle-menu" aria-expanded="false" aria-label="Toggle menu">
+                <div id="nav__bar-1"></div>
+                <div id="nav__bar-2"></div>
+                <div id="nav__bar-3"></div>
+                </button>
+            </div>
+
+            <div class="nav__links">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/pages/services.html">Services</a></li>
+                    <li><a href="/pages/use-cases.html">Use Cases</a></li>
+                    <li><a href="/#pricing">Pricing</a></li>
+                    <li><a href="/pages/faqs.html">FAQs</a></li>
+                    <li><a href="/pages/contact-us.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <main>
       <!-- HERO -->
@@ -93,7 +116,7 @@
 <script type="module" src="../components/button/button1/Button1-Primary-Large.js"></script>
 
 <!-- Sections -->
-<script type="module" src="../sections/navigationBar/NavigationBar.js"></script>
+<script type="module" src="/sections-light/navigationBar/NavigationBar.js"></script>
 <script type="module" src="../sections/features/Features2.js"></script>
 <script type="module" src="../components/section/curvedSection/CurvedSection.js"></script>
 <script type="module" src="../sections/services/Services.js"></script>

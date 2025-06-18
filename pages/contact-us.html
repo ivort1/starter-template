@@ -57,6 +57,7 @@
     <link rel="stylesheet" href="/sections-light/navigationBar/NavigationBar.css">
     <link rel="stylesheet" href="/components-css/button/Button.css">
     <link rel="stylesheet" href="/components-css/contact/Contact.css">
+    <link rel="stylesheet" href="/sections-light/steps/Steps.css">
 </head>
 <body>
     <!-- NAV BAR -->
@@ -74,7 +75,7 @@
             <div class="nav__links">
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="/#services">Services</a></li>
+                    <li><a href="/pages/services.html">Services</a></li>
                     <li><a href="/pages/use-cases.html">Use Cases</a></li>
                     <li><a href="/#pricing">Pricing</a></li>
                     <li><a href="/pages/faqs.html">FAQs</a></li>
@@ -137,23 +138,17 @@
           </div>
       </section>
 
-       <!-- <steps1-section id="steps1-section">
-          <span slot="header">What's Next?</span>
-          <span slot="subheader">Our Process</span>
-          <span slot="paragraph">Get your website up and running in 5 easy steps.</span>
-      </steps1-section>
+       <!-- SECTION: NEXT STEPS -->
+      <svg class="next-steps__divider" fill="currentColor" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" ><path  d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" fill-opacity="1"></path></svg>
+      <section class="global--section" id="next-steps">
+          <h1 class="global--section-header">What's Next?</h1>
+          <p class="global--section-subheader">Our Process</p>
+          <p class="global--section-paragraph">
+            Get your website up and running in 5 easy steps.
+          </p>
 
-
-       <footer-section>
-          <span slot="content">
-            <div class="footer--links">
-              <a href="#about">About</a>
-              <a href="#about">Our Services</a>
-              <a href="#about">Features</a>
-              <a href="#about">Contact Us</a>
-            </div>
-          </span>
-       </footer-section> -->
+          <ul class="steps-section"></ul>
+      </section>
     </main>
 </body>
 
@@ -166,4 +161,5 @@
 
 <!-- Sections -->
 <script type="module" src="../sections-light/navigationBar/NavigationBar.js"></script>
+<script type="module" src="../sections-light/steps/Steps.js" defer></script>
 </html>
