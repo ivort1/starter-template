@@ -18,7 +18,27 @@
 
 .card-2 h3 {
     color: var(--color-black, #121212);
+    font-size: var(--text-base, 1rem);
     font-weight: var(--text-semibold);
+    line-height: var(--text-base-line-height, 1.5rem);
+    margin-bottom: 0.5rem;
+}
+
+.card-2 .card-2__price {
+    background-color: var(--color-accent-light);
+    border-radius: 8px;
+    color: var(--color-accent);
+    font-size: var(--text-xs);
+    line-height: var(--text-xs-line-height);
+    margin-left: 0.5rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.card-2 .card-2__per {
+    color:rgb(183, 183, 183);
+    font-size: var(--text-sm);
+    line-height: var(--text-sm-line-height);
+    margin-left: 0.25rem;
 }
 
 .card-2 p {

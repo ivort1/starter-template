@@ -95,7 +95,7 @@ class ServicesSection extends HTMLElement {
         }
 
         .services--per {
-          color:rgb(167, 167, 167);
+          color:rgb(242, 242, 242);
           font-size: var(--text-sm);
           line-height: var(--text-sm-line-height);
           margin-left: 0.25rem;

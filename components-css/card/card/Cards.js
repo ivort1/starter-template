@@ -29,5 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
   requestAnimationFrame(() => {
     whatWeOfferCards.style.transition = "opacity 0.5s ease-in-out";
     whatWeOfferCards.style.opacity = "1";
+
+    annualFeaturesUl.style.transform = "translateY(0)";
+    annualFeaturesUl.style.opacity = "1";
   });
 });
