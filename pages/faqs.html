@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions</title>
+
+    <!-- Above the fold CSS -->
+    <style>
+     
+    </style>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/preset.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/sections/navigationBar/NavigationBar.css">
+    <link rel="stylesheet" href="/components/faq/Faq.css">
+</head>
+<body>
+  <!-- NAV BAR -->
+  <nav>
+    <div class="global--section">
+      <div class="nav__content">
+          <a class="nav__title" href="/">Golden Bear Digital</a>
+          <button class="nav__toggle-menu" aria-expanded="false" aria-label="Toggle menu">
+          <div id="nav__bar-1"></div>
+          <div id="nav__bar-2"></div>
+          <div id="nav__bar-3"></div>
+          </button>
+      </div>
+
+      <div class="nav__links">
+          <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/pages/services.html">Services</a></li>
+              <li><a href="/pages/use-cases.html">Use Cases</a></li>
+              <li><a href="/#pricing">Pricing</a></li>
+              <li><a href="/pages/faqs.html">FAQs</a></li>
+              <li><a href="/pages/contact-us.html">Contact Us</a></li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- SECTION: SERVICES -->
+    <section class="global--section" id="services">
+      <h1 class="global--section-header">Frequently Asked Questions</h1>
+      <h2 class="global--section-subheader">Have a Question?</h2>
+      <p class="global--section-paragraph">
+          Find quick answers to common questions about our custom website design, SEO services, logo creation, and small business web solutions. Whether you're just getting started or looking to improve your online presence, our FAQs cover everything you need to know to make informed decisions and get the most out of your Golden Bear Digital website.
+      </p>
+      
+      <div class="faq">
+          <button class="faq__question">
+            Can I pay outright for my website?
+            <svg class="faq__question-svg" fill="currentColor" id="fi_9312231" enable-background="new 0 0 512 512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g><g><path d="m256 439.98c-13.81 0-25-11.19-25-25v-317.96c0-13.81 11.19-25 25-25s25 11.19 25 25v317.96c0 13.81-11.19 25-25 25z"></path></g><g><path d="m414.98 281h-317.96c-13.81 0-25-11.19-25-25s11.19-25 25-25h317.96c13.81 0 25 11.19 25 25s-11.19 25-25 25z"></path></g></g></svg>
+          </button>
+          <div class="faq__answer">
+              Yes, that is an option.
+          </div>
+      </div>
+    </section>
+  </main>
+</body>
+<script>
+    const answer = document.querySelector(".faq__answer");
+    const plusIcon = document.querySelector(".faq__question-svg");
+
+    const button = document.querySelector(".faq__question");
+    button.addEventListener("click", () => {
+        plusIcon.classList.toggle("rotate");
+        answer.classList.toggle("show");
+    });
+</script>
+</html>
