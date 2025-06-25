@@ -1,0 +1,62 @@
+#services section:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+.services__content ul {
+  margin-left: 1rem;
+}
+
+.services__content li:not(:first-child) {
+  margin-top: 1rem;
+}
+
+#services ul li::before {
+  content: '‣';
+  margin-right: 0.5rem;
+}
+
+#services ol {
+  counter-reset: item;
+  list-style: none;
+  margin-left: 1rem; /* emulate ml-5 */
+}
+
+#services ol li {
+  display: block;
+  counter-increment: item;
+  position: relative;
+}
+
+#services ol li::before {
+  content: counter(item) ".";
+  margin-right: 0.5rem;
+}
+
+#services h3 {
+  font-size: var(--text-2xl);
+  font-weight: var(--text-semibold);
+  line-height: var(--text-2xl-line-height);
+  margin-bottom: 0.5rem;
+}
+
+#services h4 {
+  font-size: var(--text-base);
+  font-weight: var(--text-semibold);
+  line-height: var(--text-base-line-height);
+}
+
+.services__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.services__content p,
+.services__content ul,
+.services__content ol {
+  color: var(--color-gray);
+  font-size: var(--text-base);
+  line-height: var(--text-base-line-height);
+}

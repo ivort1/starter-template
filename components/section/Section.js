@@ -1,53 +1,31 @@
-import { getPresetCss } from "../../js/presetCss.js";
-
-class SectionComponent extends HTMLElement {
-  constructor() {
-    super();
-    this.attachShadow({ mode: "open" });
-  }
-
-  async connectedCallback() {
-    // Load the global preset CSS as a constructable style sheet.
-    const presetCss = await getPresetCss();
-
-    // Create a component-specific CSSStyleSheet.
-    const css = new CSSStyleSheet();
-    css.replaceSync(`
-      :host {
-        display: block;     
-        width: 100%;
-      }
-
-      .section {
+const style = `
+    .global--section {
         margin-inline: auto;
-        max-width: var(--max-width, var(--max-w-5xl, 64rem)); /* 1024px */
+        max-width: var(--max-w-5xl, 64rem); /* 1024px */
         padding: 3rem 1rem;
-        width: 100%;
-      }
+        width: 100%;    
+    }
 
-      /* md 48rem (768px) */
-      @media (min-width: 48rem) {
-        .section {
-          padding: 4rem 1rem;
+    /* md 48rem (768px) */
+    @media (min-width: 48rem) {
+        .global--section {
+            padding: 4rem 1rem;
         }
-      }
-    `);
+    }
+`;
 
-    // Adopt both the global and component styles into the shadow DOM.
-    this.shadowRoot.adoptedStyleSheets = [presetCss, css];
+let cssInjected = false;
 
-    // Create the section container.
-    const section = document.createElement("section");
-    section.setAttribute("part", "section");
-    section.classList.add("section");
-
-    // Create a slot so that any content provided in the light DOM is rendered.
-    const slot = document.createElement("slot");
-    section.appendChild(slot);
-
-    // Append the section container to the shadow root.
-    this.shadowRoot.appendChild(section);
+export default function section(content) {
+  if (!cssInjected) {
+    const styleElement = document.createElement("style");
+    styleElement.textContent = style;
+    document.head.appendChild(styleElement);
+    cssInjected = true;
   }
-}
 
-customElements.define("section-component", SectionComponent);
+  const section = document.createElement("section");
+  section.classList.add("global--section");
+  section.innerHTML = content;
+  return section;
+}

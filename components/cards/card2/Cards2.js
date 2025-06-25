@@ -11,18 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const card = document.createElement("div");
         card.classList.add("card-2");
 
-        let priceText = "";
-        let bgColor = "";
-        if(includedInSubscription) {
-            bgColor = "var(--color-black)";
-            priceText = `<span class="card-2__included">Included ✓</span>`;
-        } else {
-            bgColor = "var(--color-accent)";
-            priceText = `<span class="card-2__price">$${price}</span><span class="card-2__per">${per}</span>`;
-        }
-
+        const priceText = includedInSubscription ? `<span class="card-2__included">Included ✓</span>` : `<span class="card-2__price">$${price}</span><span class="card-2__per">${per}</span>`;
+        
         card.innerHTML = `
-            <div class="icon" style="background-color: ${bgColor};">${icon}</div>
+            <div class="icon">${icon}</div>
 
             <div>
                 <h3>${feature} ${priceText}</h3>

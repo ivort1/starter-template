@@ -3,50 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <!-- Preload images -->
-    <link rel="preload" as="image" href="/assets/images/tools.webp" imagesrcset="/assets/images/tools.webp 1x, /assets/images/tools@2x.webp 2x" imagesizes="(max-width: 40rem) 100vw, 40rem" type="image/webp">
-    <link rel="preload" as="image" href="/assets/icons/svg/customShape.svg" type="image/svg+xml">
-
+    <title>Contact Us</title>
 
     <!-- Above the fold CSS -->
     <style>
-      #hero svg {
-        margin: 2px 0.75rem 0 0;
-        min-width: 2rem;
-        width: 2rem;
-      }
-
-      #hero .hero__image-container {
-        position: relative;
-        width: 100%;
-      }
-
-      #hero .hero__image-container-background {
-        left: 50%;
-        max-width: none;
-        position: absolute;
-        top: 0;
-        transform: translate(-50%);
-        width: 40rem;
-        z-index: -1;
-      }
-
-      #hero .hero__image-container-foreground {
-        left: 50%;
-        position: absolute;
-        top: 3%;
-        transform: translate(-50%);
-        z-index: 1;
-      }
-
       /* ---------- MEDIA QUERIES ---------- */
       /* md: 48rem (768px) */
       @media (min-width: 48rem) {
-        #hero .global--section-header,
-        #hero .global--section-subheader,
-        #hero .global--section-paragraph {
+        #services .global--section-header,
+        #services .global--section-subheader,
+        #services .global--section-paragraph {
+          margin-inline: 0;
           text-align: left;
         }
       }
@@ -55,161 +22,137 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/css/preset.css">
     <link rel="stylesheet" href="/css/global.css">
-    <link rel="stylesheet" href="/css/services.css">
-    <link rel="stylesheet" href="/sections-light/navigationBar/NavigationBar.css">
-    <link rel="stylesheet" href="/components-css/button/Button.css">
+    <link rel="stylesheet" href="/sections/navigationBar/NavigationBar.css">
+    <link rel="stylesheet" href="/css/pages/services.css">
+    <link rel="stylesheet" href="/components/button/Button.css">
 </head>
 <body>
-    <!-- NAV BAR -->
-    <nav>
-        <div class="global--section">
-            <div class="nav__content">
-                <a class="nav__title" href="/">Golden Bear Digital</a>
-                <button class="nav__toggle-menu" aria-expanded="false" aria-label="Toggle menu">
-                <div id="nav__bar-1"></div>
-                <div id="nav__bar-2"></div>
-                <div id="nav__bar-3"></div>
-                </button>
-            </div>
+  <!-- NAV BAR -->
+  <nav>
+    <div class="global--section">
+      <div class="nav__content">
+          <a class="nav__title" href="/">Golden Bear Digital</a>
+          <button class="nav__toggle-menu" aria-expanded="false" aria-label="Toggle menu">
+          <div id="nav__bar-1"></div>
+          <div id="nav__bar-2"></div>
+          <div id="nav__bar-3"></div>
+          </button>
+      </div>
 
-            <div class="nav__links">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/pages/services.html">Services</a></li>
-                    <li><a href="/pages/use-cases.html">Use Cases</a></li>
-                    <li><a href="/#pricing">Pricing</a></li>
-                    <li><a href="/pages/faqs.html">FAQs</a></li>
-                    <li><a href="/pages/contact-us.html">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+      <div class="nav__links">
+          <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/pages/services.html">Services</a></li>
+              <li><a href="/pages/use-cases.html">Use Cases</a></li>
+              <li><a href="/#pricing">Pricing</a></li>
+              <li><a href="/pages/faqs.html">FAQs</a></li>
+              <li><a href="/pages/contact-us.html">Contact Us</a></li>
+          </ul>
+      </div>
+    </div>
+  </nav>
 
-    <main>
-      <!-- SECTION: HERO -->
-      <section class="global--section" id="hero">
-          <div class="global--grid-1-2">
-            <div class="hero__image-container">
-                <img
-                  class="hero__image-container-background"
-                  src="/assets/icons/svg/customShape.svg"
-                  alt="custom shape background"
-                  width="800" 
-                  height="800"
-                  loading="eager"
-                  fetchpriority="high"
-                >
+  <main>
+    <!-- SECTION: SERVICES -->
+    <section class="global--section" id="services">
+      <h1 class="global--section-header">Our Services</h1>
+      <h2 class="global--section-subheader">Everything We Offer</h2>
+      <p class="global--section-paragraph">
+          At Golden Bear Digital, we don’t rely on WordPress, Wix, Squarespace or any drag-and-drop builder. Instead, we hand-craft
+          100% custom, plugin-free websites that mirror your brand’s unique story and deliver peak performance. With no external
+          dependencies weighing it down, each site loads in a flash, nails Core Web Vitals, and speaks the search engines’ language
+          through clean, semantic markup and structured data. The result is a lean, lightning-fast website that captivates users
+          and pleases Google and search engines.
+      </p>
 
-                <img
-                  class="hero__image-container-foreground"
-                  src="/assets/images/tools.webp"
-                  srcset="/assets/images/tools.webp 1x, /assets/images/tools@2x.webp 2x"
-                  sizes="(max-width: 40rem) 100vw, 40rem"
-                  width="500"
-                  height="500"
-                  alt="tools"
-                  loading="eager"
-                  fetchpriority="high"
-                >
-              </div>
-              
-              <div>
-                  <h1 class="global--section-header">Our Services</h1>
-                  <h2 class="global--section-subheader">Everything We Offer</h2>
-                  <div class="global--section-paragraph">
-                    <p>
-                      At Golden Bear Digital, we don’t rely on WordPress, Wix, Squarespace or any drag-and-drop builder. Instead, we hand-craft
-                      100% custom, plugin-free websites that mirror your brand’s unique story and deliver peak performance. With no external
-                      dependencies weighing it down, each site loads in a flash, nails Core Web Vitals, and speaks the search engines’ language
-                      through clean, semantic markup and structured data. The result is a lean, lightning-fast digital presence that captivates users
-                      and pleases Google and search engines.
-                    </p>
-
-                    <a href="/pages/contact-us.html" class="button button--primary button--lg">
-                      <span>
-                          <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" fill="currentColor">
-                              <path d="M17.5,11.039c-3.584,0-6.5,2.916-6.5,6.5,0,3.563,2.916,6.461,6.5,6.461s6.5-2.916,6.5-6.5c0-3.563-2.916-6.461-6.5-6.461Zm0,11.961c-3.032,0-5.5-2.45-5.5-5.461,0-3.033,2.468-5.5,5.5-5.5s5.5,2.45,5.5,5.461c0,3.033-2.468,5.5-5.5,5.5Zm1.354-4.854c.195,.195,.195,.512,0,.707-.098,.098-.226,.146-.354,.146s-.256-.049-.354-.146l-1-1c-.094-.094-.146-.221-.146-.354v-2c0-.276,.224-.5,.5-.5s.5,.224,.5,.5v1.793l.854,.854Zm.646-16.146h-1.5V.5c0-.276-.224-.5-.5-.5s-.5,.224-.5,.5v1.5H7V.5c0-.276-.224-.5-.5-.5s-.5,.224-.5,.5v1.5h-1.5C2.019,2,0,4.019,0,6.5v13c0,2.481,2.019,4.5,4.5,4.5h6c.276,0,.5-.224,.5-.5s-.224-.5-.5-.5H4.5c-1.93,0-3.5-1.57-3.5-3.5V9H23v1.5c0,.276,.224,.5,.5,.5s.5-.224,.5-.5V6.5c0-2.481-2.019-4.5-4.5-4.5ZM1,8v-1.5c0-1.93,1.57-3.5,3.5-3.5h15c1.93,0,3.5,1.57,3.5,3.5v1.5H1Z"/>
-                          </svg>
-
-                          Schedule a call
-                      </span>
-                    </a>
-
-                    <!-- SECTION: SERVICES -->
-                    <section id="web-development">
-                      <h3>Website Design & Development</h3>
-                      <p>
-                        We build custom, SEO-optimized websites that captivate your audience and perform flawlessly. From polished design mockups to clean, secure HTML, CSS, and JavaScript code, every site is engineered for speed, scalability, and higher search rankings.
-                      </p>
-                      <ul>
-                        <li>
-                          <strong>Lightning-Fast Performance:</strong> We optimize images, minify code, defer non-critical scripts, and leverage smart caching so your site loads instantly—delighting users and boosting your Core Web Vitals.
-                        </li>
-                        <li>
-                          <strong>Responsive &amp; Mobile-First:</strong> Every layout is crafted to adapt seamlessly on smartphones, tablets, laptops, and desktops—ensuring a flawless user experience and better rankings on Google’s mobile index.
-                        </li>
-                        <li>
-                          <strong>Future-Proof & Easy Updates:</strong> With a modular, well-documented codebase and no bulky plugins, adding new features or editing content is quick, low-risk, and keeps your site fresh for years to come.
-                        </li>
-                      </ul>
-                    </section>
-          
-                    <section id="logo-design">
-                      <h3>Logo Design</h3>
-                      <p>
-                        Your logo is the cornerstone of your brand identity. At Golden Bear Digital, we fuse creative vision with strategic insight to craft a professional logo that’s memorable, versatile, and true to your business. Whether you want sleek, minimalist lines, bold modern shapes, or the nostalgic charm of vintage and retro styles, our designers deliver a vector-based mark that scales flawlessly across websites, social media, print and beyond.
-                      </p>
-
-                      <ul>
-                        <li>
-                          <strong>Crystal-Clear, Scalable Graphics:</strong> Have you ever visited a website and noticed that the logo is blurry or pixelated? It's most likely because the image is in JPEG or PNG format and is set to an improper width and height.
-                          In comparison, our logos are vectors, so they stay sharp at any size, from tiny icons to giant banners.
-                        </li>
-                        <li>
-                          <strong>Ready-to-Use File Package:</strong> You’ll get your logo as a vector file plus high-quality PNGs sized perfectly for your website, social media, email signatures and print materials.
-                        </li>
-                      </ul>
-                    </section>
-
-                    <section id="content-copywriting">
-                      <h3>Content &amp; Copywriting</h3>
-                      <p>
-                        Words matter. We craft compelling copy that tells your story, drives action, and boosts SEO.
-                      </p>
-                      <ul>
-                        <li>
-                          <strong>Brand Voice:</strong> Consistent tone across your site, emails, and marketing.
-                        </li>
-                        <li>
-                          <strong>SEO Copy:</strong> Keyword-rich, user-focused content that ranks and converts.
-                        </li>
-                        <li>
-                          <strong>Blog &amp; Whitepapers:</strong> Authority-building articles tailored to your industry.
-                        </li>
-                      </ul>
-                    </section>
-          
-                    <section id="seo">
-                      <h3>Search Engine Optimization (SEO)</h3>
-                      <p>
-                        Increase your visibility with a technical and on-page SEO strategy that drives organic traffic.
-                      </p>
-                      <ul>
-                        <li>
-                          <strong>On-Page SEO:</strong> Semantic HTML, optimized meta tags, and structured data.
-                        </li>
-                        <li>
-                          <strong>Technical SEO:</strong> Speed, mobile performance, and clean URL structures.
-                        </li>
-                        <li>
-                          <strong>Local SEO:</strong> Optimize for “near me” searches to capture local customers.
-                        </li>
-                      </ul>
-                    </section>
-                  </div>
-                </div>
-          </div>
+      <!-- SECTION: SERVICES -->
+      <section id="web-development" class="services__content">
+          <h3>Website Design & Development</h3>
+          <p>
+            At Golden Bear Digital, we don’t just build websites — we craft custom digital experiences tailored to your business goals. Every site is meticulously hand-coded from scratch using clean, semantic HTML, CSS, and JavaScript, with no reliance on bulky plugins or third-party builders. This means faster loading times, better security, and total control over performance and design.
+          </p>
+          <ul>
+            <li>
+              <strong>SEO-Optimized from Day One:</strong> We build with search engines in mind, using clean code, proper heading structures, optimized metadata, and structured data to help your website rank higher organically.
+            </li>
+            <li>
+              <strong>Lightning-Fast Performance:</strong> Your visitors won’t wait. We optimize images, minify code, defer non-essential scripts, and leverage smart caching techniques so pages load instantly — improving user experience and Core Web Vitals scores, which Google rewards.
+            </li>
+            <li>
+              <strong>Responsive &amp; Mobile-First Design:</strong> With over half of all web traffic coming from mobile devices, we ensure your site looks stunning and works flawlessly on smartphones, tablets, laptops, and desktops—ensuring a flawless user experience and better rankings on Google’s mobile index.
+            </li>
+            <li>
+              <strong>Future-Proof & Easy Updates:</strong> With a modular, well-documented codebase and no bulky plugins, adding new features or editing content is quick, low-risk, and keeps your site fresh for years to come.
+            </li>
+          </ul>
+          <p>From initial design mockups to the final deployment, we partner with you every step of the way to deliver a website that looks great, performs brilliantly, and grows your online presence.</p>
       </section>
-    </main>
+
+      <section id="logo-design" class="services__content">
+        <h3>Logo Design</h3>
+        <p>
+          Your logo is much more than just an image — it’s the visual cornerstone of your brand’s identity. At Golden Bear Digital, we blend creativity with strategic thinking to deliver logos that are memorable, versatile, and perfectly aligned with your business values.
+        </p>
+
+        <h4>What sets our logo design apart?</h4>
+        <ul>
+          <li>
+            <strong>Custom, Vector-Based Artwork:</strong> Unlike pixel-based images (JPEG or PNG) that blur when resized, our logos are created as scalable vector files. This ensures your logo looks razor-sharp and professional on everything — from tiny social media icons to large banners and printed materials.
+          </li>
+          <li>
+            <strong>Tailored Style to Fit Your Brand:</strong>  Whether you want sleek minimalism, bold modern shapes, vintage charm, or something entirely unique, our designers craft a logo that visually tells your brand’s story.
+          </li>
+          <li>
+            <strong>Ready-to-Use File Package:</strong> You’ll receive your logo in multiple formats, including vector files (SVG, AI, EPS) plus high-resolution PNGs optimized for your website, social media, email signatures, and print. This makes it easy to use your logo anywhere, anytime.
+          </li>
+        </ul>
+        <p>Your logo is often the first impression customers have of your business. Let’s make sure it’s unforgettable.</p>
+      </section>
+
+      <section id="content-copywriting" class="services__content">
+        <h3>Content &amp; Copywriting</h3>
+        <p>
+          Great websites need great content — clear, compelling, and tailored to your audience. At Golden Bear Digital, you have three flexible options for your website content:
+        </p>
+        <ol>
+          <li>
+            <strong>Provide Your Own Content: </strong>If you already have well-crafted text, you can simply supply it to us. We’ll integrate your content seamlessly into your custom website.
+          </li>
+          <li>
+            <strong>AI-Generated Content: </strong>Need a quick start? We offer AI-generated content that’s optimized for SEO and easy to understand. This option is great for standard pages like About, Services, and FAQs. We review and tweak the content to make sure it sounds natural and professional.
+          </li>
+          <li>
+            <strong>Professional Copywriting Services: </strong>For polished, original copy that truly captures your brand voice and converts visitors into customers, we provide expert copywriting. Our professional writers craft content that’s engaging, clear, and SEO-friendly — tailored specifically for your business goals. Pricing depends on the word count and complexity of the content needed.
+          </li>
+        </ol>
+      </section>
+
+      <section id="seo" class="services__content">
+        <h3>Search Engine Optimization (SEO)</h3>
+        <p>
+          At Golden Bear Digital, SEO is baked into every website we build — starting with on-page SEO to help your site rank higher and attract the right visitors. On-page SEO includes optimizing page titles, meta descriptions, headings, image alt text, and URL structure. We also ensure your site’s content uses relevant keywords naturally, so search engines easily understand what your business is about.
+        </p>
+        <p>
+          We pay special attention to technical SEO elements such as clean, semantic HTML markup, structured data (schema), and fast loading times — all critical factors that improve your site’s visibility in search results and enhance user experience. Additionally, our websites meet Google’s Core Web Vitals standards, which influence your rankings.
+        </p>
+
+        <h4>What’s included with on-page SEO?</h4>
+        <ul>
+          <li>Keyword research guidance to focus on the terms your customers search for</li>
+          <li>Optimized page titles and meta tags</li>
+          <li>Proper heading hierarchy (H1, H2, etc.) for clear content structure</li>
+          <li>Alt text for all images to improve accessibility and SEO</li>
+          <li>Clean URL slugs reflecting page content</li>
+          <li>Implementation of structured data (schema) to help search engines display rich snippets</li>
+          <li>Fast loading performance and mobile-friendly design</li>
+        </ul>
+
+        <h4>Advanced SEO Services:</h4>
+        <p>
+          If you want to take your SEO even further with ongoing optimization, backlink building, local SEO strategies, or content marketing, we offer specialized SEO packages at an additional fee. These services are designed to boost your site’s authority and improve rankings over time.
+        </p>
+      </section>
+    </section>
+  </main>
 </body>
 </html>

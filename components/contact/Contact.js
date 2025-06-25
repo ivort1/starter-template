@@ -1,102 +1,42 @@
-import { getPresetCss } from "../../../js/presetCss.js";
+import { contactInformation } from "../../database.js";
 
-class ContactComponent extends HTMLElement {
-  constructor() {
-    super();
-    this.attachShadow({ mode: "open" });
-    this._contactInformation = [];
-    this._initialized = false; // We'll set this after templating
-    
-    // Create a template for the component
-    const template = document.createElement("template");
-    template.innerHTML = `
-      <ul id="contact-component" part="contact-component"></ul>
-    `;
-    this.shadowRoot.appendChild(template.content.cloneNode(true));
-    // Cache the reference for efficient future updates
-    this._contactList = this.shadowRoot.querySelector("#contact-component");
-  }
+document.addEventListener("DOMContentLoaded", () => {
+  const list = document.getElementById("contact-component");
+  if (!Array.isArray(contactInformation) || !list) return;
 
-  get contactInformation() {
-    return this._contactInformation;
-  }
+  const fragment = document.createDocumentFragment();
 
-  set contactInformation(value) {
-    if (Array.isArray(value)) {
-      this._contactInformation = value;
-      if (this._initialized) {
-        this.renderContactInformation();
-      }
+  contactInformation.forEach(({ icon, title, information }) => {
+    // li wrapper
+    const li = document.createElement("li");
+
+    // icon
+    const iconWrapper = document.createElement("div");
+    iconWrapper.innerHTML = icon;
+
+    // info
+    const infoWrapper = document.createElement("div");
+    const p = document.createElement("p");
+    p.className = "contact-component__title";
+    p.textContent = title;
+
+    const a = document.createElement("a");
+    a.textContent = information;
+    if (/email/i.test(title)) {
+      a.href = `mailto:${information}`;
+    } else if (/phone/i.test(title)) {
+      const digits = information.replace(/[^\d+]/g, "");
+      a.href = `tel:${digits}`;
     }
-  }
 
-  connectedCallback() {
-    this.init();
-  }
+    infoWrapper.append(p, a);
+    li.append(iconWrapper, infoWrapper);
+    fragment.appendChild(li);
+  });
 
-  async init() {
-    const presetCss = await getPresetCss();
-
-    const css = new CSSStyleSheet();
-    css.replaceSync(`
-      #contact-component {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          justify-content: flex-start;
-          gap: 2rem;
-      }
-      svg {
-          min-width: 1.75rem;
-          width: 1.75rem;
-      }
-      li {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: flex-start;
-          gap: 1rem;
-      }
-      .title {
-          color: #121212;
-          font-weight: var(--text-semibold);
-      }
-      a {
-          color: var(--color-accent);
-          cursor: pointer;
-          text-decoration: underline;
-          text-underline-offset: 5px;
-          transition: color 0.3s ease-in-out;
-      }
-      a:hover {
-          color: var(--color-accent-hover);
-      }
-    `);
-    this.shadowRoot.adoptedStyleSheets = [presetCss, css];
-
-    this._initialized = true;
-    // If data was set before init, render now
-    if (this._contactInformation.length > 0) {
-      this.renderContactInformation();
-    }
-  }
-
-  renderContactInformation() {
-    if (!this._contactList) return;
-
-    this._contactList.innerHTML = "";
-    this._contactInformation.forEach(({ icon, title, information }) => {
-      const li = document.createElement("li");
-      li.innerHTML = `
-        <div>${icon || "icon"}</div>
-        <div>
-          <p>${title || "title"}</p>
-          <a>${information || "information"}</a>
-        </div>
-      `;
-      this._contactList.appendChild(li);
-    });
-  }
-}
-
-customElements.define("contact-component", ContactComponent);
+  // 1) insert all <li> at once
+  list.appendChild(fragment);
+  // 2) trigger the fade-in
+  list.style.opacity = "1";
+  list.style.transform = "translateY(0)";
+});
