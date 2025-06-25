@@ -24,20 +24,29 @@
     margin-bottom: 0.5rem;
 }
 
+.card-2 .card-2__included {
+    border: solid 1px rgb(183, 183, 183);
+    border-radius: 8px;
+    color: rgb(183, 183, 183);
+    font-size: var(--text-xs);
+    margin-left: 0.75rem;
+    padding: 0.25rem 0.5rem;
+}
+
 .card-2 .card-2__price {
     background-color: var(--color-accent-light);
     border-radius: 8px;
     color: var(--color-accent);
-    font-size: var(--text-xs);
-    line-height: var(--text-xs-line-height);
-    margin-left: 0.5rem;
+    font-size: var(--text-base);
+    line-height: var(--text-base-line-height);
+    margin-left: 0.75rem;
     padding: 0.25rem 0.5rem;
 }
 
 .card-2 .card-2__per {
     color:rgb(183, 183, 183);
-    font-size: var(--text-sm);
-    line-height: var(--text-sm-line-height);
+    font-size: var(--text-xs);
+    line-height: var(--text-xs-line-height);
     margin-left: 0.25rem;
 }
 

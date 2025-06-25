@@ -200,29 +200,6 @@
 
         <div class="global--grid-1-2" id="features--cards"></div>
     </section>
-
-    <!-- SECTION: PAID FEATURES -->
-    <section class="global--section" id="additional-features">
-        <h1 class="global--section-header">Additional Features</h1>
-        <p class="global--section-subheader">Need Integrations or More Functionality?</p>
-        <p class="global--section-paragraph">
-            We offer a range of additional features to enhance your website’s functionality at an additional cost, yet still at an affordable price.
-        </p>
-
-        <table style="width: 100%; table-layout: fixed;" id="additional-features__table">
-            <colgroup>
-                <col style="width: 70%;">
-                <col style="width: 30%;">
-            </colgroup>
-            <tr>
-                <th>FEATURE</th>
-                <th>PRICE</th>
-            </tr>
-        </table>
-
-
-        <!-- <ul class="global--grid-1-2" id="additional-features__cards"></ul> -->
-    </section>
   </main>
 </body>
 
@@ -251,40 +228,10 @@ document.addEventListener('DOMContentLoaded', function () {
         `;
         whyWorkWithUsUl.appendChild(li);
     })
-
-    // FEATURES
-    const featuresCards = document.getElementById("features--cards");
-
-    features.forEach(({ includedInSubscription, price, per, icon, feature, description }) => {
-        const card = document.createElement("div");
-        card.classList.add("card-2");
-
-        let priceText = "";
-        let bgColor = "";
-        if(includedInSubscription) {
-            bgColor = "var(--color-black)";
-            priceText = `<span class="card-2__per">✓</span>`;
-        } else {
-            bgColor = "var(--color-accent)";
-            priceText = `<span class="card-2__price">$${price}</span><span class="card-2__per">${per}</span>`;
-        }
-
-        card.innerHTML = `
-            <div class="icon" style="background-color: ${bgColor};">${icon}</div>
-
-            <div>
-                <h3>${feature} ${priceText}</h3>
-                <p>${description}</p>
-            </div>
-        `;
-
-        featuresCards.appendChild(card);
-    })
 });
 </script>
 <script type="module" src="/sections-light/navigationBar/NavigationBar.js"></script>
 <script type="module" defer src="/components-css/cards/card/Cards.js"></script>
 <script type="module" defer src="/sections-light/pricing/Pricing.js"></script>
 <script type="module" defer src="/components-css/cards/card2/Cards2.js"></script>
-<script type="module" defer src="/components-css/cards/card3/ Cards3.js"></script>
 </html>
