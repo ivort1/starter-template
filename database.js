@@ -1,3 +1,5 @@
+import article  from "./assets/icons/article.js";
+import calendarCheck from "./assets/icons/calendarCheck.js";
 import calendarClock from "./assets/icons/calendarClock.js";
 import code from "./assets/icons/code.js";
 import codeWindow from "./assets/icons/codeWindow.js";
@@ -9,7 +11,9 @@ import googleAnalytics from "./assets/icons/googleAnalytics.js";
 import googleBusiness from "./assets/icons/googleBusiness.js";
 import heartHandshake from "./assets/icons/heartHandshake.js";
 import laptopCode from "./assets/icons/laptopCode.js";
+import layers from "./assets/icons/layers.js";
 import logoDesign from "./assets/icons/logoDesign.js";
+import logoDesignFill from "./assets/icons/logoDesignFill.js";
 import maintenance from "./assets/icons/maintenance.js";
 import pencil from "./assets/icons/pencil.js";
 import mobilePhone from "./assets/icons/mobilePhone.js";
@@ -111,45 +115,101 @@ export const monthlyFeatures = [
 // FEATURES
 export const features = [
     {
+      "includedInSubscription": true,
+      "price": "0",
+      "per": null,
       "icon": `${code}`,
       "feature": "100% Custom Site",
       "description": "Fully custom-coded websites—no WordPress, Wix, Squarespace, etc. Each site is uniquely designed and optimized for a fast, responsive online presence."
     },
     {
+      "includedInSubscription": true,
+      "price": "0",
+      "per": null,
       "icon": `${pencil}`,
       "feature": "Unlimited Edits",
       "description": "Enjoy unlimited revisions to perfect your site’s design and functionality, keeping your web presence up-to-date and user-friendly."
     },
     {
+      "includedInSubscription": true,
+      "price": "0",
+      "per": null,
       "icon": `${maintenance}`,
       "feature": "Maintenance",
       "description": "Keep your website running smoothly with our proactive maintenance services, including regular updates, security checks, and performance optimization."
     },
     {
+      "includedInSubscription": true,
+      "price": "0",
+      "per": null,
       "icon": `${server}`,
       "feature": "Hosting",
       "description": "Benefit from our secure and scalable hosting solutions that deliver fast load times, 99.9% uptime, and robust data protection."
     },
     {
+      "includedInSubscription": true,
+      "price": "0",
+      "per": null,
       "icon": `${worldWideWeb}`,
       "feature": "Domain Name Registration",  
       "description": "Seamlessly connect an existing domain or register a brand-new one. Our expert domain management services boost your search engine visibility and drive organic traffic to help your business stand out online."
     },
     {
+      "includedInSubscription": true,
+      "price": "0",
+      "per": null,
       "icon": `${googleBusiness}`,
       "feature": "Google Business Profile",
       "description": "Enhance your local SEO with a fully optimized Google Business Profile, designed to attract more local customers and improve online visibility."
     },
     {
+      "includedInSubscription": true,
+      "price": "0",
+      "per": null,
       "icon": `${googleAnalytics}`,
       "feature": "Google Analytics",
       "description": "Gain actionable insights with integrated Google Analytics, helping you track user behavior, optimize performance, and drive conversions."
     },
     {
+      "includedInSubscription": true,
+      "price": "0",
+      "per": null,
       "icon": `${dollar}`,
       "feature": "Accept Digital Payments",
       "description": "Streamline your online transactions with Stripe or Square Up and provide a frictionless and efficient e-commerce payment experience for your customers."
-    }
+    },
+    {
+      "includedInSubscription": false,
+      "price": "99.99",
+      "per": "(one-time payment)",
+      "icon": `${layers}`,
+      "feature": "Additional Page(s)",
+      "description": "Streamline your online transactions with Stripe or Square Up and provide a frictionless and efficient e-commerce payment experience for your customers."
+    },
+    {
+      "includedInSubscription": false,
+      "price": "19.99",
+      "per": "/month",
+      "icon": `${article}`,
+      "feature": "Blog",
+      "description": "Streamline your online transactions with Stripe or Square Up and provide a frictionless and efficient e-commerce payment experience for your customers."
+    },
+    {
+      "includedInSubscription": false,
+      "price": "9.99",
+      "per": "/month",
+      "icon": `${calendarCheck}`,
+      "feature": "Scheduling / Appointments",
+      "description": "Streamline your online transactions with Stripe or Square Up and provide a frictionless and efficient e-commerce payment experience for your customers."
+    },
+    {
+      "includedInSubscription": false,
+      "price": "199.99",
+      "per": "(one-time payment)",
+      "icon": `${logoDesignFill}`,
+      "feature": "Logo Design",
+      "description": "Streamline your online transactions with Stripe or Square Up and provide a frictionless and efficient e-commerce payment experience for your customers."
+    },
 ];
 
 // ADDITIONAL FEATURES
