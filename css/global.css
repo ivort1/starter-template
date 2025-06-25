@@ -87,6 +87,7 @@
 
     /* JavaScript effects */
     --js-fade-in: 0.25s;
+    --js-transition: 0.25s;
     --js-translate-y: translateY(-25px);
 }
 
@@ -104,12 +105,13 @@ html {
 
 .global--section-header {
   color: var(--color-accent);
-  font-size: var(--text-base);
-  font-weight: var(--text-semibold);
-  line-height: var(--text-base-line-height);
+  font-size: var(--text-sm);
+  font-weight: var(--text-bold);
+  line-height: var(--text-sm-line-height);
   margin-bottom: 0.5rem;
   margin-inline: auto;
   text-align: left;
+  text-transform: uppercase;
   width: 100%;
 }
 

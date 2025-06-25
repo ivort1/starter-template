@@ -152,6 +152,34 @@ export const features = [
     }
 ];
 
+// ADDITIONAL FEATURES
+export const additionalFeatures = [
+  {
+    "feature": "Additional Page",
+    "price": "99.99",
+    "per": "one-time payment",
+    "description": "Add an extra page to your website, expanding your content and enhancing user engagement with a one-time fee."
+  },
+  {
+    "feature": "Blog",
+    "price": "19.99",
+    "per": "per month",
+    "description": "Add an extra page to your website, expanding your content and enhancing user engagement with a one-time fee."
+  },
+  {
+    "feature": "Appointments / Scheduling",
+    "price": "9.99",
+    "per": "per month",
+    "description": "Add an extra page to your website, expanding your content and enhancing user engagement with a one-time fee."
+  },
+  {
+    "feature": "Logo Design & Creation",
+    "price": "199.99",
+    "per": "one-time payment",
+    "description": "Your logo is the cornerstone of your brand identity—it tells your story in a single visual image. Our logo design service combines creativity with strategy to produce a unique, memorable logo that represents the essence of your business."
+  }
+];
+
 // WHAT'S NEXT STEPS (ContactUs.html)
 export const nextSteps = [
     {

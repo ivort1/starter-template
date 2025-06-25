@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/lightIndex.css">
     <link rel="stylesheet" href="/components-css/button/Button.css">
-    <link rel="stylesheet" href="/components-css/card/card/Card.css">
-    <link rel="stylesheet" href="/components-css/card/Card2.css">
+    <link rel="stylesheet" href="/components-css/cards/card/Card.css">
+    <link rel="stylesheet" href="/components-css/cards/card2/Card2.css">
+    <link rel="stylesheet" href="/components-css/cards/card3/Card3.css">
     <link rel="stylesheet" href="sections-light/pricing/Pricing.css">
     <link rel="stylesheet" href="/sections-light/navigationBar/NavigationBar.css">
 </head>
@@ -74,27 +75,29 @@
             We manage your digital presence so you can focus on growing your brand.
         </p>
 
-        <div class="global--grid-1-2-3" id="what-we-offer--cards"></div>
+        <div class="global--grid-1-2-3" id="what-we-offer__cards"></div>
     </section>
 
     <!-- SECTION: WHY WORK WITH US -->
-    <section class="global--section" id="why-work-with-us">
-        <div class="global--grid-1-2">
-            <div>
-                <h1 class="global--section-header">Why Work With Us?</h1>
-                <p class="global--section-subheader">Piece of Mind & Support</p>
-                <p class="global--section-paragraph">
-                    We take care of every detail—from UI/UX design, to coding and development, and ongoing maintenance and support—allowing you to concentrate on growing your business. 
-                </p>
-
-                <ul id="why-work-with-us--ul"></ul>
-            </div>
-
-            <div class="why-work-with-us--image-container">
-                <img src="/assets/images/customer_support.webp" alt="customer support heart" />
-            </div>
-        </div>
-    </section>
+     <div id="why-work-with-us-bg">
+         <section class="global--section" id="why-work-with-us">
+             <div class="global--grid-1-2">
+                 <div>
+                     <h1 class="global--section-header">Why Work With Us?</h1>
+                     <p class="global--section-subheader">Piece of Mind & Support</p>
+                     <p class="global--section-paragraph">
+                         We take care of every detail—from UI/UX design, to coding and development, and ongoing maintenance and support—allowing you to concentrate on growing your business. 
+                     </p>
+     
+                     <ul id="why-work-with-us--ul"></ul>
+                 </div>
+     
+                 <div class="why-work-with-us--image-container">
+                     <img src="/assets/images/customer_support.webp" alt="customer support heart" loading="lazy" />
+                 </div>
+             </div>
+         </section>
+     </div>
 
     <!-- CTA -->
     <section class="global--section" id="cta">
@@ -138,7 +141,7 @@
                     </p>
 
                     <p class="pricing__price">
-                        <span class="pricing__price-amount">$2100</span>
+                        <span class="pricing__price-amount">$2099.99</span>
                         <span class="pricing__per">/year</span>
                     </p>
                 </div>
@@ -161,7 +164,7 @@
                     <p class="pricing__subscription-type">Monthly Subscription</p>
                     
                     <p class="pricing__price">
-                        <span class="pricing__price-amount">$200</span>
+                        <span class="pricing__price-amount">$199.99</span>
                         <span class="pricing__per">/month</span>
                     </p>
                 </div>
@@ -197,6 +200,29 @@
 
         <div class="global--grid-1-2" id="features--cards"></div>
     </section>
+
+    <!-- SECTION: PAID FEATURES -->
+    <section class="global--section" id="additional-features">
+        <h1 class="global--section-header">Additional Features</h1>
+        <p class="global--section-subheader">Need Integrations or More Functionality?</p>
+        <p class="global--section-paragraph">
+            We offer a range of additional features to enhance your website’s functionality at an additional cost, yet still at an affordable price.
+        </p>
+
+        <table style="width: 100%; table-layout: fixed;" id="additional-features__table">
+            <colgroup>
+                <col style="width: 70%;">
+                <col style="width: 30%;">
+            </colgroup>
+            <tr>
+                <th>FEATURE</th>
+                <th>PRICE</th>
+            </tr>
+        </table>
+
+
+        <!-- <ul class="global--grid-1-2" id="additional-features__cards"></ul> -->
+    </section>
   </main>
 </body>
 
@@ -206,7 +232,7 @@
    ============================================================
 -->
 <script type="module">
-import { whyWorkWithUs, features } from "./database.js";
+import { whyWorkWithUs } from "./database.js";
 import circleCheckmark from "./assets/icons/circleCheckmark.js";
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -225,28 +251,11 @@ document.addEventListener('DOMContentLoaded', function () {
         `;
         whyWorkWithUsUl.appendChild(li);
     })
-
-    // FEATURES
-    const featuresCards = document.getElementById("features--cards");
-
-    features.forEach(({ icon, feature, description }) => {
-        const card = document.createElement("div");
-        card.classList.add("card-2");
-
-        card.innerHTML = `
-            <div class="icon">${icon}</div>
-
-            <div>
-                <h3>${feature}</h3>
-                <p>${description}</p>
-            </div>
-        `;
-
-        featuresCards.appendChild(card);
-    })
 });
 </script>
 <script type="module" src="/sections-light/navigationBar/NavigationBar.js"></script>
+<script type="module" defer src="/components-css/cards/card/Cards.js"></script>
 <script type="module" defer src="/sections-light/pricing/Pricing.js"></script>
-<script type="module" defer src="/components-css/card/card/Cards.js"></script>
+<script type="module" defer src="/components-css/cards/card2/Cards2.js"></script>
+<script type="module" defer src="/components-css/cards/card3/ Cards3.js"></script>
 </html>
