@@ -114,6 +114,7 @@
 #pricing .pricing__price-amount {
   font-size: var(--text-6xl);
   font-weight: var(--text-semibold);
+  letter-spacing: -3px;
   line-height: var(--text-6xl-line-height);
 }
 

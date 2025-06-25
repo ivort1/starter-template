@@ -2,7 +2,7 @@ import { whatWeOffer } from "/database.js";
 
 document.addEventListener('DOMContentLoaded', () => {
   // WHAT WE OFFER
-  const whatWeOfferCards = document.getElementById("what-we-offer--cards");
+  const whatWeOfferCards = document.getElementById("what-we-offer__cards");
   if (!whatWeOfferCards) return;
 
   const fragment = document.createDocumentFragment();
@@ -27,10 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   whatWeOfferCards.appendChild(fragment);
 
   requestAnimationFrame(() => {
-    whatWeOfferCards.style.transition = "opacity 0.5s ease-in-out";
     whatWeOfferCards.style.opacity = "1";
-
-    annualFeaturesUl.style.transform = "translateY(0)";
-    annualFeaturesUl.style.opacity = "1";
+    whatWeOfferCards.style.transform = "translateY(0)";
   });
 });
