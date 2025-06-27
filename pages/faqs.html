@@ -44,33 +44,42 @@
 
   <main>
     <!-- SECTION: SERVICES -->
-    <section class="global--section" id="services">
+    <section class="global--section" id="faqs">
       <h1 class="global--section-header">Frequently Asked Questions</h1>
       <h2 class="global--section-subheader">Have a Question?</h2>
       <p class="global--section-paragraph">
           Find quick answers to common questions about our custom website design, SEO services, logo creation, and small business web solutions. Whether you're just getting started or looking to improve your online presence, our FAQs cover everything you need to know to make informed decisions and get the most out of your Golden Bear Digital website.
       </p>
-      
-      <div class="faq">
-          <button class="faq__question">
-            Can I pay outright for my website?
-            <svg class="faq__question-svg" fill="currentColor" id="fi_9312231" enable-background="new 0 0 512 512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g><g><path d="m256 439.98c-13.81 0-25-11.19-25-25v-317.96c0-13.81 11.19-25 25-25s25 11.19 25 25v317.96c0 13.81-11.19 25-25 25z"></path></g><g><path d="m414.98 281h-317.96c-13.81 0-25-11.19-25-25s11.19-25 25-25h317.96c13.81 0 25 11.19 25 25s-11.19 25-25 25z"></path></g></g></svg>
-          </button>
-          <div class="faq__answer">
-              Yes, that is an option.
-          </div>
-      </div>
     </section>
   </main>
 </body>
-<script>
-    const answer = document.querySelector(".faq__answer");
-    const plusIcon = document.querySelector(".faq__question-svg");
+<script type="module">
+  import { websiteFaqs } from "/database.js";
+  
+  const faqsSection = document.getElementById("faqs");
 
-    const button = document.querySelector(".faq__question");
-    button.addEventListener("click", () => {
-        plusIcon.classList.toggle("rotate");
-        answer.classList.toggle("show");
+  websiteFaqs.forEach(({ question, answer }, index) => {
+    const details = document.createElement("details");
+    details.classList.add("faq");
+
+    const ariaControls = `faq${index + 1}-desc`;
+
+    details.innerHTML = `
+        <summary aria-controls=${ariaControls} aria-expanded="false">
+          ${question}
+          <svg aria-hidden="true" class="faq__svg" fill="currentColor" id="fi_9312231" enable-background="new 0 0 512 512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g><g><path d="m256 439.98c-13.81 0-25-11.19-25-25v-317.96c0-13.81 11.19-25 25-25s25 11.19 25 25v317.96c0 13.81-11.19 25-25 25z"></path></g><g><path d="m414.98 281h-317.96c-13.81 0-25-11.19-25-25s11.19-25 25-25h317.96c13.81 0 25 11.19 25 25s-11.19 25-25 25z"></path></g></g></svg>
+        </summary>
+        <p id=${ariaControls}>${answer}</p>
+    `;
+
+    faqsSection.appendChild(details);
+  })
+  
+  document.querySelectorAll('.faq').forEach(faq => {
+    const summary = faq.querySelector('summary');
+    faq.addEventListener('toggle', () => {
+      summary.setAttribute('aria-expanded', faq.open);
     });
+  });
 </script>
 </html>
