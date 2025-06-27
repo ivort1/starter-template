@@ -17,3 +17,20 @@ nav h2 {
   font-weight: var(--text-semibold);
   line-height: var(--text-2xl-line-height);
 }
+
+nav a svg {
+  transform: rotate(-45deg);
+  transition: all ease-in-out 0.25s;
+}
+
+nav a:hover svg {
+  transform: rotate(0deg);
+}
+
+nav a span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
