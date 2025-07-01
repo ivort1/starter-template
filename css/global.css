@@ -7,23 +7,13 @@
     --twoXl: 96rem;  /* 1536px */
 
     /* Colors */
-    --color-black: #121212;
-    --color-white: #FFFFFF;
-    --color-gray-light: rgb(72, 85, 101); /* text-gray-600 */
-    --color-gray-dark: rgb(210, 213, 220); /* text-gray-300 */
-
-    --color-background: #121212;   /* Overall app background */
-    --color-foreground: #1E1E1E;   /* Surfaces like cards, modals, navbars, and footers */
-    --color-text: #EAEAEA;         /* Primary text for headings and paragraphs */
-    --color-muted: #B0B0B0;        /* Secondary text or icon color for less emphasis */
-    --color-divider: #2C2C2C;      /* Subtle dividers and border lines */
-    --color-gray: #495565;
-
-    /* Aqua Green Accent Colors*/
-    --color-accent-light: #E6FBF4;
-    --color-accent: #00BFA6;         /* New base accent color */
-    --color-accent-hover: #33CCC1;    /* A slightly brighter/lighter variant for hover states */
-    --color-accent-active: #009688;   /* A slightly deeper/darker shade for active/pressed states */
+    --color-white: #F5F5F5;      /* Light background (page) */
+    --color-black: #0F0F0F;      /* Primary body text */
+    --color-black-soft: #505050; /* Headings, hero text, large titles */
+    --color-accent: #5A5A5A;     /* Subtext, metadata, captions */
+    --color-highlight: #E0E0E0;  /* Borders, dividers, hover states */
+    --color-cta: #111111; 
+    --color-gray-light: #F5F5F5;       /* Call-to-action buttons, links */
 
     /* Font Sizes */
     --text-xs: 0.75rem;
@@ -83,16 +73,29 @@
     --max-w-7xl: 80rem;   /* 1280px */
     --max-w-full: 100%;
 
-    font-family: ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-
     /* JavaScript effects */
     --js-fade-in: 0.25s;
     --js-transition: 0.25s;
     --js-translate-y: translateY(-25px);
+
+    --transition-speed: 0.2s;
+}
+
+[data-theme="dark"] {
+  --color-white: #0F0F0F;       /* Dark background */
+  --color-black: #F5F5F5;       /* Light text */
+  --color-soft-black: #EAEAEA;  /* Headers in light gray */
+  --color-accent: #A1A1A1;      /* Subtext in medium gray */
+  --color-highlight: #333333;   /* Border lines, hover overlays */
+  --color-cta: #FFFFFF;         /* CTA buttons in white */
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-white);
 }
 
 /* Components */
@@ -104,7 +107,7 @@ html {
 }
 
 .global--section-header {
-  color: var(--color-accent);
+  color: var(--color-black);
   font-size: var(--text-base);
   font-weight: var(--text-semibold);
   line-height: var(--text-base-line-height);
@@ -127,7 +130,7 @@ html {
 
 .global--section-paragraph {
   font-size: var(--text-lg, 1.125rem);
-  color: var(--color-gray, #495565);
+  color: var(--color-accent);
   line-height: var(--text-lg-line-height, 1.75rem);
   margin-bottom: 2rem;
   text-align: left;
@@ -153,7 +156,7 @@ html {
 /* md 48rem (768px) */
 @media (min-width: 48rem) {
   .global--section {
-    padding: 4rem 1rem;
+    padding: 8rem 1rem;
   }
   
   .global--section-header {
@@ -161,11 +164,12 @@ html {
   
   }
   .global--section-subheader {
-    font-size: var(--text-5xl, 3rem);
-    line-height: var(--text-5xl-line-height, 1);
+    font-size: var(--text-7xl, 3rem);
+    line-height: var(--text-7xl-line-height, 1);
     margin-inline: auto;
-    max-width: var(--max-w-2xl, 42rem);
+    max-width: var(--max-w-3xl, 42rem);
     text-align: center;
+    text-wrap: balance;
   }
 
   .global--section-paragraph {

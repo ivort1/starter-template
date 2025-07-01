@@ -9,17 +9,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   whatWeOffer.forEach(({ icon, service, description, href, link }) => {
     const card = document.createElement("div");
-    card.classList.add("card");
+    card.classList.add("card-4");
     if (!icon) {
       card.classList.add("card--no-icon");
     }
     card.innerHTML = `
       ${icon ? `<div class="icon">${icon}</div>` : ""}
       <div>
-        <p class="service">${service}</p>
-        <p class="description">${description}</p>
+        <p class="service spectral-semibold-italic">${service}</p>
+        <p class="description manrope">${description}</p>
       </div>
-      <a href="${href}" class="href">${link}</a>
+      <a href="${href}" class="href manrope">${link}</a>
     `;
     fragment.appendChild(card);
   });
