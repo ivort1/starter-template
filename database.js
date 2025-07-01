@@ -40,42 +40,42 @@ export const contactInformation = [
 // SERVICES
 export const whatWeOffer = [
   {
-    icon: `${designTools}`,
+    icon: "uiDesign.jpg",
     service: "Website Design",
     description: "Custom, responsive designs that capture your brand and convert visitors into customers.",
     href: "/",
     link: "Get started →"
   },
   {
-    icon: `${codeWindow}`,
+    icon: "coding.jpg",
     service: "Website Development",
     description: "Fast, secure static sites built with modern code to deliver peak performance and a seamless user experience.",
     href: "/",
     link: "Get started →"
   },
   {
-    icon: `${logoDesign}`,
+    icon: "logoDesign.jpg",
     service: "Logo Design",
     description: "Distinctive logo designs that boost brand recognition and create a memorable identity.",
     href: "/",
     link: "Get started →"
   },
   {
-    icon: `${seo}`,
+    icon: "engine.jpg",
     service: "SEO Optimization",
     description: "Strategic on-page SEO enhancements designed to boost your small business’s search rankings and drive organic traffic.",
     href: "/",
     link: "Get started →"
   },
   {
-    icon: `${typewriter}`,
+    icon: "typewriter.jpg",
     service: "Content & Copywriting",
     description: "Persuasive, SEO-friendly content that engages your audience and elevates your online presence.",
     href: "/",
     link: "Get started →"
   },
   {
-    icon: null,
+    icon: "collaborating.jpg",
     service: "Looking to Grow Your Business?",
     description: "Elevate your online presence with custom web solutions engineered to drive traffic. Visit our Services page for full details and pricing.",
     href: "/",
