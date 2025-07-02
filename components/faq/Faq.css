@@ -6,7 +6,7 @@
 }
 
 .faq:not(:last-of-type) {
-  border-bottom: 1px solid var(--color-gray-dark);
+  border-bottom: 1px solid var(--color-highlight);
 }
 
 .faq summary {
@@ -20,7 +20,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .faq summary:focus-visible {
@@ -34,13 +34,14 @@
 
 .faq > p {
     font-size: var(--text-base);
-    color: var(--color-gray);
+    color: var(--color-accent);
     line-height: var(--text-base-line-height);
     margin-top: 1.5rem;
 }
 
 .faq .faq__svg {
     height: 1.5rem;
+    min-width: 1.5rem;
     width: 1.5rem;
     transition: transform 0.25s ease-in-out;
 }

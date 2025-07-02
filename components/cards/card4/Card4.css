@@ -84,7 +84,6 @@
   color: var(--color-black);
 }
 
-
 /* sm */
 @media (min-width: 640px) {
     .card-4 {

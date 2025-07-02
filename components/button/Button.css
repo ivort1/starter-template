@@ -27,6 +27,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
 }
 
 .button::before {
@@ -49,7 +50,6 @@
 }
 
 .button svg {
-  margin-left: 0.5rem;
   transform: rotate(-45deg);
   transition: transform var(--transition-speed) ease-in-out;
 }

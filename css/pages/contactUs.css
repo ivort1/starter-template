@@ -1,4 +1,28 @@
 /* ----- HERO ----- */
+.contact-us__schedule-a-call {
+  border: solid 1px var(--color-black-soft);
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.contact-us__schedule-a-call h3 {
+  color: var(--color-black);
+  font-size: var(--text-2xl);
+  font-weight: var(--text-semibold);
+  line-height: var(--text-2xl-line-height);
+}
+
+.contact-us__schedule-a-call p {
+  color: var(--color-accent);
+  font-size: var(--text-base);
+  line-height: var(--text-base-line-height);
+}
+
 #next-steps {
   background-color: var(--color-accent-light);
 }

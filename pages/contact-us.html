@@ -3,43 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <!-- Preload images -->
-    <link rel="preload" as="image" href="/assets/images/rocket.webp" imagesrcset="/assets/images/rocket.webp 1x, /assets/images/rocket@2x.webp 2x" imagesizes="(max-width: 40rem) 100vw, 40rem" type="image/webp">
-    <link rel="preload" as="image" href="/assets/icons/svg/vortex.svg" type="image/svg+xml">
+    <title>Contact Us</title>
 
     <!-- Above the fold CSS -->
     <style>
-      #hero a svg {
-        margin: 2px 0.75rem 0 0;
-        min-width: 2rem;
-        width: 2rem;
-      }
-
-      #hero .hero__image-container {
-        position: relative;
-        width: 100%;
-      }
-
-      #hero .hero__image-container-background {
-        left: 50%;
-        max-width: none;
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 40rem;
-        z-index: -1;
-      }
-
-      #hero .hero__image-container-foreground {
-        left: 50%;
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%, -50%) rotate(25deg);
-        z-index: 1;
-      }
-
       #hero #contact-component {
         margin-top: 3rem;
       }
@@ -57,24 +24,34 @@
     </style>
 
     <!-- CSS -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/sections/navigationBar/navigationBar-2/NavigationBar-2.css">
+    <link rel="stylesheet" href="/components/button/Button.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    
+    
     <link rel="stylesheet" href="/css/preset.css">
     <link rel="stylesheet" href="/css/global.css">
-    <link rel="stylesheet" href="/sections/navigationBar/NavigationBar.css">
     <link rel="stylesheet" href="/css/pages/contactUs.css">
-    <link rel="stylesheet" href="/components/button/Button.css">
     <link rel="stylesheet" href="/components/contact/Contact.css">
     <link rel="stylesheet" href="/sections/steps/Steps.css">
 </head>
 <body>
     <!-- NAV BAR -->
-    <nav>
+      <!-- NAV BAR -->
+    <nav class="manrope">
         <div class="global--section">
             <div class="nav__content">
                 <a class="nav__title" href="/">Golden Bear Digital</a>
                 <button class="nav__toggle-menu" aria-expanded="false" aria-label="Toggle menu">
-                <div id="nav__bar-1"></div>
-                <div id="nav__bar-2"></div>
-                <div id="nav__bar-3"></div>
+                    <div id="nav__bar-1"></div>
+                    <div id="nav__bar-2"></div>
+                    <div id="nav__bar-3"></div>
                 </button>
             </div>
 
@@ -82,10 +59,17 @@
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="/pages/services.html">Services</a></li>
-                    <li><a href="/pages/use-cases.html">Use Cases</a></li>
+                    <li><a href="/pages/use-cases.html">Our Work</a></li>
                     <li><a href="/#pricing">Pricing</a></li>
                     <li><a href="/pages/faqs.html">FAQs</a></li>
-                    <li><a href="/pages/contact-us.html">Contact Us</a></li>
+                    <li>
+                        <a class="button button__primary" href="/pages/contact-us.html">
+                            <span>
+                                Contact Us
+                                <svg fill="currentColor" width="1.5rem" height="1.5rem" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg" id="fi_9199645"><path clip-rule="evenodd" d="m12.293 4.29535c.1875-.18747.4418-.29279.707-.29279s.5195.10532.707.29279l7 7.00005c.1875.1875.2928.4418.2928.7069 0 .2652-.1053.5195-.2928.707l-7 7.0001c-.1886.1821-.4412.2829-.7034.2806s-.513-.1074-.6984-.2928-.2906-.4363-.2929-.6984c-.0023-.2622.0985-.5148.2807-.7035l5.293-5.293h-13.586c-.26522 0-.51957-.1053-.70711-.2928-.18753-.1876-.29289-.4419-.29289-.7072 0-.2652.10536-.5195.29289-.7071.18754-.1875.44189-.2929.70711-.2929h13.586l-5.293-5.29295c-.1875-.18753-.2928-.44184-.2928-.707s.1053-.51947.2928-.707z" fill="currentColor" fill-rule="evenodd"></path></svg>
+                            </span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -93,59 +77,32 @@
 
     <main>
       <!-- SECTION: HERO -->
-      <section class="global--section" id="hero">
-          <div class="global--grid-1-2">
-              <div>
-                  <h1 class="global--section-header">Ready to Start?</h1>
-                  <p class="global--section-subheader">Contact Us Today</p>
-                  <div class="global--section-paragraph">
-                    <p>
-                      At Golden Bear Digital, we provide an all-in-one website solution designed specifically for small businesses. Our comprehensive subscription service covers every
-                      detail—from innovative UI/UX design and cutting-edge coding to reliable hosting, domain registration, custom logo creation, and ongoing maintenance and support.
-                    </p>
-
-                    <br />
-
-                    <p>Contact us now to discuss your project, request a quote, or learn more about our all-in-one website solutions — including custom design, logo creation, hosting, and maintenance. Let’s make your business stand out online!</p>
-                  </div>
-
-                  <a href="/pages/contact-us.html" class="button button--primary button--lg">
-                      <span>
-                          <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" fill="currentColor">
-                              <path d="M17.5,11.039c-3.584,0-6.5,2.916-6.5,6.5,0,3.563,2.916,6.461,6.5,6.461s6.5-2.916,6.5-6.5c0-3.563-2.916-6.461-6.5-6.461Zm0,11.961c-3.032,0-5.5-2.45-5.5-5.461,0-3.033,2.468-5.5,5.5-5.5s5.5,2.45,5.5,5.461c0,3.033-2.468,5.5-5.5,5.5Zm1.354-4.854c.195,.195,.195,.512,0,.707-.098,.098-.226,.146-.354,.146s-.256-.049-.354-.146l-1-1c-.094-.094-.146-.221-.146-.354v-2c0-.276,.224-.5,.5-.5s.5,.224,.5,.5v1.793l.854,.854Zm.646-16.146h-1.5V.5c0-.276-.224-.5-.5-.5s-.5,.224-.5,.5v1.5H7V.5c0-.276-.224-.5-.5-.5s-.5,.224-.5,.5v1.5h-1.5C2.019,2,0,4.019,0,6.5v13c0,2.481,2.019,4.5,4.5,4.5h6c.276,0,.5-.224,.5-.5s-.224-.5-.5-.5H4.5c-1.93,0-3.5-1.57-3.5-3.5V9H23v1.5c0,.276,.224,.5,.5,.5s.5-.224,.5-.5V6.5c0-2.481-2.019-4.5-4.5-4.5ZM1,8v-1.5c0-1.93,1.57-3.5,3.5-3.5h15c1.93,0,3.5,1.57,3.5,3.5v1.5H1Z"/>
-                          </svg>
-
-                          Schedule a call
-                      </span>
-                  </a>
+      <section class="global--section" id="contact-us">
+      
+            <h1 class="global--section-header manrope">Contact Us Today</h1>
+            <h2 class="global--section-subheader spectral-semibold-italic">Ready to Start?</h2>
+            <div class="global--section-paragraph manrope">
+              <p>
+                At Golden Bear Digital, we provide an all-in-one website solution designed specifically for small businesses. Our comprehensive subscription service covers every
+                detail—from innovative UI/UX design and cutting-edge coding to reliable hosting, domain registration, custom logo creation, and ongoing maintenance and support.
+              </p>
+  
+              <br />
+  
+            </div>
+            
+          <div class="contact-us__schedule-a-call manrope">
+            <h3>Schedule a call</h3>
+            <p>Contact us now to discuss your project, request a quote, or learn more about our all-in-one website solutions — including custom design, logo creation, hosting, and maintenance. Let’s make your business stand out online!</p>
+            <a class="button button__primary button__large" href="/pages/contact-us.html">
+              <span>
+                Schedule a call
+                <svg fill="currentColor" width="1.5rem" height="1.5rem" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg" id="fi_9199645"><path clip-rule="evenodd" d="m12.293 4.29535c.1875-.18747.4418-.29279.707-.29279s.5195.10532.707.29279l7 7.00005c.1875.1875.2928.4418.2928.7069 0 .2652-.1053.5195-.2928.707l-7 7.0001c-.1886.1821-.4412.2829-.7034.2806s-.513-.1074-.6984-.2928-.2906-.4363-.2929-.6984c-.0023-.2622.0985-.5148.2807-.7035l5.293-5.293h-13.586c-.26522 0-.51957-.1053-.70711-.2928-.18753-.1876-.29289-.4419-.29289-.7072 0-.2652.10536-.5195.29289-.7071.18754-.1875.44189-.2929.70711-.2929h13.586l-5.293-5.29295c-.1875-.18753-.2928-.44184-.2928-.707s.1053-.51947.2928-.707z" fill="currentColor" fill-rule="evenodd"></path></svg>
+              </span>
+            </a>
+          </div>
 
                   <ul id="contact-component"></ul>
-              </div>
-
-              <div class="hero__image-container">
-                <img
-                  class="hero__image-container-background"
-                  src="/assets/icons/svg/vortex.svg"
-                  alt="vortex pattern"
-                  width="800" 
-                  height="800"
-                  loading="eager"
-                  fetchpriority="high"
-                >
-
-                <img
-                  class="hero__image-container-foreground"
-                  src="/assets/images/rocket.webp"
-                  srcset="/assets/images/rocket.webp 1x, /assets/images/rocket@2x.webp 2x"
-                  sizes="(max-width: 40rem) 100vw, 40rem"
-                  width="188"
-                  height="428"
-                  alt="rocket"
-                  loading="eager"
-                  fetchpriority="high"
-                >
-              </div>
-          </div>
       </section>
 
        <!-- SECTION: NEXT STEPS -->

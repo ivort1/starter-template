@@ -105,11 +105,12 @@ nav ul {
 }
 
 nav li {
+  color: var(--color-accent);
   opacity: 0;
 }
 
 nav li:hover {
-  color: var(--color-accent);
+  color: var(--color-black);
 }
 
 nav a {
