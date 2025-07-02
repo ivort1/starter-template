@@ -55,6 +55,8 @@
     --text-9xl: 8rem;
     --text-9xl-line-height: 1;
 
+    --line-height: min(1.2, 1);
+    
     /* Font Weights */
     --text-semibold: 600;
     --text-bold: 700;
@@ -122,7 +124,7 @@ body {
   font-size: clamp(var(--text-3xl), 10vw, var(--text-7xl));
   font-weight: var(--text-semibold, 600);
   letter-spacing: -1.2px;
-  line-height: min(1.2, 1);
+  line-height: var(--line-height);
   margin-bottom: 1.5rem;
   text-wrap: balance;
   width: 100%;
