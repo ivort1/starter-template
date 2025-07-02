@@ -2,102 +2,136 @@
     background-color: var(--color-black);
     border-radius: 48px;
     color: var(--color-white);
-    height: 65vh;
+    height: 80vh;
     overflow: hidden;
     width: 100%;
 
+    /* Flexbox */
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
 }
 
-.card-4__right-section img {
+.card-4__section-one {
+    height: 55%;
+    padding: 1rem;
+    width: 100%;
+
+    /* Flexbox */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.card-4__section-two {
+    height: 45%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    /* Flexbox */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-4__section-two img {
     height: 100%;
     object-fit: cover;
     width: 100%;
 }
 
-.card-4__left-section {
-    height: 100%;
-    padding: 0 2rem;
-    width: 50%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 2rem;
-}
-
 .card-4__number {
-    font-size: var(--text-5xl);
-    line-height: var(--text-5xl-line-height);
+    display: none;
 }
 
 .card-4__our-service {
-    font-size: var(--text-xl);
+    font-size: var(--text-lg);
     font-weight: var(--text-bold);
-    line-height: var(--text-xl-line-height);
+    line-height: var(--text-lg-line-height);
+    margin-bottom: 0.25rem;
 }
 
 .card-4__service {
-    font-size: var(--text-7xl);
+    font-size: var(--text-4xl);
     font-weight: 700;
-    letter-spacing: -4px;
-    line-height: var(--text-7xl-line-height);
-    
+    letter-spacing: -2px;
+    line-height: var(--text-4xl-line-height);
 }
 
 .card-4__description {
     color: var(--color-highlight);
-    font-size: var(--text-lg);
-    line-height: var(--text-lg-line-height);
-    text-wrap: balance;
+    font-size: var(--text-sm);
+    line-height: var(--text-sm-line-height);
 }
 
-.card-4__right-section {
-    background-color: #3a3a3a;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    width: 50%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.card-4 .button {
-    border-radius: 100px;
-}
-
-.card-4 .button svg {
-    margin-left: 8px;
-    transform: rotate(-45deg);
-    transition: transform var(--transition-speed) ease-in-out;
-    width: fit-content;
-}
-
-.card-4 .button:hover svg {
-    transform: rotate(0deg);
-}
-
-.card-4 .button--primary {
+.card-4 .button__primary {
   background-color: var(--color-white);
   color: var(--color-black);
 }
 
-.card-4 .button--primary::before {
+.card-4 .button__primary::before {
   background-color: #FFFFFF;
 }
 
-.card-4 .button--primary:hover::before {
-  transform: translateX(100%);
+.card-4 .button__primary:hover span,
+.card-4 .button__primary:hover svg {
+  color: var(--color-black);
 }
 
-.card-4 .button--primary:hover span,
-.card-4 .button--primary:hover svg {
-  color: var(--color-black);
+/* sm */
+@media (min-width: 640px) {
+    .card-4 {
+        height: 65vh;
+
+        /* Flexbox */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-4__section-one {
+        height: 100%;
+        padding: 0 2rem;
+        width: 50%;
+
+        /* Flexbox */
+        align-items: flex-start;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .card-4__section-two {
+        height: 100%;
+        width: 50%;
+    }
+
+    .card-4__number {
+        display: inline-block;
+        font-size: var(--text-5xl);
+        line-height: var(--text-5xl-line-height);
+    }
+
+    .card-4__our-service {
+        font-size: var(--text-xl);
+        line-height: var(--text-xl-line-height);
+        margin-bottom: 0.5rem;
+    }
+
+    .card-4__service {
+        font-size: var(--text-7xl);
+        letter-spacing: -4px;
+        line-height: var(--text-7xl-line-height);
+    }
+
+    .card-4__description {
+        font-size: var(--text-lg);
+        line-height: var(--text-lg-line-height);
+        text-wrap: balance;
+    }
 }

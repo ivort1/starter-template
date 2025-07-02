@@ -5,30 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="stylesheet" href="/css/preset.css">
+    <link rel="stylesheet" href="/css/global.css">
+    
     <style>
         /* Navigation bar */
-        nav .button,
-        #hero .button {
-            border-radius: 100px;
-        }
-
-        nav .button svg,
-        #hero .button svg {
-            margin-left: 8px;
-            transform: rotate(-45deg);
-            transition: transform var(--transition-speed) ease-in-out;
-        }
-
-        nav .button:hover svg,
-        #hero .button:hover svg {
-            transform: rotate(0deg);
-        }
-
         #hero {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
+        }
+
+        #hero .global--section-subheader {
+            font-size: clamp(
+                var(--text-3xl),   /* min = 1.875rem */
+                10vw,               /* fluid value */
+                var(--text-9xl)    /* max = 8rem */
+            );
         }
 
         .hero__bold {
@@ -43,24 +37,70 @@
             text-underline-offset: 8px;
         }
 
-        #hero .global--grid-1-2 > a.button:first-child {
-            justify-self: end;
+        .hero__content {
+            width: 100%;
+
+            /* Flexbox */
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
         }
 
-        #hero .global--grid-1-2 > a.button:last-child {
-            justify-self: start;
+        .hero__paragraph {
+            color: var(--color-accent);
+            font-size: var(--text-xl);
+            line-height: var(--text-xl-line-height);
+            width: 100%;
         }
 
-        #hero .global--section-paragraph {
-            margin: 0;
-            text-align: left;
-            text-wrap: none;
+        .hero__content-buttons {
+            width: 100%;
+
+            /* Flexbox */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        /* md 48rem (768px) */
+        @media (min-width: 48rem) {
+            #hero > .global--section {
+                margin-inline: 0;
+            }
+
+            #hero .global--section-header {
+                text-align: left;
+            }
+
+            #hero .global--section-subheader {
+                text-align: left;
+            }
+
+            .hero__content {
+                flex-direction: row;
+                justify-content: space-between;
+                gap: clamp(0.5rem, 12vw, 12rem);
+            }
+
+            .hero__content-buttons {
+                width: 50%;
+
+                flex-direction: row;
+                justify-content: flex-start;
+                gap: clamp(2px, 2vw, 1rem);
+            }
+
+            .hero__paragraph {
+                width: 50%;
+            }
         }
     </style>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/preset.css">
-    <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/fonts.css">
     <link rel="stylesheet" href="/css/index2.css">
     <link rel="stylesheet" href="/sections/navigationBar/navigationBar-2/NavigationBar-2.css">
@@ -96,7 +136,7 @@
                     <li><a href="/#pricing">Pricing</a></li>
                     <li><a href="/pages/faqs.html">FAQs</a></li>
                     <li>
-                        <a class="button button--primary" href="/pages/contact-us.html">
+                        <a class="button button__primary" href="/pages/contact-us.html">
                             <span>
                                 Contact Us
                                 <svg fill="currentColor" width="1.5rem" height="1.5rem" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg" id="fi_9199645"><path clip-rule="evenodd" d="m12.293 4.29535c.1875-.18747.4418-.29279.707-.29279s.5195.10532.707.29279l7 7.00005c.1875.1875.2928.4418.2928.7069 0 .2652-.1053.5195-.2928.707l-7 7.0001c-.1886.1821-.4412.2829-.7034.2806s-.513-.1074-.6984-.2928-.2906-.4363-.2929-.6984c-.0023-.2622.0985-.5148.2807-.7035l5.293-5.293h-13.586c-.26522 0-.51957-.1053-.70711-.2928-.18753-.1876-.29289-.4419-.29289-.7072 0-.2652.10536-.5195.29289-.7071.18754-.1875.44189-.2929.70711-.2929h13.586l-5.293-5.29295c-.1875-.18753-.2928-.44184-.2928-.707s.1053-.51947.2928-.707z" fill="currentColor" fill-rule="evenodd"></path></svg>
@@ -114,16 +154,16 @@
         <h2 class="global--section-subheader spectral-semibold-italic">Small Business Website Design & Development</h2>
         
 
-        <div class="global--grid-1-2">
-            <div style="display: flex; flex-direction: row; align-items: center;">
-                <a class="button button--primary button--lg manrope" href="/pages/contact-us.html">
+        <div class="hero__content">
+            <div class="hero__content-buttons">
+                <a class="button button__primary button__large manrope" href="/pages/contact-us.html">
                     <span>
-                        Contact Us
+                        Get started
                         <svg fill="currentColor" width="1.5rem" height="1.5rem" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg" id="fi_9199645"><path clip-rule="evenodd" d="m12.293 4.29535c.1875-.18747.4418-.29279.707-.29279s.5195.10532.707.29279l7 7.00005c.1875.1875.2928.4418.2928.7069 0 .2652-.1053.5195-.2928.707l-7 7.0001c-.1886.1821-.4412.2829-.7034.2806s-.513-.1074-.6984-.2928-.2906-.4363-.2929-.6984c-.0023-.2622.0985-.5148.2807-.7035l5.293-5.293h-13.586c-.26522 0-.51957-.1053-.70711-.2928-.18753-.1876-.29289-.4419-.29289-.7072 0-.2652.10536-.5195.29289-.7071.18754-.1875.44189-.2929.70711-.2929h13.586l-5.293-5.29295c-.1875-.18753-.2928-.44184-.2928-.707s.1053-.51947.2928-.707z" fill="currentColor" fill-rule="evenodd"></path></svg>
                     </span>
                 </a>
     
-                <a class="button button--secondary button--lg manrope" href="/pages/contact-us.html">
+                <a class="button button__secondary button__large manrope" href="/pages/contact-us.html">
                     <span>
                         Our work
                         <svg fill="currentColor" width="1.5rem" height="1.5rem" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg" id="fi_9199645"><path clip-rule="evenodd" d="m12.293 4.29535c.1875-.18747.4418-.29279.707-.29279s.5195.10532.707.29279l7 7.00005c.1875.1875.2928.4418.2928.7069 0 .2652-.1053.5195-.2928.707l-7 7.0001c-.1886.1821-.4412.2829-.7034.2806s-.513-.1074-.6984-.2928-.2906-.4363-.2929-.6984c-.0023-.2622.0985-.5148.2807-.7035l5.293-5.293h-13.586c-.26522 0-.51957-.1053-.70711-.2928-.18753-.1876-.29289-.4419-.29289-.7072 0-.2652.10536-.5195.29289-.7071.18754-.1875.44189-.2929.70711-.2929h13.586l-5.293-5.29295c-.1875-.18753-.2928-.44184-.2928-.707s.1053-.51947.2928-.707z" fill="currentColor" fill-rule="evenodd"></path></svg>
@@ -131,8 +171,9 @@
                 </a>
             </div>
 
-            <p class="global--section-paragraph manrope">
-                Custom designed and coded websites, logo design, copywriting, SEO, and more. All starting at <span class="hero__bold">$200</span> a month with <span class="hero__underline">$0 down</span>. 
+            <p class="hero__paragraph manrope">
+                Custom designed and coded websites, logo design, copywriting, SEO, and more.
+                All starting at <span class="hero__bold">$200</span> a month with <span class="hero__underline">$0 down</span>. 
             </p>
         </div>
         
@@ -147,7 +188,7 @@
         </p>
         <div id="what-we-offer__cards"></div>
   </main>
-
+  <script type="module" defer src="/sections/navigationBar/NavigationBar.js"></script>
   <script type="module" defer src="/components/cards/card4/Cards4.js"></script>
 </body>
 </html>

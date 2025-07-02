@@ -2,8 +2,7 @@ nav {
     background-color: var(--color-white);
     border: solid 1px #121212;
     box-shadow: 0px 20px 0px -10px #000000;
-    margin-inline: auto;
-    margin-top: 2rem;
+    margin: 1rem auto;
     max-width: var(--max-w-6xl);
     position: sticky;
     top: 0;
@@ -12,7 +11,7 @@ nav {
 }
 
 nav .global--section {
-  padding: 2rem 1rem;
+  padding: 1rem;
   max-width: var(--max-w-7xl);
 
 
@@ -32,7 +31,6 @@ nav .nav__content {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1rem;
 }
 
 nav .nav__title {
@@ -44,8 +42,6 @@ nav .nav__title {
 }
 
 nav .nav__toggle-menu {
-  background: var(--color-gray-light);
-  border-radius: 8px;
   cursor: pointer;
   padding: 1rem 0.5rem;
 
@@ -59,7 +55,6 @@ nav .nav__toggle-menu {
 
 nav .nav__toggle-menu > div {
   background-color: var(--color-black);
-  border-radius: 25px;
   height: 2px;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -114,7 +109,7 @@ nav li {
 }
 
 nav li:hover {
-  color: var(--color-accent)
+  color: var(--color-accent);
 }
 
 nav a {
@@ -123,10 +118,6 @@ nav a {
   line-height: var(--text-base-line-height);
   text-transform: capitalize;
   transition: color 0.3s ease-in-out;
-}
-
-nav a:hover {
-  color: var(--color-accent-hover);
 }
 
 @keyframes mobileNavLinkFadeIn {
@@ -143,6 +134,8 @@ nav a:hover {
 /* lg: 64rem (1024px) */
 @media (min-width: 1024px) {
   nav .global--section {
+    padding: 2rem 1rem;
+    
     flex-direction: row;
   }
 

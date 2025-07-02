@@ -14,12 +14,14 @@ document.addEventListener('DOMContentLoaded', () => {
       card.classList.add("card--no-icon");
     }
     card.innerHTML = `
-        <div class="card-4__left-section">
+        <div class="card-4__section-one">
             <div class="card-4__number spectral-semibold-italic">${index + 1}</div>
-            <div class="card-4__our-service manrope">• Our service</div>
-            <h3 class="card-4__service manrope">${service}</h3>
+            <div>
+              <div class="card-4__our-service manrope">• Our service</div>
+              <h3 class="card-4__service manrope">${service}</h3>
+            </div>
             <p class="card-4__description manrope">${description}</p>
-            <a class="button button--primary button--lg manrope" href="${link}">
+            <a class="button button__primary button__large manrope" href="${link}">
                 <span>
                     Get started
                     <svg fill="currentColor" width="1.5rem" height="1.5rem" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg" id="fi_9199645"><path clip-rule="evenodd" d="m12.293 4.29535c.1875-.18747.4418-.29279.707-.29279s.5195.10532.707.29279l7 7.00005c.1875.1875.2928.4418.2928.7069 0 .2652-.1053.5195-.2928.707l-7 7.0001c-.1886.1821-.4412.2829-.7034.2806s-.513-.1074-.6984-.2928-.2906-.4363-.2929-.6984c-.0023-.2622.0985-.5148.2807-.7035l5.293-5.293h-13.586c-.26522 0-.51957-.1053-.70711-.2928-.18753-.1876-.29289-.4419-.29289-.7072 0-.2652.10536-.5195.29289-.7071.18754-.1875.44189-.2929.70711-.2929h13.586l-5.293-5.29295c-.1875-.18753-.2928-.44184-.2928-.707s.1053-.51947.2928-.707z" fill="currentColor" fill-rule="evenodd"></path></svg>
@@ -27,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </a>
         </div>
 
-        <div class="card-4__right-section">${icon ? `<img src="/assets/images/${icon}" />` : ""}</div>
+        <div class="card-4__section-two">${icon ? `<img src="/assets/images/${icon}" />` : "Image is missing :("}</div>
     `;
     fragment.appendChild(card);
   });
