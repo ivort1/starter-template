@@ -1,0 +1,44 @@
+.steps-section {
+    opacity: 0;
+    transform: var(--js-translate-y);
+    transition: all var(--js-fade-in) ease-in;
+}
+
+/* Individual Step */
+.step {
+    /* border: solid 1px var(--color-black-soft); */
+    position: relative;
+    padding: 2rem;
+
+    /* Flexbox */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.step__number {
+    color: var(--color-highlight);
+    font-size: var(--text-9xl);
+    line-height: var(--text-9xl-line-height);
+    position: absolute;
+    right: 0;
+    top: -5%;
+    z-index: -1;
+}
+
+.step__icon {
+    min-width: 2rem;
+    width: 2rem;
+}
+
+.step__title {
+    font-size: var(--text-lg);
+    font-weight: var(--text-semibold);
+    line-height: var(--text-lg-line-height);
+}
+
+.step__description {
+    color: var(--color-accent);
+    font-size: var(--text-base);
+    line-height: var(--text-base-line-height);
+}

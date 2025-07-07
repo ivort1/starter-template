@@ -1,6 +1,7 @@
-/* ----- HERO ----- */
+/* ----- CONTACT US ----- */
 .contact-us__block {
   border: solid 1px var(--color-black-soft);
+  height: 100%;
   padding: 2rem;
   width: 100%;
 
@@ -25,8 +26,9 @@
 }
 
 .contact-us__contact-info {
-  width: fit-content;
+  height: 100%;
 
+  /* Flexbox */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -52,12 +54,8 @@
   color: #000000;
 }
 
-#next-steps {
-  background-color: var(--color-accent-light);
-}
-
 .next-steps__divider {
-  color: var(--color-accent-light);
+  color: var(--color-black);
   margin: 0 auto;
   max-width: var(--max-w-5xl);
   transform: rotate(180deg);
@@ -73,7 +71,7 @@
     text-align: left;
   }
 
-  #next-steps {
-    padding: 0 8rem 3rem 8rem;
+  #contact-us .global--grid-1-2 {
+    grid-template-columns: 1fr auto;
   }
 }
