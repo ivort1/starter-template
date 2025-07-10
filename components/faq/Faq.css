@@ -6,7 +6,7 @@
 }
 
 .faq:not(:last-of-type) {
-  border-bottom: 1px solid var(--color-highlight);
+  border-bottom: 1px solid var(--color-black-soft);
 }
 
 .faq summary {

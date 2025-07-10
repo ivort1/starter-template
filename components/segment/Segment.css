@@ -36,9 +36,10 @@ label {
 
 label span {
     border: solid 1px var(--color-black);
-    color: var(--color-accent);
+    color: var(--color-black);
     cursor: pointer;
     display: block;
+    font-weight: var(--text-semibold);
     padding: 0.5rem 2rem;
     position: relative;
     text-align: center;

@@ -222,21 +222,33 @@ export const faqs = {
    "pricingAndPaymentsFaqs": [
     {
       "question": "Can I pay for my website in one lump sum instead of a monthly or annual subscription?",
-      "answer": "Yes! If you prefer to pay once for your website, we offer a flat one-time payment option of $3499.99. However, please note that none of the features that come with a subscription will be included, such as domain registration, hosting, maintenance, etc."
+      "answer": "Yes! If you prefer to pay once for your website, we offer a flat one-time payment option of $3999.99. However, please note that none of the features that come with a subscription will be included, such as domain registration, hosting, maintenance, etc."
     },
     {
-      "question": "Do I keep my domain if I cancel my subscription?",
-      "answer": "Yes! Your domain and assets will always remain yours, regardless of your subscription status. Even if we purchased and registered the domain on your behalf, we will transfer the domain if you decide to cancel your subscription."
+      "question": "What payment methods do you accept?",
+      "answer": "We send our invoices via email through Stripe, which accepts all major credit cards and debit cards. Monthly subscriptions are paid via credit or debit card. Lump sum payments are made via ACH bank transfers in order to minimize processing fees. We do not accept checks or money orders."
+    },
+     {
+      "question": "How are late payments handled?",
+      "answer": "There is a 7-day grace period for late payments. If payment is not received within 7 days of the due date, a $25 late fee will be applied to your account. If payment is not received within 30 days of the due date, a 15% interest fee will be applied each month thereafter and your website will be taken offline until payment is made. If there is no response or communication from the client after 90 days, the contract will be voided and payment will be due in full plus any late fees and interest accrued. Please communicate with us if you are having trouble making a payment so we can work with you to find a solution. Communication is key!"
+    },
+    {
+      "question": "What is your refund policy?",
+      "answer": "If we cannot produce a design that meets your expectations, we will refund you the full amount of what you have paid up to that point, no questions asked. After the design is approved and the website is live, we offer clients a 14-day trial period. If you decide to cancel within the first 14 days, we will void the contract but you will still be responsible for the charges incurred up to that point and no further charges will be applied. After the 14-day trial period, refunds are not available and you will be responsible for the full amount of the contract."
     },
   ],
    "subscriptionsFaqs": [
-    {
-      "question": "Can I pay for my website in one lump sum instead of a monthly or annual subscription?",
-      "answer": "Yes! If you prefer to pay once for your website, we offer a flat one-time payment option of $3499.99. However, please note that none of the features that come with a subscription will be included, such as domain registration, hosting, maintenance, etc."
+     {
+       "question": "Do I keep my website, domain, images, and other assets if I cancel my monthly subscription?",
+       "answer": "The code for the website is licensed by us for you to use as long as you maintain an active subscription. If you cancel your subscription, you will no longer have access to the code, but you will retain ownership of your domain and any images or assets that were provided to you. We will transfer the domain to you if you decide to cancel your subscription."
     },
     {
-      "question": "Do I keep my domain if I cancel my subscription?",
-      "answer": "Yes! Your domain and assets will always remain yours, regardless of your subscription status. Even if we purchased and registered the domain on your behalf, we will transfer the domain if you decide to cancel your subscription."
+      "question": "Can I add a maintenance/support plan to my one-time lump sum payment?",
+      "answer": "Yes! We offer a maintenance plan for $49.99/month with a 12 month commitment that includes domain management, hosting, unlimited edits, and ongoing support. The maintenance plan must be renewed annually, but you can cancel anytime after the first year."
+    },
+    {
+      "question": "What's the difference between a monthly subscription and the one-time lump sum payment?",
+      "answer": "A subscription includes ongoing services such as domain registration, hosting, maintenance, and support. The one-time lump sum payment covers the website design and development only, without any of the additional features or ongoing support. With a subscription, you also have access to unlimited revisions and updates to your website. You can add a maintenance plan to your one-time lump sum payment for $49.99/month. Essentially, a subscription costs more over time but is more affordable upfront with manageable monthly payments. While a one-time lump sump payment is more expensive upfront, but you save money in the long run."
     },
   ],
   // {
