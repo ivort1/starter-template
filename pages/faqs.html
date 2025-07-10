@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/css/preset.css">
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/sections/navigationBar/navigationBar-2/NavigationBar-2.css">
+    <link rel="stylesheet" href="/components/segment/Segment.css">
     <link rel="stylesheet" href="/components/button/Button.css">
     <link rel="stylesheet" href="/components/faq/Faq.css">
 
@@ -56,24 +57,39 @@
   </nav>
 
   <main>
-    <!-- SECTION: SERVICES -->
+    <!-- SECTION: FAQs -->
     <section class="global--section" id="faqs">
       <h1 class="global--section-header manrope">Frequently Asked Questions</h1>
-        <h2 class="global--section-subheader spectral-semibold-italic">Have a Question?</h2>
-        <p class="global--section-paragraph manrope">
-            Find quick answers to common questions about our custom website design, SEO services, logo creation, and small business web solutions. Whether you're just getting started or looking to improve your online presence, our FAQs cover everything you need to know to make informed decisions and get the most out of your Golden Bear Digital website.
-        </p>
+      <h2 class="global--section-subheader spectral-semibold-italic">Have a Question?</h2>
+      <p class="global--section-paragraph manrope">
+          Find quick answers to common questions about our custom website design, SEO services, logo creation, and small business web solutions. Whether you're just getting started or looking to improve your online presence, our FAQs cover everything you need to know to make informed decisions and get the most out of your Golden Bear Digital website.
+      </p>
+
+      <div class="segment manrope">
+        <label>
+          <input type="radio" name="radio" checked="" />
+          <span>Websites</span>
+        </label>
+        <label>
+          <input type="radio" name="radio" />
+          <span>Pricing & Payments</span>
+        </label>
+        <label>
+          <input type="radio" name="radio" />
+          <span>Subscriptions</span>
+        </label>
+      </div>
     </section>
   </main>
 </body>
 
 <script type="module" defer src="/sections/navigationBar/NavigationBar.js"></script>
 <script type="module">
-  import { websiteFaqs } from "/database.js";
+  import { faqs } from "/database.js";
   
   const faqsSection = document.getElementById("faqs");
 
-  websiteFaqs.forEach(({ question, answer }, index) => {
+  faqs.websiteFaqs.forEach(({ question, answer }, index) => {
     const details = document.createElement("details");
     details.classList.add("faq");
     details.classList.add("manrope");

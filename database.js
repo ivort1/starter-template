@@ -208,20 +208,42 @@ export const features = [
     },
 ];
 
-export const websiteFaqs = [
-  {
-    "question": "Can I pay for my website in one lump sum instead of a monthly or annual subscription?",
-    "answer": "Yes! If you prefer to pay once for your website, we offer a flat one-time payment option of $3499.99. However, please note that none of the features that come with a subscription will be included, such as domain registration, hosting, maintenance, etc."
-  },
-  {
-    "question": "Do I keep my domain if I cancel my subscription?",
-    "answer": "Yes! Your domain and assets will always remain yours, regardless of your subscription status. Even if we purchased and registered the domain on your behalf, we will transfer the domain if you decide to cancel your subscription."
-  },
+export const faqs = {
+  "websiteFaqs": [
+    {
+      "question": "Can I pay for my website in one lump sum instead of a monthly or annual subscription?",
+      "answer": "Yes! If you prefer to pay once for your website, we offer a flat one-time payment option of $3999.99. However, please note that none of the features that come with a subscription will be included, such as domain registration, hosting, maintenance, etc."
+    },
+    {
+      "question": "Do I keep my domain if I cancel my subscription?",
+      "answer": "Yes! Your domain and assets will always remain yours, regardless of your subscription status. Even if we purchased and registered the domain on your behalf, we will transfer the domain if you decide to cancel your subscription."
+    },
+  ],
+   "pricingAndPaymentsFaqs": [
+    {
+      "question": "Can I pay for my website in one lump sum instead of a monthly or annual subscription?",
+      "answer": "Yes! If you prefer to pay once for your website, we offer a flat one-time payment option of $3499.99. However, please note that none of the features that come with a subscription will be included, such as domain registration, hosting, maintenance, etc."
+    },
+    {
+      "question": "Do I keep my domain if I cancel my subscription?",
+      "answer": "Yes! Your domain and assets will always remain yours, regardless of your subscription status. Even if we purchased and registered the domain on your behalf, we will transfer the domain if you decide to cancel your subscription."
+    },
+  ],
+   "subscriptionsFaqs": [
+    {
+      "question": "Can I pay for my website in one lump sum instead of a monthly or annual subscription?",
+      "answer": "Yes! If you prefer to pay once for your website, we offer a flat one-time payment option of $3499.99. However, please note that none of the features that come with a subscription will be included, such as domain registration, hosting, maintenance, etc."
+    },
+    {
+      "question": "Do I keep my domain if I cancel my subscription?",
+      "answer": "Yes! Your domain and assets will always remain yours, regardless of your subscription status. Even if we purchased and registered the domain on your behalf, we will transfer the domain if you decide to cancel your subscription."
+    },
+  ],
   // {
   //   "question": "",
   //   "answer": ""
   // }
-];
+};
 
 // WHAT'S NEXT STEPS (ContactUs.html)
 export const nextSteps = [
