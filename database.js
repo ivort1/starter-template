@@ -246,7 +246,7 @@ export const faqs = {
     {
       question: "Can I purchase my website with a single upfront payment instead of a monthly subscription?",
       answer:
-        "Absolutely. We offer a one-time payment option for $3999.99. However, this option does not include services like hosting, domain registration, ongoing support, or maintenance."
+        "Absolutely. We offer a one-time payment option for $3999.99. However, this option does not include services like hosting, domain registration, unlimited edits, ongoing support, or maintenance."
     },
     {
       question: "What’s the difference between the monthly subscription and the one-time payment option?",
@@ -260,7 +260,7 @@ export const faqs = {
     },
     {
       "question": "What is the long-term value of choosing a monthly website subscription versus a one-time payment with a maintenance plan?",
-      "answer": "If you're deciding between the monthly subscription and the one-time lump sum payment, here's a simple breakdown to help clarify the cost difference. The monthly subscription is \$200 per month, which totals \$2,400 per year and includes everything you need like domain registration, hosting, unlimited updates, maintenance, and support. The one-time payment option is \$3,999.99 for the website design and development, and if you choose to add the \$50/month maintenance plan, that adds \$600 per year. In the first year, the one-time payment plus maintenance totals \$4,599.99. After that, the only ongoing cost is \$600 per year for maintenance, compared to \$2,400 per year with the subscription. Around month 20, both options will have cost about the same. From that point forward, the one-time payment option starts saving you around \$1,800 per year, making it the better long-term value in our ongoing business relationship and mutual commitment to keeping your website thriving."
+      "answer": "If you're deciding between the monthly subscription and the one-time lump sum payment, here's a simple breakdown to help clarify the cost difference: The monthly subscription is \$200 per month, which totals \$2,400 per year and includes everything you need like domain registration, hosting, unlimited updates, maintenance, and support. The one-time payment option is \$3,999.99 for the website design and development, and if you choose to add the \$50/month maintenance plan, that adds \$600 per year. In the first year, the one-time payment plus maintenance totals \$4,599.99. After that, the only ongoing cost is \$600 per year for maintenance, compared to \$2,400 per year with the subscription. Around month 20, both options will have cost about the same. From that point forward, the one-time payment option starts saving you around \$1,800 per year, making it the better long-term value in our ongoing business relationship and mutual commitment to keeping your website thriving."
 }
   ],
 
@@ -268,7 +268,7 @@ export const faqs = {
     {
       question: "How long does the website design and development process take?",
       answer:
-        "From consultation to launch, our typical turnaround time is 2–4 weeks. This timeline includes design, development, testing, and revisions. The speed of completion largely depends on how quickly we receive your content, feedback, and approval."
+        "From consultation to launch, our typical turnaround time is 3-6 weeks. This timeline includes design, development, testing, and revisions. The speed of completion largely depends on how quickly we receive your content, feedback, and approval."
     },
     {
       question: "Why do you build custom-coded websites instead of using WordPress or drag-and-drop builders?",
