@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/preset.css">
+    <link rel="stylesheet" href="/css/global.css">
+
+    <style>
+        nav {
+            background-color: black;
+            box-sizing: border-box;
+            color: white;
+            font-family: Manrope;
+            padding: 2rem;
+            width: 100%;
+
+            /* Nav on close */
+            position: sticky;
+        }
+
+        .nav__toggle {
+            position: absolute;
+            bottom: 0;
+            top: 0;
+        }
+
+        nav .nav__header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav__title {
+            font-size: var(--text-lg);
+            opacity: 1;
+            transition: opacity 0.2s ease-in-out; 
+        }
+
+        .nav__menu {
+            display: none;
+            font-size: var(--text-2xl);
+            font-weight: var(--text-bold);
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        .nav__menu li {
+            opacity: 0;
+        }
+
+        nav .nav__toggle-menu {
+            cursor: pointer;
+            padding: 1rem 0.5rem;
+
+            /* Flexbox */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+        }
+
+        nav .nav__toggle-menu > div {
+            background-color: #a9a9a9;
+            border-radius: 8px;
+            height: 2px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        nav #nav__bar-1,
+        nav #nav__bar-3 {
+            width: 1.5rem;
+        }
+
+        nav #nav__bar-2 {
+            width: 2rem;
+        }
+
+        button.btn__toggle #nav__bar-1 {
+            transform: rotate(-45deg) translate(-5px, 5px);
+        }
+
+        button.btn__toggle #nav__bar-2 {
+            opacity: 0;
+        }
+
+        button.btn__toggle #nav__bar-3 {
+            transform: rotate(45deg) translate(-6px, -6px);
+        }
+
+        nav .fade-in {
+            animation: mobileNavLinkFadeIn 0.5s ease forwards var(--delay);
+        }
+
+        @keyframes mobileNavLinkFadeIn {
+            from {
+                opacity: 0;
+                /* transform: translateY(-50px); */
+            }
+            to {
+                opacity: 1;
+                /* transform: translateY(0); */
+            }
+        }
+    </style>
+
+     <!-- CSS -->
+    <link rel="stylesheet" href="/css/fonts.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="nav__header">
+            <a class="nav__title" href="/">Golden Coast Digital</a>
+            <button class="nav__toggle-menu" aria-expanded="false" aria-label="Toggle menu">
+                <div id="nav__bar-1"></div>
+                <div id="nav__bar-2"></div>
+                <div id="nav__bar-3"></div>
+            </button>
+        </div>
+
+        <ul class="nav__menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/pages/services.html">Services</a></li>
+            <li><a href="/pages/use-cases.html">Our Work</a></li>
+            <li><a href="/#pricing">Pricing</a></li>
+            <li><a href="/pages/faqs.html">FAQs</a></li>
+        </ul>
+    </nav>
+    
+    <h1>Test Page</h1>
+
+<!-- ============================================================
+                            JavaScript
+    ============================================================ -->
+    <script type="module">
+        (() => {
+            const navigationBar = document.querySelector('nav');
+            const navToggleMenuButton = document.querySelector('.nav__toggle-menu');
+            const navTitle = document.querySelector('.nav__title');
+            const navMenu = document.querySelector('.nav__menu');
+            const navMenuItems = navMenu.querySelectorAll('li');
+
+            function closeMenu() {
+                navigationBar.classList.remove('nav__toggle');
+                navTitle.style.opacity = "1";
+                navMenu.style.display = 'none';
+                navMenu.style.opacity = "0";
+            }
+
+            function openMenu() {
+                navigationBar.classList.add('nav__toggle');
+                navTitle.style.opacity = "0";
+                navMenu.style.display = 'flex';
+                navMenu.style.flexDirection = 'column';
+                navMenu.style.gap = '1rem';
+                navMenu.style.opacity = "1";
+                navMenuItems.forEach((li, i) => {
+                    li.style.setProperty('--delay', `${i * 0.05 + 0.15}s`);
+                    li.classList.add('fade-in');
+                });
+            }
+
+            navToggleMenuButton.addEventListener('click', () => {
+                navigationBar.classList.contains('nav__toggle') ? closeMenu() : openMenu();
+                navToggleMenuButton.classList.toggle('btn__toggle');
+
+            });
+
+            // if you cross desktop breakpoint, force-close
+            window.matchMedia('(min-width:1024px)').addEventListener('change', e => e.matches && closeMenu());
+        })();
+    </script>
+</body>
+</html>
