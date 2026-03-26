@@ -14,6 +14,7 @@
             box-sizing: border-box;
             color: white;
             font-family: Manrope;
+            height: 10vh;
             padding: 2rem;
             width: 100%;
 
@@ -22,9 +23,10 @@
         }
 
         .nav__toggle {
+            background-color: rgb(30, 30, 30);
+            height: 100vh;
+            transition: height ease-in-out 0.3s, background-color ease-in-out 0.3s;
             position: absolute;
-            bottom: 0;
-            top: 0;
         }
 
         nav .nav__header {
@@ -65,10 +67,10 @@
         }
 
         nav .nav__toggle-menu > div {
-            background-color: #a9a9a9;
+            background-color: #929292;
             border-radius: 8px;
             height: 2px;
-            transition: transform 0.3s ease, opacity 0.3s ease;
+            transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
         }
 
         nav #nav__bar-1,
@@ -81,6 +83,7 @@
         }
 
         button.btn__toggle #nav__bar-1 {
+            background-color: white;
             transform: rotate(-45deg) translate(-5px, 5px);
         }
 
@@ -89,6 +92,7 @@
         }
 
         button.btn__toggle #nav__bar-3 {
+            background-color: white;
             transform: rotate(45deg) translate(-6px, -6px);
         }
 
